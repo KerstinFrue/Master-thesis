@@ -25,7 +25,7 @@ ct_growthrate<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/data/growth rates
 growth.all.oligocene.reefs<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/data/growth rates/Oligocene/mean growth rates Oligocene.csv")
 
 
-# 1.1 comparison of growth rate means between reef sections -----------------------------------
+# 1.1 Comparison of growth rate means between reef sections -----------------------------------
 
 #boxplot 
 #correcting the order for the x axis
@@ -127,17 +127,6 @@ boxplot(growth.all.miocene.reefs$mean.growth~growth.all.miocene.reefs$genus, xla
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 # 3 Oligocene vs. Miocene ------------------------------
 
 
@@ -165,7 +154,7 @@ growth.oligocene.miocene.genus$genus<- factor(growth.oligocene.miocene.genus$gen
 boxplot(growth.oligocene.miocene.genus$mean.growth~growth.oligocene.miocene.genus$genus, xlab="time & reef section", ylab="mean growth rate (mm)", main="Growth rate comparison: Oligocene vs. Miocene Poritids")
 
 #############################
-RESULTS
+#RESULTS
 
 
 
