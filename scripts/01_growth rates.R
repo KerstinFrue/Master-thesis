@@ -29,7 +29,7 @@ growth.all.oligocene.reefs<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/data
 
 #boxplot 
 #correcting the order for the x axis
-growth.all.oligocene.reefs$reef.section<- factor(growth.all.oligocene.reefs$reef.section, levels = c("proximal back reef", "distal back reef", "fore reef", "reef front"))
+growth.all.oligocene.reefs$reef.section<- factor(growth.all.oligocene.reefs$reef.section, levels = c("proximal back reef", "distal back reef", "reef front", "fore reef"))
 
 
 boxplot(growth.all.oligocene.reefs$mean.growth~growth.all.oligocene.reefs$reef.section, xlab="reef section", ylab="mean growth rate (mm)", main="Oligocene: Comparison of growth rates between reef sections")
@@ -38,7 +38,7 @@ boxplot(growth.all.oligocene.reefs$mean.growth~growth.all.oligocene.reefs$reef.s
 # RESULTS---------------------------------------------------------------
 #growth rate during Oligocene highest in the reef front, then proximal back reef, then fore reef and 4. distal back reef
 #--> does not agree with previous studies where it is said that the corals grow best in the back reef?
-#reef front should be low growth, its not a good place to live for corals??
+#fore reef/reef slope: Favites data (1 specimen, only 2 measurements) was left out (very big growth rate)
 
 
 
