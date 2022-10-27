@@ -135,7 +135,7 @@ boxplot(growth.all.miocene.reefs$mean.growth~growth.all.miocene.reefs$genus, xla
 
 growth.oligocene.miocene.reef.section<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/data/growth rates/Oligocene Miocene growth rates reef section.csv")
 
-
+#boxplot
 #correcting the order for the x axis
 growth.oligocene.miocene.reef.section$reef.section<- factor(growth.oligocene.miocene.reef.section$reef.section, levels = c("Oligocene back reef", "Miocene back reef", "Oligocene reef front","Miocene reef front","Oligocene slope", "Miocene slope"))
 
@@ -150,8 +150,11 @@ growth.oligocene.miocene.genus<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/
 #correcting the order for the x axis
 growth.oligocene.miocene.genus$genus<- factor(growth.oligocene.miocene.genus$genus, levels = c("Oligocene Poritid", "Miocene Porites"))
 
+# 
+x <- boxplot(growth.oligocene.miocene.genus$mean.growth~growth.oligocene.miocene.genus$genus, xlab="time & reef section", ylab="mean growth rate (mm)", main="Growth rate comparison: Oligocene vs. Miocene Poritids")
 
-boxplot(growth.oligocene.miocene.genus$mean.growth~growth.oligocene.miocene.genus$genus, xlab="time & reef section", ylab="mean growth rate (mm)", main="Growth rate comparison: Oligocene vs. Miocene Poritids")
+wilcox.test(growth.oligocene.miocene.genus$mean.growth~growth.oligocene.miocene.genus$genus)
+median(growth.oligocene.miocene.genus$mean.growth[growth.oligocene.miocene.genus$genus=="Oligocene Poritid"])
 
 #############################
 #RESULTS
