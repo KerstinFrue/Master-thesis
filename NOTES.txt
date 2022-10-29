@@ -1,0 +1,21 @@
+-test for normal distribution
+
+shapiro test
+
+
+
+-statistical significance tests
+
+if values are normally distributed: t-test
+
+if values are not normally distributed: Wilcox-test
+
+
+
+-check for same distribution between samples: kolmogorov and smirnov test
+
+-check for same variance between samples: fishers f-test // ANOVA??
+
+
+-check for dependency of one variable on the other: chi-suared test
+---> what is the difference to a correlation test?

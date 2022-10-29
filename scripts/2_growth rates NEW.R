@@ -127,6 +127,23 @@ wilcox.test(ol.mio$mean.growth[ol.mio$time=="Miocene"]~ol.mio$reef.section[ol.mi
 # 3.1 Comparison of growth rate between Oligocene and Miocene: reef section ------------
 
 #Problem
+o <- subset(ol.mio, time=="Oligocene")
+boxplot(o$mean.growth ~ o$reef.section)
+
+m <- subset(ol.mio, time=="Miocene")
+
+cols <- c("cyan1", "cyan2", "chartreuse1", "chartreuse2", "darkorange1", "darkorange2")
+
+X11()
+boxplot(ol.mio$mean.growth ~ ol.mio$reef.section + ol.mio$time)
+boxplot(ol.mio$mean.growth ~  ol.mio$time + ol.mio$reef.section, col=cols)
+
+
+windows(h=8, w=6)
+op <- par(mfrow=c(2,1))
+boxplot(o$mean.growth ~ o$reef.section)
+boxplot(m$mean.growth ~ m$reef.section)
+par(op)
 
 #boxplot
 boxplot((ol.mio$mean.growth[ol.mio$time=="Oligocene"~ol.mio$reef.section[ol.mio$time=="Oligocene"])~(ol.mio$mean.growth[ol.mio$time=="Miocene"]~ol.mio$reef.section[ol.mio$time=="Miocene"]))
