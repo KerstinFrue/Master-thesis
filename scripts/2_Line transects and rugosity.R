@@ -67,7 +67,7 @@ VT1.data<-data.frame(VT1,VT1.act, VT1.ast,VT1.bio,VT1.biv,VT1.biv.b,
                                VT1.cau,VT1.cca,VT1.cem,VT1.cor,VT1.cor.a,VT1.fav,VT1.glau,VT1.hyd,VT1.mon, VT1.na,VT1.pav,VT1.pd,
                                VT1.por,VT1.sed,VT1.sha,VT1.sid,VT1.sty,VT1.tar)
 
-write.xlsx(x = VT1.data,"VT1.xlsx")
+##write.xlsx(x = VT1.data,"VT1.xlsx")
 
 
 #--------------------------------------------------------------------------
@@ -129,7 +129,7 @@ VT2.data<-data.frame(VT2,VT2.act, VT2.ast,VT2.bio,VT2.biv,VT2.biv.b,
                                VT2.por,VT2.sed,VT2.sha,VT2.sid,VT2.sty,VT2.tar)
 
 
-write.xlsx(x = VT2.data,"VT2.xlsx")
+###write.xlsx(x = VT2.data,"VT2.xlsx")
 
 
 
@@ -191,7 +191,7 @@ VT3.data<-VT3.data<-data.frame(VT3,VT3.act, VT3.ast,VT3.bio,VT3.biv,VT3.biv.b,
                                VT3.por,VT3.sed,VT3.sha,VT3.sid,VT3.sty,VT3.tar)
 
 
-write.xlsx(x = VT3.data,"VT3.xlsx")
+##write.xlsx(x = VT3.data,"VT3.xlsx")
 
 
 
@@ -255,7 +255,7 @@ VT4.data<-data.frame(VT4,VT4.act, VT4.ast,VT4.bio,VT4.biv,VT4.biv.b,
                                VT4.por,VT4.sed,VT4.sha,VT4.sid,VT4.sty,VT4.tar)
 
 
-write.xlsx(x = VT4.data,"VT4.xlsx")
+##write.xlsx(x = VT4.data,"VT4.xlsx")
 
 
 
@@ -329,7 +329,7 @@ SCT1.data<-data.frame(SCT1,SCT1.act, SCT1.ast,SCT1.bio,SCT1.biv,SCT1.biv.b,
                      SCT1.cau,SCT1.cca,SCT1.cem,SCT1.cor,SCT1.cor.a,SCT1.fav,SCT1.glau,SCT1.hyd,SCT1.mon, SCT1.na,SCT1.pav,SCT1.pd,
                      SCT1.por,SCT1.sed,SCT1.sha,SCT1.sid,SCT1.sty,SCT1.tar)
 
-write.xlsx(x = SCT1.data,"SCT1.xlsx")
+##write.xlsx(x = SCT1.data,"SCT1.xlsx")
 
 
 #--------------------------------------------------------------------------
@@ -390,7 +390,7 @@ SCT2.data<-data.frame(SCT2,SCT2.act, SCT2.ast,SCT2.bio,SCT2.biv,SCT2.biv.b,
                      SCT2.por,SCT2.sed,SCT2.sha,SCT2.sid,SCT2.sty,SCT2.tar)
 
 
-write.xlsx(x = SCT2.data,"SCT2.xlsx")
+##write.xlsx(x = SCT2.data,"SCT2.xlsx")
 
 
 
@@ -452,7 +452,7 @@ SCT3.data<-data.frame(SCT3,SCT3.act, SCT3.ast,SCT3.bio,SCT3.biv,SCT3.biv.b,
                                SCT3.por,SCT3.sed,SCT3.sha,SCT3.sid,SCT3.sty,SCT3.tar)
 
 
-write.xlsx(x = SCT3.data,"SCT3.xlsx")
+##write.xlsx(x = SCT3.data,"SCT3.xlsx")
 
 
 
@@ -516,7 +516,7 @@ SCT4.data<-data.frame(SCT4,SCT4.act, SCT4.ast,SCT4.bio,SCT4.biv,SCT4.biv.b,
                      SCT4.por,SCT4.sed,SCT4.sha,SCT4.sid,SCT4.sty,SCT4.tar)
 
 
-write.xlsx(x = SCT4.data,"SCT4.xlsx")
+##write.xlsx(x = SCT4.data,"SCT4.xlsx")
 
 
 
@@ -578,7 +578,7 @@ SCT5.data<-data.frame(SCT5,SCT5.act, SCT5.ast,SCT5.bio,SCT5.biv,SCT5.biv.b,
                       SCT5.por,SCT5.sed,SCT5.sha,SCT5.sid,SCT5.sty,SCT5.tar)
 
 
-write.xlsx(x = SCT5.data,"SCT5.xlsx")
+##write.xlsx(x = SCT5.data,"SCT5.xlsx")
 
 
 
@@ -642,7 +642,7 @@ SCT6.data<-data.frame(SCT6,SCT6.act, SCT6.ast,SCT6.bio,SCT6.biv,SCT6.biv.b,
                       SCT6.por,SCT6.sed,SCT6.sha,SCT6.sid,SCT6.sty,SCT6.tar)
 
 
-write.xlsx(x = SCT6.data,"SCT6.xlsx")
+##write.xlsx(x = SCT6.data,"SCT6.xlsx")
 
 
 
@@ -705,7 +705,7 @@ SCT7.data<-data.frame(SCT7,SCT7.act, SCT7.ast,SCT7.bio,SCT7.biv,SCT7.biv.b,
                       SCT7.por,SCT7.sed,SCT7.sha,SCT7.sid,SCT7.sty,SCT7.tar)
 
 
-write.xlsx(x = SCT7.data,"SCT7.xlsx")
+##write.xlsx(x = SCT7.data,"SCT7.xlsx")
 
 
 
@@ -769,7 +769,7 @@ SCT8.data<-data.frame(SCT8,SCT8.act, SCT8.ast,SCT8.bio,SCT8.biv,SCT8.biv.b,
                       SCT8.por,SCT8.sed,SCT8.sha,SCT8.sid,SCT8.sty,SCT8.tar)
 
 
-write.xlsx(x = SCT8.data,"SCT8.xlsx")
+##write.xlsx(x = SCT8.data,"SCT8.xlsx")
 
 
 
@@ -832,7 +832,7 @@ PML1.data<-data.frame(PML1,PML1.act, PML1.ast,PML1.bio,PML1.biv,PML1.biv.b,
                       PML1.cau,PML1.cca,PML1.cem,PML1.cor,PML1.cor.a,PML1.fav,PML1.glau,PML1.hyd,PML1.mon, PML1.na,PML1.pav,PML1.pd,
                       PML1.por,PML1.sed,PML1.sha,PML1.sid,PML1.sty,PML1.tar)
 
-write.xlsx(x = PML1.data,"PML1.xlsx")
+##write.xlsx(x = PML1.data,"PML1.xlsx")
 
 
 #--------------------------------------------------------------------------
@@ -893,7 +893,7 @@ PML2.data<-data.frame(PML2,PML2.act, PML2.ast,PML2.bio,PML2.biv,PML2.biv.b,
                       PML2.por,PML2.sed,PML2.sha,PML2.sid,PML2.sty,PML2.tar)
 
 
-write.xlsx(x = PML2.data,"PML2.xlsx")
+##write.xlsx(x = PML2.data,"PML2.xlsx")
 
 
 
@@ -955,7 +955,7 @@ PML3.data<-data.frame(PML3,PML3.act, PML3.ast,PML3.bio,PML3.biv,PML3.biv.b,
                       PML3.por,PML3.sed,PML3.sha,PML3.sid,PML3.sty,PML3.tar)
 
 
-write.xlsx(x = PML3.data,"PML3.xlsx")
+#write.xlsx(x = PML3.data,"PML3.xlsx")
 
 
 
@@ -1019,7 +1019,7 @@ PML4.data<-data.frame(PML4,PML4.act, PML4.ast,PML4.bio,PML4.biv,PML4.biv.b,
                       PML4.por,PML4.sed,PML4.sha,PML4.sid,PML4.sty,PML4.tar)
 
 
-write.xlsx(x = PML4.data,"PML4.xlsx")
+#write.xlsx(x = PML4.data,"PML4.xlsx")
 
 
 
@@ -1081,7 +1081,7 @@ PML5.data<-data.frame(PML5,PML5.act, PML5.ast,PML5.bio,PML5.biv,PML5.biv.b,
                       PML5.por,PML5.sed,PML5.sha,PML5.sid,PML5.sty,PML5.tar)
 
 
-write.xlsx(x = PML5.data,"PML5.xlsx")
+#write.xlsx(x = PML5.data,"PML5.xlsx")
 
 
 
@@ -1145,7 +1145,7 @@ PML6.data<-data.frame(PML6,PML6.act, PML6.ast,PML6.bio,PML6.biv,PML6.biv.b,
                       PML6.por,PML6.sed,PML6.sha,PML6.sid,PML6.sty,PML6.tar)
 
 
-write.xlsx(x = PML6.data,"PML6.xlsx")
+#write.xlsx(x = PML6.data,"PML6.xlsx")
 
 
 
@@ -1216,7 +1216,7 @@ TL1.data<-data.frame(TL1,TL1.act, TL1.ast,TL1.bio,TL1.biv,TL1.biv.b,
                       TL1.cau,TL1.cca,TL1.cem,TL1.cor,TL1.cor.a,TL1.fav,TL1.glau,TL1.hyd,TL1.mon, TL1.na,TL1.pav,TL1.pd,
                       TL1.por,TL1.sed,TL1.sha,TL1.sid,TL1.sty,TL1.tar)
 
-write.xlsx(x = TL1.data,"TL1.xlsx")
+#write.xlsx(x = TL1.data,"TL1.xlsx")
 
 
 #--------------------------------------------------------------------------
@@ -1277,7 +1277,7 @@ TL2.data<-data.frame(TL2,TL2.act, TL2.ast,TL2.bio,TL2.biv,TL2.biv.b,
                       TL2.por,TL2.sed,TL2.sha,TL2.sid,TL2.sty,TL2.tar)
 
 
-write.xlsx(x = TL2.data,"TL2.xlsx")
+#write.xlsx(x = TL2.data,"TL2.xlsx")
 
 
 
@@ -1339,7 +1339,7 @@ TL3.data<-data.frame(TL3,TL3.act, TL3.ast,TL3.bio,TL3.biv,TL3.biv.b,
                       TL3.por,TL3.sed,TL3.sha,TL3.sid,TL3.sty,TL3.tar)
 
 
-write.xlsx(x = TL3.data,"TL3.xlsx")
+#write.xlsx(x = TL3.data,"TL3.xlsx")
 
 
 
@@ -1403,7 +1403,7 @@ TL4.data<-data.frame(TL4,TL4.act, TL4.ast,TL4.bio,TL4.biv,TL4.biv.b,
                       TL4.por,TL4.sed,TL4.sha,TL4.sid,TL4.sty,TL4.tar)
 
 
-write.xlsx(x = TL4.data,"TL4.xlsx")
+#write.xlsx(x = TL4.data,"TL4.xlsx")
 
 
 
@@ -1465,7 +1465,7 @@ TL5.data<-data.frame(TL5,TL5.act, TL5.ast,TL5.bio,TL5.biv,TL5.biv.b,
                       TL5.por,TL5.sed,TL5.sha,TL5.sid,TL5.sty,TL5.tar)
 
 
-write.xlsx(x = TL5.data,"TL5.xlsx")
+#write.xlsx(x = TL5.data,"TL5.xlsx")
 
 
 
@@ -1529,7 +1529,7 @@ TL6.data<-data.frame(TL6,TL6.act, TL6.ast,TL6.bio,TL6.biv,TL6.biv.b,
                       TL6.por,TL6.sed,TL6.sha,TL6.sid,TL6.sty,TL6.tar)
 
 
-write.xlsx(x = TL6.data,"TL6.xlsx")
+#write.xlsx(x = TL6.data,"TL6.xlsx")
 
 
 
@@ -1595,7 +1595,7 @@ CGL1.data<-data.frame(CGL1,CGL1.act, CGL1.ast,CGL1.bio,CGL1.biv,CGL1.biv.b,
                       CGL1.cau,CGL1.cca,CGL1.cem,CGL1.cor,CGL1.cor.a,CGL1.fav,CGL1.glau,CGL1.hyd,CGL1.mon, CGL1.na,CGL1.pav,CGL1.pd,
                       CGL1.por,CGL1.sed,CGL1.sha,CGL1.sid,CGL1.sty,CGL1.tar)
 
-write.xlsx(x = CGL1.data,"CGL1.xlsx")
+#write.xlsx(x = CGL1.data,"CGL1.xlsx")
 
 
 #--------------------------------------------------------------------------
@@ -1656,7 +1656,7 @@ CGL2.data<-data.frame(CGL2,CGL2.act, CGL2.ast,CGL2.bio,CGL2.biv,CGL2.biv.b,
                       CGL2.por,CGL2.sed,CGL2.sha,CGL2.sid,CGL2.sty,CGL2.tar)
 
 
-write.xlsx(x = CGL2.data,"CGL2.xlsx")
+#write.xlsx(x = CGL2.data,"CGL2.xlsx")
 
 
 
@@ -1718,7 +1718,7 @@ CGL3.data<-data.frame(CGL3,CGL3.act, CGL3.ast,CGL3.bio,CGL3.biv,CGL3.biv.b,
                       CGL3.por,CGL3.sed,CGL3.sha,CGL3.sid,CGL3.sty,CGL3.tar)
 
 
-write.xlsx(x = CGL3.data,"CGL3.xlsx")
+#write.xlsx(x = CGL3.data,"CGL3.xlsx")
 
 
 
@@ -1782,7 +1782,7 @@ CGL4.data<-data.frame(CGL4,CGL4.act, CGL4.ast,CGL4.bio,CGL4.biv,CGL4.biv.b,
                       CGL4.por,CGL4.sed,CGL4.sha,CGL4.sid,CGL4.sty,CGL4.tar)
 
 
-write.xlsx(x = CGL4.data,"CGL4.xlsx")
+#write.xlsx(x = CGL4.data,"CGL4.xlsx")
 
 
 
@@ -1844,7 +1844,7 @@ CGL5.data<-data.frame(CGL5,CGL5.act, CGL5.ast,CGL5.bio,CGL5.biv,CGL5.biv.b,
                       CGL5.por,CGL5.sed,CGL5.sha,CGL5.sid,CGL5.sty,CGL5.tar)
 
 
-write.xlsx(x = CGL5.data,"CGL5.xlsx")
+#write.xlsx(x = CGL5.data,"CGL5.xlsx")
 
 
 
@@ -1908,7 +1908,7 @@ CGL6.data<-data.frame(CGL6,CGL6.act, CGL6.ast,CGL6.bio,CGL6.biv,CGL6.biv.b,
                       CGL6.por,CGL6.sed,CGL6.sha,CGL6.sid,CGL6.sty,CGL6.tar)
 
 
-write.xlsx(x = CGL6.data,"CGL6.xlsx")
+#write.xlsx(x = CGL6.data,"CGL6.xlsx")
 
 
 
@@ -1971,7 +1971,7 @@ CGL7.data<-data.frame(CGL7,CGL7.act, CGL7.ast,CGL7.bio,CGL7.biv,CGL7.biv.b,
                       CGL7.por,CGL7.sed,CGL7.sha,CGL7.sid,CGL7.sty,CGL7.tar)
 
 
-write.xlsx(x = CGL7.data,"CGL7.xlsx")
+#write.xlsx(x = CGL7.data,"CGL7.xlsx")
 
 
 
@@ -2036,7 +2036,7 @@ LCT1.data<-data.frame(LCT1,LCT1.act, LCT1.ast,LCT1.bio,LCT1.biv,LCT1.biv.b,
                       LCT1.cau,LCT1.cca,LCT1.cem,LCT1.cor,LCT1.cor.a,LCT1.fav,LCT1.glau,LCT1.hyd,LCT1.mon, LCT1.na,LCT1.pav,LCT1.pd,
                       LCT1.por,LCT1.sed,LCT1.sha,LCT1.sid,LCT1.sty,LCT1.tar)
 
-write.xlsx(x = LCT1.data,"LCT1.xlsx")
+#write.xlsx(x = LCT1.data,"LCT1.xlsx")
 
 
 #--------------------------------------------------------------------------
@@ -2097,7 +2097,7 @@ LCT2.data<-data.frame(LCT2,LCT2.act, LCT2.ast,LCT2.bio,LCT2.biv,LCT2.biv.b,
                       LCT2.por,LCT2.sed,LCT2.sha,LCT2.sid,LCT2.sty,LCT2.tar)
 
 
-write.xlsx(x = LCT2.data,"LCT2.xlsx")
+##write.xlsx(x = LCT2.data,"LCT2.xlsx")
 
 
 
@@ -2159,7 +2159,7 @@ LCT3.data<-data.frame(LCT3,LCT3.act, LCT3.ast,LCT3.bio,LCT3.biv,LCT3.biv.b,
                       LCT3.por,LCT3.sed,LCT3.sha,LCT3.sid,LCT3.sty,LCT3.tar)
 
 
-write.xlsx(x = LCT3.data,"LCT3.xlsx")
+###write.xlsx(x = LCT3.data,"LCT3.xlsx")
 
 
 
@@ -2223,5 +2223,39 @@ LCT4.data<-data.frame(LCT4,LCT4.act, LCT4.ast,LCT4.bio,LCT4.biv,LCT4.biv.b,
                       LCT4.por,LCT4.sed,LCT4.sha,LCT4.sid,LCT4.sty,LCT4.tar)
 
 
-write.xlsx(x = LCT4.data,"LCT4.xlsx")
+###write.xlsx(x = LCT4.data,"LCT4.xlsx")
 
+
+
+#------------------------------------------------------------------------------------------------------
+
+# plotting ----------------------------------------------------------------
+
+sp.cover<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/data/line transects/means cover data.csv")
+
+
+
+
+
+
+
+
+#---------------------------------------------------------------------------------------------------------------------------------
+
+# rugosity ----------------------------------------------------------------
+
+#--------------------------------------------------------------------------
+
+rug<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/data/rugosity/mean rugosity.csv")
+
+#summary(rug)
+rug$time.reef.section<-as.factor(rug$time.reef.section)
+
+#correcting the order for the x axis
+rug$time.reef.section<- factor(rug$time.reef.section, levels = c("Oligocene reef front", "Miocene reef front", "Miocene proximal slope"))
+
+#PROBLEM cant make dots (changed class of time.reef.section from character to a factor)?
+
+plot(rug$time.reef.section,rug$mean_rugosity, type="5",
+     ylab="rugosity", xlab="time & reef section", main="Rugosity (Oligocene and Miocene)")
+  
