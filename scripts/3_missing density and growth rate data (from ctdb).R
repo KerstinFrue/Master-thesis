@@ -6,7 +6,7 @@ setwd("C:/Users/Kerry/Desktop/Master-thesis")
 #0 Preparing data ---------------------------------------------
 
 library(chronosphere)
-#ct<-fetch("CoralTraitDB")
+ct<-fetch("CoralTraitDB")
 
 
 
@@ -72,7 +72,22 @@ d.por<-data.frame(d.por$trait_name, d.por$specie_name, d.por$value, d.por$standa
 # 2.1 Growth rates Porites-------------------------------------------------
 #--------------------------------------------------------------------------
 
-#MEASURED
+#subsetting for growth rate data
+gr<- subset(ct, trait_name=="Growth rate")
+
+#subsetting for species Porites
+gr.por<-gr[grepl("Porites", gr$specie_name),]
+
+
+#subsetting for standard unit of mm yr^-1
+#PROBLEM does not work, why??
+
+gr.por<-gr.por[grepl("mm yr^-1", gr.por$standard_unit),]
+
+
+
+gr.por<-data.frame(gr.por$trait_name, gr.por$specie_name, gr.por$value, gr.por$standard_unit,
+                  gr.por$value_type, gr.por$location_name, gr.por$methodology_name)
 
 
 

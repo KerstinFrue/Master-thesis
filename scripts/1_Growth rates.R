@@ -23,6 +23,8 @@ modern.data<-read.csv("C:/Users/Kerry/Desktop/Master-thesis/data/growth rates/me
 
 ol.mio<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/data/growth rates/mean growth rates Oligocene Miocene.csv")
 o <- subset(ol.mio, time=="Oligocene")
+#slope: Favites data (1 specimen, only 2 measurements) was left out (very big growth rate)
+
 m <- subset(ol.mio, time=="Miocene")
 
 #alldata
@@ -41,12 +43,17 @@ ol.mio.mo<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/data/growth rates/mea
 #correcting the order for the x axis
 o$reef.section<- factor(o$reef.section, levels = c("back reef", "reef flat", "reef front", "proximal slope"))
 
+#color vector for distinguishing groups
+cols1 <- c("cadetblue1", "cyan4", "olivedrab3", "goldenrod1")
+
+
 #boxplot
 boxplot(o$mean.growth~o$reef.section,
-        main = "Oligocene: comparison between reef sections",
-        xlab = "reef section", ylab= "mean growth rate (mm / year)")
+        #main = "Oligocene: comparison between reef sections",
+        col=cols1, xlab = "reef section", ylab= "mean growth rate (mm / year)",
+        names = c("back reef (12)", "reef flat (3)", "reef front (16)", "proximal slope (8)"))
 
-#Test geht nicht? --> Gruppen müssen gleich lang sein! Und Vergleich geht nur mit 2 Gruppen! -->Kruskal test
+#Test geht nicht? --> Gruppen m�ssen gleich lang sein! Und Vergleich geht nur mit 2 Gruppen! -->Kruskal test
 #wilcox.test(o$mean.growth~o$reef.section)
 
 #--> Kruskal-test, whether the means vary between the Oligocene reef sections???
@@ -55,10 +62,10 @@ kruskal.test(o$mean.growth~o$reef.section)
 
 
 # RESULTS---------------------------------------------------------------
-#growth rate during Oligocene highest in the abck reef reef front, then proximal slope and 4. reef flat
+#growth rate during Oligocene highest in the back reef reef front, then proximal slope and 4. reef flat
 #--> does agree with previous studies where it is said that the corals grow best in the back reef!
 
-#slope: Favites data (1 specimen, only 2 measurements) was left out (very big growth rate)
+
 
 #Kruskal-test: p-value 0.0184, is SMALLER than 0,05--> ??? PROBLEM
 
@@ -73,12 +80,14 @@ kruskal.test(o$mean.growth~o$reef.section)
 #--------------------------------------------------------------------------------------------------
 
 #correcting the order for the x axis
-o$genus<- factor(o$genus, levels = c("Porites", "Poritid", "Actinacis", "Tarbellastraea", "Astreopora", "Pavona?"))
+o$genus<- factor(o$genus, levels = c("Porites", "Actinacis", "Tarbellastraea", "Pavona?"))
+
+cols2<-c("coral","coral1","coral3","coral4")
 
 #boxplot
 boxplot(o$mean.growth~o$genus,
-        main = "Oligocene: comparison between genera",
-        xlab = "genus", ylab= "mean growth rate (mm / year)")
+        #main = "Oligocene: comparison between genera",
+        col=cols2, xlab = "genus", ylab = "mean growth rate (mm / year)", names =c("Porites (11)", "Actinacis (6)", "Tarbellastraea (2)", "Pavona? (2)"))
 
 #Test geht nicht?  --> Gruppen müssen gleich lang sein! Und Vergleich geht nur mit 2 Gruppen! -->Kruskal test
 #wilcox.test(o$mean.growth~o$reef.section)
@@ -89,7 +98,7 @@ kruskal.test(o$mean.growth ~ o$genus)
 
 # RESULTS ---------------------------------------------------------------
 #Porites and Poritids do not show similar growth --> should not fuse them!
-#Kruskal-test: p-value 0.02679, is SMALLER than 0,05--> ??? PROBLEM
+#Kruskal-test: p-value 0.02349, is SMALLER than 0,05--> ??? PROBLEM
 
 
 
@@ -112,10 +121,13 @@ kruskal.test(o$mean.growth ~ o$genus)
 #correcting the order for the x axis
 m$reef.section<- factor(m$reef.section, levels = c("back reef", "reef front", "proximal slope"))
 
+cols3 <- c("cyan4", "olivedrab", "yellow")
+
 #boxplot 
 boxplot(m$mean.growth~m$reef.section,
-        main = "Miocene: comparison between reef sections",
-        xlab = "reef section", ylab= "mean growth rate (mm / year)")
+        #main = "Miocene: comparison between reef sections",
+        xlab = "reef section", ylab= "mean growth rate (mm / year)", col=cols3,
+        names = c("back reef (6)", "reef front (10)", "proximal slope (5)"))
 
 #Test geht nicht?  --> Gruppen müssen gleich lang sein! Und Vergleich geht nur mit 2 Gruppen! -->Kruskal test
 #wilcox.test(o$mean.growth ~ o$reef.section)
@@ -164,9 +176,14 @@ cols <- c("cadetblue1", "cyan4", "cadetblue1", "cyan4", "olivedrab3", "olivedrab
 
 
 #x11()
+svg("ol.mio.reefsections.svg", w=8, h=6)
 boxplot(ol.mio$mean.growth ~  ol.mio$time + ol.mio$reef.section, col=cols,
-        main = "Comparison between Oligocene and Miocene: reef sections",
-        xlab = "time : reef section", ylab= "mean growth rate (mm / year)", cex.main=3.0, cex.lab=3.0, cex.axis=1.2)
+        #main = "Comparison between Oligocene and Miocene: reef sections",
+        names = c("Oligocene back reef (12)","Miocene back reef (6)", "Oligocene reef flat (3)", "Miocene reef flat (0)",
+                  "Oligocene reef front (16)", "Miocene reef front (10)", "Oligocene proximal slope (8)", "Miocene proximal slope (5)"),
+        xlab = "time : reef section", ylab= "mean growth rate (mm / year)", cex.main=1.0, cex.lab=1.0, cex.axis=0.28)
+dev.off()
+
 
 
 #option to show several graphs in one window
@@ -203,11 +220,12 @@ kruskal.test(ol.mio$mean.growth ~  ol.mio$reef.section)
 #correcting the order for the x axis
 ol.mio$time<- factor(ol.mio$time, levels = c("Oligocene", "Miocene"))
 
+cols4<- c("goldenrod1","yellow")
 
 #boxplot
 boxplot(ol.mio$mean.growth[ol.mio$genus=="Porites"] ~ ol.mio$time[ol.mio$genus=="Porites"],
-        main = "Comparison between Oligocene and Miocene: Porites",
-        xlab = "time", ylab= "mean growth rate (mm / year)")
+        #main = "Comparison between Oligocene and Miocene: Porites",
+        col=cols4, names=c("Oligocene (11)", "Miocene (21)"), xlab = "time", ylab= "mean growth rate (mm / year)")
 
 
 
@@ -237,10 +255,13 @@ wilcox.test(ol.mio$mean.growth[ol.mio$genus=="Porites"] ~ ol.mio$time[ol.mio$gen
 #correcting the order for the x axis
 ol.mio.mo$time<- factor(ol.mio.mo$time, levels = c("Oligocene", "Miocene", "modern"))
 
+cols5<- c("goldenrod1","yellow", "seagreen2")
+
 #boxplot
 boxplot(ol.mio.mo$mean.growth ~ ol.mio.mo$time,
-        main = "Comparison between Oligocene, Miocene and modern",
-        xlab = "time", ylab= "mean growth rate (mm / year)")
+        #main = "Comparison between Oligocene, Miocene and modern",
+        xlab = "time", ylab= "mean growth rate (mm / year)", names=c("Oligocene (39)", "Miocene (21)", "Modern (1.514)"),
+        col=cols5, outline=FALSE)
 
 
 #geht nicht, siehe oben
