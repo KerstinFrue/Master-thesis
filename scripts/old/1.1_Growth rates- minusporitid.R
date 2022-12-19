@@ -15,20 +15,20 @@ setwd("C:/Users/Kerry/Desktop/Master-thesis")
 #library(readr)
 #write.csv(ct_growthrate, "C:/Users/Kerry/Desktop/Master-thesis/data/growth rates//modern growth rates.csv", row.names=FALSE, quote=F)
 
-modern.data<-read.csv("C:/Users/Kerry/Desktop/Master-thesis/data/growth rates/mean growth rates modern reduced genera.csv")
+modern.data<-read.csv("C:/Users/Kerry/Desktop/Master-thesis/data/growth rates/mean growth rates modern.csv")
 
 
 
 # Oligocene and Miocene data ----------------------------------------------
 
-ol.mio<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/data/growth rates/mean growth rates Oligocene Miocene.csv")
-o <- subset(ol.mio, time=="Oligocene")
+ol.mio.mp<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/data/growth rates/mean growth rates Oligocene Miocene minus poritid.csv")
+o.mp <- subset(ol.mio.mp, time=="Oligocene")
 #slope: Favites data (1 specimen, only 2 measurements) was left out (very big growth rate)
 
-m <- subset(ol.mio, time=="Miocene")
+m.mp <- subset(ol.mio.mp, time=="Miocene")
 
 #alldata
-ol.mio.mo<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/data/growth rates/mean growth rates Oligocene Miocene modern.csv")
+ol.mio.mo.mp<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/data/growth rates/mean growth rates Oligocene Miocene modern minus poritid.csv")
 
 
 
@@ -51,23 +51,23 @@ ol.mio.mo<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/data/growth rates/mea
 #--------------------------------------------------------------------------
 
 #correcting the order for the x axis
-o$reef.section<- factor(o$reef.section, levels = c("back reef", "reef flat", "reef front", "proximal slope"))
+o.mp$reef.section<- factor(o.mp$reef.section, levels = c("back reef", "reef front", "proximal slope"))
 
 #color vector for distinguishing groups
-cols1 <- c("cadetblue1", "cyan4", "olivedrab3", "goldenrod1")
+cols1 <- c("cadetblue1", "olivedrab3", "goldenrod1")
 
 
-#boxplot 12 3 16 8
-boxplot(o$mean.growth~o$reef.section,
+#boxplot
+boxplot(o.mp$mean.growth~o.mp$reef.section,
         #main = "Oligocene: comparison between reef sections",
         col=cols1, xlab = "reef section", ylab= "mean growth rate (mm / year)",
-        names = c("back reef", "reef flat", "reef front ", "proximal slope"))
+        names = c("back reef (12)", "reef front (9)", "proximal slope (1)"))
 
-#Test geht nicht? --> Gruppen m?ssen gleich lang sein! Und Vergleich geht nur mit 2 Gruppen! -->Kruskal test
-#wilcox.test(o$mean.growth~o$reef.section)
+#Test geht nicht? --> Gruppen m.müssen gleich lang sein! Und Vergleich geht nur mit 2 Gruppen! -->Kruskal test
+#wilcox.test(o.mp$mean.growth~o.mp$reef.section)
 
 #--> Kruskal-test, whether the means vary between the Oligocene reef sections???
-kruskal.test(o$mean.growth~o$reef.section)
+kruskal.test(o.mp$mean.growth~o.mp$reef.section)
 
 
 
@@ -90,25 +90,25 @@ kruskal.test(o$mean.growth~o$reef.section)
 #--------------------------------------------------------------------------------------------------
 
 #correcting the order for the x axis
-o$genus<- factor(o$genus, levels = c("Porites", "Actinacis", "Poritid", "Tarbellastraea", "Pavona?"))
+o.mp$genus<- factor(o.mp$genus, levels = c("Porites", "Actinacis", "Tarbellastraea", "Pavona?"))
 
-cols2<-c("coral","coral1","coral2", "coral4", "coral1")
+cols2<-c("coral","coral1","coral3","coral4")
 
-#boxplot 10 6 17 2 2
-boxplot(o$mean.growth~o$genus,
+#boxplot
+boxplot(o.mp$mean.growth~o.mp$genus,
         #main = "Oligocene: comparison between genera",
-        col=cols2, xlab = "genus", ylab = "mean growth rate (mm / year)", names =c("Porites", "Actinacis", "Poritid", "Tarbellastraea", "Pavona?"))
+        col=cols2, xlab = "genus", ylab = "mean growth rate (mm / year)", names =c("Porites (10)", "Actinacis (6)", "Tarbellastraea (2)", "Pavona? (2)"))
 
-#Test geht nicht?  --> Gruppen mÃ¼ssen gleich lang sein! Und Vergleich geht nur mit 2 Gruppen! -->Kruskal test
-#wilcox.test(o$mean.growth~o$reef.section)
+#Test geht nicht?  --> Gruppen m.müssen gleich lang sein! Und Vergleich geht nur mit 2 Gruppen! -->Kruskal test
+#wilcox.test(o.mp$mean.growth~o.mp$reef.section)
 
-kruskal.test(o$mean.growth ~ o$genus)
+kruskal.test(o.mp$mean.growth ~ o.mp$genus)
 
 
 
 # RESULTS ---------------------------------------------------------------
 #Porites and Poritids do not show similar growth --> should not fuse them!
-#Kruskal-test: p-value 0.02349, is SMALLER than 0,05--> ??? PROBLEM
+#Kruskal-test: p-value 0.2349, is SMALLER than 0,05--> ??? PROBLEM
 
 
 
@@ -129,20 +129,20 @@ kruskal.test(o$mean.growth ~ o$genus)
 #----------------------------------------------------------------------------------------------
 
 #correcting the order for the x axis
-m$reef.section<- factor(m$reef.section, levels = c("back reef", "reef front", "proximal slope"))
+m.mp$reef.section<- factor(m.mp$reef.section, levels = c("back reef", "reef front", "proximal slope"))
 
-cols3 <- c("cadetblue1", "olivedrab", "yellow")
+cols3 <- c("cyan4", "olivedrab", "yellow")
 
-#boxplot 6 10 5
-boxplot(m$mean.growth~m$reef.section,
+#boxplot 
+boxplot(m.mp$mean.growth~m.mp$reef.section,
         #main = "Miocene: comparison between reef sections",
         xlab = "reef section", ylab= "mean growth rate (mm / year)", col=cols3,
-        names = c("back reef", "reef front ", "proximal slope"))
+        names = c("back reef (6)", "reef front (10)", "proximal slope (5)"))
 
-#Test geht nicht?  --> Gruppen mÃ¼ssen gleich lang sein! Und Vergleich geht nur mit 2 Gruppen! -->Kruskal test
-#wilcox.test(o$mean.growth ~ o$reef.section)
+#Test geht nicht?  --> Gruppen m.mpüssen gleich lang sein! Und Vergleich geht nur mit 2 Gruppen! -->Kruskal test
+#wilcox.test(o.mp$mean.growth ~ o.mp$reef.section)
 
-kruskal.test(m$mean.growth ~ m$reef.section)
+kruskal.test(m.mp$mean.growth ~ m.mp$reef.section)
 
 
 
@@ -176,22 +176,22 @@ kruskal.test(m$mean.growth ~ m$reef.section)
 #---------------------------------------------------------------------------------------
 
 #correcting the order for the x axis
-ol.mio$time<- factor(ol.mio$time, levels = c("Oligocene", "Miocene"))
-ol.mio$reef.section<- factor(ol.mio$reef.section, levels = c("back reef", "reef flat", "reef front", "proximal slope"))
+ol.mio.mp$time<- factor(ol.mio.mp$time, levels = c("Oligocene", "Miocene"))
+ol.mio.mp$reef.section<- factor(ol.mio.mp$reef.section, levels = c("back reef", "reef front", "proximal slope"))
 
 
 #color vector for distinguishing groups
-cols <- c("cadetblue1", "cyan4", "cadetblue1", "cyan4", "olivedrab3", "olivedrab", "yellow", "goldenrod1")
+cols <- c("cadetblue1", "cadetblue1", "olivedrab3", "olivedrab", "yellow", "goldenrod1")
 
 
-#boxplot 12 6 3 0 16 10 8 5
+
 #x11()
-#svg("ol.mio.reefsections.svg", w=8, h=6)
-boxplot(ol.mio$mean.growth ~  ol.mio$time + ol.mio$reef.section, col=cols,
+#svg("ol.mio.mp.reefsections.mp.svg", w=8, h=6)
+boxplot(ol.mio.mp$mean.growth ~  ol.mio.mp$time + ol.mio.mp$reef.section, col=cols,
         #main = "Comparison between Oligocene and Miocene: reef sections",
-        names = c("Oligocene back reef","Miocene back reef", "Oligocene reef flat", "Miocene reef flat",
-                  "Oligocene reef front", "Miocene reef front", "Oligocene proximal slope", "Miocene proximal slope"),
-        xlab = "time & reef section", ylab= "mean growth rate (mm / year)", cex.main=1.0, cex.lab=1.0, cex.axis=1.0)
+        names = c("Oligocene back reef (12)","Miocene back reef (6)",
+                  "Oligocene reef front (9)", "Miocene reef front (10)", "Oligocene proximal slope (1)", "Miocene proximal slope (5)"),
+        xlab = "time : reef section", ylab= "mean growth rate (mm / year)", cex.main=1.0, cex.lab=1.0, cex.axis=0.5)
 #dev.off()
 
 
@@ -199,15 +199,15 @@ boxplot(ol.mio$mean.growth ~  ol.mio$time + ol.mio$reef.section, col=cols,
 #option to show several graphs in one window
 #windows(h=8, w=6)
 #op <- par(mfrow=c(2,1))
-#boxplot(o$mean.growth ~ o$reef.section)
-#boxplot(m$mean.growth ~ m$reef.section)
+#boxplot(o.mp$mean.growth ~ o.mp$reef.section)
+#boxplot(m.mp$mean.growth ~ m.mp$reef.section)
 #par(op)
 
 
 #Test does not work, see notes above
 #wilcox.test()
 
-kruskal.test(ol.mio$mean.growth ~  ol.mio$reef.section)
+kruskal.test(ol.mio.mp$mean.growth ~  ol.mio.mp$reef.section)
 
 # RESULTS -----------------------------------------------------------------
 #growth rate is generally higher in the Oligocene throughout all sections
@@ -228,23 +228,23 @@ kruskal.test(ol.mio$mean.growth ~  ol.mio$reef.section)
 #----------------------------------------------------------------------------------
 
 #correcting the order for the x axis
-ol.mio$time<- factor(ol.mio$time, levels = c("Oligocene", "Miocene"))
+ol.mio.mp$time<- factor(ol.mio.mp$time, levels = c("Oligocene", "Miocene"))
 
 cols4<- c("goldenrod1","yellow")
 
-#boxplot 11 21
-boxplot(ol.mio$mean.growth[ol.mio$genus=="Porites"] ~ ol.mio$time[ol.mio$genus=="Porites"],
+#boxplot
+boxplot(ol.mio.mp$mean.growth[ol.mio.mp$genus=="Porites"] ~ ol.mio.mp$time[ol.mio.mp$genus=="Porites"],
         #main = "Comparison between Oligocene and Miocene: Porites",
-        col=cols4, names=c("Oligocene", "Miocene"), xlab = "time", ylab= "mean growth rate (mm / year)")
+        col=cols4, names=c("Oligocene (10)", "Miocene (21)"), xlab = "time", ylab= "mean growth rate (mm / year)")
 
 
 
-wilcox.test(ol.mio$mean.growth[ol.mio$genus=="Porites"] ~ ol.mio$time[ol.mio$genus=="Porites"])
+wilcox.test(ol.mio.mp$mean.growth[ol.mio.mp$genus=="Porites"] ~ ol.mio.mp$time[ol.mio.mp$genus=="Porites"])
 
-#kruskal.test(ol.mio$mean.growth[ol.mio$genus=="Porites"] ~ ol.mio$time[ol.mio$genus=="Porites"])
+#kruskal.test(ol.mio.mp$mean.growth[ol.mio.mp$genus=="Porites"] ~ ol.mio.mp$time[ol.mio.mp$genus=="Porites"])
 
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!very useful function!!!!!!!!!!!!!!!!!!!!!!!!!
-#summary (ol.mio)
+#summary (ol.mio.mp)
 
 # RESULTS -----------------------------------------------------------------
 #Wilcox test: p value is 1,504 e-06 is way SMALLER than 0,05 --> ??? PROBLEM
@@ -263,22 +263,22 @@ wilcox.test(ol.mio$mean.growth[ol.mio$genus=="Porites"] ~ ol.mio$time[ol.mio$gen
 
 
 #correcting the order for the x axis
-ol.mio.mo$time<- factor(ol.mio.mo$time, levels = c("Oligocene", "Miocene", "modern"))
+ol.mio.mo.mp$time<- factor(ol.mio.mo.mp$time, levels = c("Oligocene", "Miocene", "modern"))
 
 cols5<- c("goldenrod1","yellow", "seagreen2")
 
-#boxplot 39 21 429
-boxplot(ol.mio.mo$mean.growth ~ ol.mio.mo$time,
+#boxplot
+boxplot(ol.mio.mo.mp$mean.growth ~ ol.mio.mo.mp$time,
         #main = "Comparison between Oligocene, Miocene and modern",
-        xlab = "time", ylab= "mean growth rate (mm / year)", names=c("Oligocene", "Miocene", "Modern"),
+        xlab = "time", ylab= "mean growth rate (mm / year)", names=c("Oligocene (22)", "Miocene (21)", "Modern (1.514)"),
         col=cols5, outline=FALSE)
 
 
 #geht nicht, siehe oben
-#wilcox.test(ol.mio.mo$mean.growth~ol.mio.mo$time)
+#wilcox.test(ol.mio.mo.mp$mean.growth~ol.mio.mo.mp$time)
 
 
-kruskal.test(ol.mio.mo$mean.growth ~ ol.mio.mo$time)
+kruskal.test(ol.mio.mo.mp$mean.growth ~ ol.mio.mo.mp$time)
 
 
 
@@ -299,37 +299,29 @@ kruskal.test(ol.mio.mo$mean.growth ~ ol.mio.mo$time)
 
 
 
-
-
-
-
-
-
-
 # 5 ANOVA tests -------------------------------------------------------------
 
 #Oligocene
-#5.1 growth rate ~ reef section
-an.o.section<-aov(o$mean.growth ~ o$reef.section)
-summary(an.o.section)
+#growth rate ~ reef section
+an.o.mp.section<-aov(o.mp$mean.growth ~ o.mp$reef.section)
+summary(an.o.mp.section)
 
-
-
-# 5.2 growth rate ~ genus
-an.o.genus<-aov(o$mean.growth ~ o$genus)
-summary(an.o.genus)
+#growth rate ~ genus
+an.o.mp.genus<-aov(o.mp$mean.growth ~ o.mp$genus)
+summary(an.o.mp.genus)
 
 
 #--------------------------------------------------------------------------
 
 
-# 5.3 Miocene
+#Miocene
 #growth rate ~ reef section
-an.m.section<-aov(m$mean.growth ~ m$reef.section)
-summary(an.m.section)
-
+an.m.mp.section<-aov(m.mp$mean.growth ~ m.mp$reef.section)
+summary(an.m.mp.section)
 
 #growth rate ~ genus                                DOES NOT MAKE SENSE (only PORITES)
-#an.m.genus<-aov(m$mean.growth ~ m$genus)
-#summary(an.m.genus)
+#an.m.mp.genus<-aov(m.mp$mean.growth ~ m.mp$genus)
+#summary(an.m.mp.genus)
+
+
 
