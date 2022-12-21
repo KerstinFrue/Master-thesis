@@ -181,7 +181,7 @@ ol.mio$reef.section<- factor(ol.mio$reef.section, levels = c("back reef", "reef 
 
 
 #color vector for distinguishing groups
-cols <- c("cadetblue1", "cyan4", "cadetblue1", "cyan4", "olivedrab3", "olivedrab", "yellow", "goldenrod1")
+cols <- c("cadetblue1", "cadetblue3", "cyan4", "cyan4", "olivedrab3", "olivedrab", "yellow", "goldenrod1")
 
 
 #boxplot 12 6 3 0 16 10 8 5
