@@ -2257,5 +2257,6 @@ rug$time.reef.section<- factor(rug$time.reef.section, levels = c("Oligocene reef
 #PROBLEM cant make dots (changed class of time.reef.section from character to a factor)?
 
 plot(rug$time.reef.section,rug$mean_rugosity, type="5",
-     ylab="rugosity", xlab="time & reef section", main="Rugosity (Oligocene and Miocene)")
+     ylab="rugosity", xlab="time & reef section", #main="Rugosity (Oligocene and Miocene)"
+)
   
