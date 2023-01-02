@@ -32,7 +32,7 @@ ct<-fetch("CoralTraitDB")
 #subsetting for skeletal density data
 d<- subset(ct, trait_name=="Skeletal density")
 
-#subsetting for species Porites
+#subsetting for GENUS Porites
 d.por<-d[grepl("Porites", d$specie_name),]
 
 d.por<-data.frame(d.por$trait_name, d.por$specie_name, d.por$value, d.por$standard_unit,
@@ -75,16 +75,14 @@ d.por<-data.frame(d.por$trait_name, d.por$specie_name, d.por$value, d.por$standa
 #subsetting for growth rate data
 gr<- subset(ct, trait_name=="Growth rate")
 
-#subsetting for species Porites
+#subsetting for GENUS Porites
 gr.por<-gr[grepl("Porites", gr$specie_name),]
 
 
-#subsetting for standard unit of mm yr^-1
-#PROBLEM does not work, why??
+#subsetting for standard unit of mm yr^-1 and 
 
-gr.por<-gr.por[grepl("mm yr^-1", gr.por$standard_unit),]
-
-
+gr.por<- subset (gr.por, standard_unit=="mm yr^-1")
+gr.por<- subset (gr.por, value_type=="mean")
 
 gr.por<-data.frame(gr.por$trait_name, gr.por$specie_name, gr.por$value, gr.por$standard_unit,
                   gr.por$value_type, gr.por$location_name, gr.por$methodology_name)
