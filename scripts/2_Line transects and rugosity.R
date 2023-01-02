@@ -1,7 +1,7 @@
 setwd("C:/Users/Kerry/Desktop/Master-thesis")
 
 #0 Preparing data ---------------------------------------------
-line<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/data/line transects/all line transect data.csv")
+line<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/R/data/line transects/all line transect data.csv")
 
 #summary(line)
 library (dplyr)
@@ -2231,7 +2231,7 @@ LCT4.data<-data.frame(LCT4,LCT4.act, LCT4.ast,LCT4.bio,LCT4.biv,LCT4.biv.b,
 
 # plotting ----------------------------------------------------------------
 
-sp.cover<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/data/line transects/means cover data.csv")
+sp.cover<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/R/data/line transects/means cover data.csv")
 
 
 
@@ -2246,7 +2246,7 @@ sp.cover<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/data/line transects/me
 
 #--------------------------------------------------------------------------
 
-rug<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/data/rugosity/mean rugosity.csv")
+rug<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/R/data/rugosity/mean rugosity.csv")
 
 #summary(rug)
 rug$time.reef.section<-as.factor(rug$time.reef.section)

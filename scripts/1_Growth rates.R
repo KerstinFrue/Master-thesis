@@ -13,16 +13,16 @@ setwd("C:/Users/Kerry/Desktop/Master-thesis")
 #ct_growthrate<- subset(ct, trait_name=="Growth rate")
 #ct_growthrate<-data.frame(ct_growthrate$specie_name, ct_growthrate$trait_name, ct_growthrate$value)
 #library(readr)
-#write.csv(ct_growthrate, "C:/Users/Kerry/Desktop/Master-thesis/data/growth rates//modern growth rates.csv", row.names=FALSE, quote=F)
+#write.csv(ct_growthrate, "C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates//modern growth rates.csv", row.names=FALSE, quote=F)
 
 
 
 # Growth rate data ----------------------------------------------
 # alldata
-ol.mio<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/data/growth rates/mean growth rates Oligocene Miocene Modern.csv")
+ol.mio<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates/mean growth rates Oligocene Miocene Modern.csv")
 
 # Oligocene and Miocene data only
-ol.mio<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/data/growth rates/mean growth rates Oligocene Miocene.csv")
+ol.mio<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates/mean growth rates Oligocene Miocene.csv")
 ol <- subset(ol.mio, time=="Oligocene")
 #slope: Favites data (1 specimen, only 2 measurements) was left out (very big growth rate)
 

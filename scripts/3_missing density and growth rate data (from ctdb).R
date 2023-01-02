@@ -35,10 +35,11 @@ d<- subset(ct, trait_name=="Skeletal density")
 #subsetting for GENUS Porites
 d.por<-d[grepl("Porites", d$specie_name),]
 
+
 d.por<-data.frame(d.por$trait_name, d.por$specie_name, d.por$value, d.por$standard_unit,
                   d.por$value_type, d.por$location_name, d.por$methodology_name)
 
-
+write.csv2(d.por,"C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates and density from CTDB/density_porites.csv", row.names = FALSE)
 
 #-------------------------------------------------------------------------
 # 1.2 Skeletal density Actinacis------------------------------------------
@@ -48,20 +49,14 @@ d.por<-data.frame(d.por$trait_name, d.por$specie_name, d.por$value, d.por$standa
 
 
 #--------------------------------------------------------------------------
-# 1.3 Skeletal density Hydnophora------------------------------------------
+# 1.3 Skeletal density Hydnophora------------too little data------------------------------
 #--------------------------------------------------------------------------
 
 #Hydnophora microconos                     1.37 g cm^-3   mean value
 
 
 
-
-
-
-
-
-
-
+---------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -87,7 +82,7 @@ gr.por<- subset (gr.por, value_type=="mean")
 gr.por<-data.frame(gr.por$trait_name, gr.por$specie_name, gr.por$value, gr.por$standard_unit,
                   gr.por$value_type, gr.por$location_name, gr.por$methodology_name)
 
-
+write.csv(gr.por,"C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates and density from CTDB/mean_growth_porites.csv", row.names = FALSE)
 
 #--------------------------------------------------------------------------
 # 2.2 Growth rates Actinacis-----------------------------------------------
@@ -100,7 +95,7 @@ gr.por<-data.frame(gr.por$trait_name, gr.por$specie_name, gr.por$value, gr.por$s
 
 
 #--------------------------------------------------------------------------
-# 2.3 Growth rates Hydnophora----------------------------------------------
+# 2.3 Growth rates Hydnophora---------------too little data in the CTDB-------------------------------
 #--------------------------------------------------------------------------
 
 
