@@ -19,7 +19,7 @@ setwd("C:/Users/Kerry/Desktop/Master-thesis")
 
 # Growth rate data ----------------------------------------------
 # alldata
-ol.mio<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates/mean growth rates Oligocene Miocene Modern.csv")
+ol.mio.mo<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates/mean growth rates Oligocene Miocene Modern.csv")
 
 # Oligocene and Miocene data only
 ol.mio<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates/mean growth rates Oligocene Miocene.csv")
@@ -90,14 +90,14 @@ kruskal.test(ol$mean.growth~ol$reef.section)
 #--------------------------------------------------------------------------------------------------
 
 #correcting the order for the x axis
-ol$genus<- factor(ol$genus, levels = c("Porites", "Actinacis", "Poritid", "Tarbellastraea", "Pavona?"))
+ol$genus<- factor(ol$genus, levels = c("Porites", "Actinacis", "Poritid", "Tarbellastraea", "Pavona"))
 
 cols2<-c("coral","coral1","coral2", "coral4", "coral1")
 
 #boxplot 10 6 17 2 2
 boxplot(ol$mean.growth~ol$genus,
         #main = "Oligocene: comparison between genera",
-        col=cols2, xlab = "genus", ylab = "mean growth rate (mm / year)", names =c("Porites", "Actinacis", "Poritid", "Tarbellastraea", "Pavona?"))
+        col=cols2, xlab = "genus", ylab = "mean growth rate (mm / year)", names =c("Porites", "Actinacis", "Poritid", "Tarbellastraea", "Pavona"))
 
 #Test geht nicht?  --> Gruppen mioüssen gleich lang sein! Und Vergleich geht nur mit 2 Gruppen! -->Kruskal test
 #wilcox.test(ol$mean.growth~ol$reef.section)
@@ -263,7 +263,7 @@ wilcox.test(ol.mio$mean.growth[ol.mio$genus=="Porites"] ~ ol.mio$time[ol.mio$gen
 
 
 #correcting the order for the x axis
-ol.mio.mo.mo$time<- factor(ol.mio.mo$time, levels = c("Oligocene", "Miocene", "modern"))
+ol.mio.mo$time<- factor(ol.mio.mo$time, levels = c("Oligocene", "Miocene", "modern"))
 
 cols5<- c("goldenrod1","yellow", "seagreen2")
 

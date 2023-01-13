@@ -5,7 +5,7 @@
    viewBox="0 0 576 432"
    version="1.1"
    id="svg558"
-   sodipodi:docname="ol.mio.reefsections1.svg"
+   sodipodi:docname="3.1_Oligocene Miocene reef sections.svg"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -25,10 +25,10 @@
      inkscape:zoom="1.4097222"
      inkscape:cx="384.11823"
      inkscape:cy="288.35468"
-     inkscape:window-width="1920"
-     inkscape:window-height="1001"
+     inkscape:window-width="2400"
+     inkscape:window-height="1271"
      inkscape:window-x="-9"
-     inkscape:window-y="1341"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="surface16" />
   <defs
@@ -383,26 +383,26 @@
     <rect
        x="61.714287"
        y="522.08868"
-       width="78.333649"
-       height="18.910957"
+       width="60.124537"
+       height="15.356211"
        id="rect3513" />
     <rect
        x="61.714287"
        y="522.08868"
-       width="69.229095"
-       height="19.305929"
+       width="51.887083"
+       height="15.751183"
        id="rect3513-3" />
     <rect
        x="61.714287"
        y="522.08868"
-       width="77.466553"
-       height="18.515985"
+       width="62.725843"
+       height="14.961239"
        id="rect3513-3-3" />
     <rect
        x="61.714287"
        y="522.08868"
-       width="44.516727"
-       height="20.490845"
+       width="36.279271"
+       height="16.936099"
        id="rect3513-3-3-4" />
     <rect
        x="165.99014"
@@ -456,8 +456,8 @@
   <g
      id="surface16">
     <rect
-       x="-6.916256"
-       y="8.5123148"
+       x="-6.2226558"
+       y="-0.035156298"
        width="576"
        height="432"
        style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -469,7 +469,7 @@
        style="font-size:12px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect64657)"><tspan
          x="165.99023"
          y="140.05148"
-         id="tspan4001">Oligocene</tspan></text>
+         id="tspan21360">Oligocene</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.75,0,0,0.75,70.438308,136.32774)"
@@ -477,7 +477,7 @@
        style="font-size:12px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect64657-1)"><tspan
          x="165.99023"
          y="140.05148"
-         id="tspan4003">Oligocene</tspan></text>
+         id="tspan21362">Oligocene</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.75,0,0,0.75,20.960479,4.9188804)"
@@ -485,7 +485,7 @@
        style="font-size:12px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect64657-7)"><tspan
          x="165.99023"
          y="140.05148"
-         id="tspan4005">Miocene</tspan></text>
+         id="tspan21364">Miocene</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.75,0,0,0.75,244.81795,240.80766)"
@@ -493,7 +493,7 @@
        style="font-size:12px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect64657-7-7)"><tspan
          x="165.99023"
          y="140.05148"
-         id="tspan4007">Miocene</tspan></text>
+         id="tspan21366">Miocene</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.75,0,0,0.75,358.13815,46.088449)"
@@ -501,7 +501,7 @@
        style="font-size:12px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect64657-7-7-6)"><tspan
          x="165.99023"
          y="140.05148"
-         id="tspan4009">Miocene</tspan></text>
+         id="tspan21368">Miocene</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.75,0,0,0.75,133.62583,137.06383)"
@@ -509,15 +509,15 @@
        style="font-size:12px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect64657-7-2)"><tspan
          x="165.99023"
          y="140.05148"
-         id="tspan4011">Miocene
+         id="tspan21370">Miocene
 </tspan><tspan
          x="165.99023"
          y="155.05148"
-         id="tspan4013">missing
+         id="tspan21372">missing
 </tspan><tspan
          x="165.99023"
          y="170.05148"
-         id="tspan4015">data</tspan></text>
+         id="tspan21374">data</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.75,0,0,0.75,184.29052,239.53956)"
@@ -525,7 +525,7 @@
        style="font-size:12px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect64657-17)"><tspan
          x="165.99023"
          y="140.05148"
-         id="tspan4017">Oligocene</tspan></text>
+         id="tspan21376">Oligocene</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.75,0,0,0.75,296.54668,45.884391)"
@@ -533,41 +533,41 @@
        style="font-size:12px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect64657-0)"><tspan
          x="165.99023"
          y="140.05148"
-         id="tspan4019">Oligocene</tspan></text>
+         id="tspan21378">Oligocene</tspan></text>
     <text
        xml:space="preserve"
-       transform="matrix(1.2271234,0,0,1.3469814,371.98663,-332.7674)"
+       transform="matrix(1.2271234,0,0,1.3469814,377.83885,-331.70336)"
        id="text3511-5-1-5"
-       style="font-size:16px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect3513-3-3-4)"><tspan
+       style="font-size:12.445px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect3513-3-3-4)"><tspan
          x="61.714844"
-         y="536.68518"
-         id="tspan4021">slope</tspan></text>
+         y="533.44184"
+         id="tspan21380">slope</tspan></text>
     <text
        xml:space="preserve"
-       transform="matrix(1.2271234,0,0,1.3469814,238.8885,-332.30615)"
+       transform="matrix(1.2271234,0,0,1.3469814,246.33678,-330.17807)"
        id="text3511-5-1"
-       style="font-size:16px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect3513-3-3)"><tspan
+       style="font-size:12.445px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect3513-3-3)"><tspan
          x="61.714844"
-         y="536.68518"
-         id="tspan4023">reef front
+         y="533.44184"
+         id="tspan21382">reef front
 </tspan></text>
     <text
        xml:space="preserve"
-       transform="matrix(1.2271234,0,0,1.3469814,132.80646,-331.77414)"
+       transform="matrix(1.2271234,0,0,1.3469814,140.78676,-329.64606)"
        id="text3511-5"
-       style="font-size:16px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect3513-3)"><tspan
+       style="font-size:12.445px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect3513-3)"><tspan
          x="61.714844"
-         y="536.68518"
-         id="tspan4025">reef flat
+         y="533.44184"
+         id="tspan21384">reef flat
 </tspan></text>
     <text
        xml:space="preserve"
-       transform="matrix(1.2271234,0,0,1.3469814,13.005412,-332.83817)"
+       transform="matrix(1.2271234,0,0,1.3469814,24.177826,-331.24211)"
        id="text3511"
-       style="font-size:16px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect3513)"><tspan
+       style="font-size:12.445px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect3513)"><tspan
          x="61.714844"
-         y="536.68518"
-         id="tspan4027">back reef</tspan></text>
+         y="533.44184"
+         id="tspan21386">back reef</tspan></text>
     <path
        style="fill:#97f5ff;fill-opacity:1;fill-rule:nonzero;stroke:none"
        d="M 82.699219,268.94531 H 127.76563 V 189.70703 H 82.699219 Z m 0,0"
