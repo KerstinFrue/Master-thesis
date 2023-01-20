@@ -23,8 +23,8 @@
      inkscape:document-units="pt"
      showgrid="false"
      inkscape:zoom="1.4097222"
-     inkscape:cx="384.11823"
-     inkscape:cy="288.35468"
+     inkscape:cx="579.90149"
+     inkscape:cy="250.04927"
      inkscape:window-width="2400"
      inkscape:window-height="1271"
      inkscape:window-x="-9"
@@ -33,6 +33,61 @@
      inkscape:current-layer="surface16" />
   <defs
      id="defs133">
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect16859"
+       is_visible="true"
+       lpeversion="1"
+       steps="1"
+       threshold="0.000909091"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect16855"
+       is_visible="true"
+       lpeversion="1"
+       steps="1"
+       threshold="0.000909091"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect11865"
+       is_visible="true"
+       lpeversion="1"
+       steps="1"
+       threshold="0.000909091"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect11861"
+       is_visible="true"
+       lpeversion="1"
+       steps="1"
+       threshold="0.000909091"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect11791"
+       is_visible="true"
+       lpeversion="1"
+       steps="1"
+       threshold="0.000909091"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false" />
     <g
        id="g131">
       <symbol
@@ -452,6 +507,12 @@
        width="65.970451"
        height="15.605912"
        id="rect64657-7-7-6" />
+    <rect
+       x="61.714287"
+       y="522.08868"
+       width="60.124538"
+       height="15.356211"
+       id="rect3513-5" />
   </defs>
   <g
      id="surface16">
@@ -469,7 +530,7 @@
        style="font-size:12px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect64657)"><tspan
          x="165.99023"
          y="140.05148"
-         id="tspan21360">Oligocene</tspan></text>
+         id="tspan1628">Oligocene</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.75,0,0,0.75,70.438308,136.32774)"
@@ -477,7 +538,7 @@
        style="font-size:12px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect64657-1)"><tspan
          x="165.99023"
          y="140.05148"
-         id="tspan21362">Oligocene</tspan></text>
+         id="tspan1630">Oligocene</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.75,0,0,0.75,20.960479,4.9188804)"
@@ -485,7 +546,7 @@
        style="font-size:12px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect64657-7)"><tspan
          x="165.99023"
          y="140.05148"
-         id="tspan21364">Miocene</tspan></text>
+         id="tspan1632">Miocene</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.75,0,0,0.75,244.81795,240.80766)"
@@ -493,7 +554,7 @@
        style="font-size:12px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect64657-7-7)"><tspan
          x="165.99023"
          y="140.05148"
-         id="tspan21366">Miocene</tspan></text>
+         id="tspan1634">Miocene</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.75,0,0,0.75,358.13815,46.088449)"
@@ -501,7 +562,7 @@
        style="font-size:12px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect64657-7-7-6)"><tspan
          x="165.99023"
          y="140.05148"
-         id="tspan21368">Miocene</tspan></text>
+         id="tspan1636">Miocene</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.75,0,0,0.75,133.62583,137.06383)"
@@ -509,15 +570,15 @@
        style="font-size:12px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect64657-7-2)"><tspan
          x="165.99023"
          y="140.05148"
-         id="tspan21370">Miocene
+         id="tspan1638">Miocene
 </tspan><tspan
          x="165.99023"
          y="155.05148"
-         id="tspan21372">missing
+         id="tspan1640">missing
 </tspan><tspan
          x="165.99023"
          y="170.05148"
-         id="tspan21374">data</tspan></text>
+         id="tspan1642">data</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.75,0,0,0.75,184.29052,239.53956)"
@@ -525,7 +586,7 @@
        style="font-size:12px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect64657-17)"><tspan
          x="165.99023"
          y="140.05148"
-         id="tspan21376">Oligocene</tspan></text>
+         id="tspan1644">Oligocene</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.75,0,0,0.75,296.54668,45.884391)"
@@ -533,7 +594,7 @@
        style="font-size:12px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect64657-0)"><tspan
          x="165.99023"
          y="140.05148"
-         id="tspan21378">Oligocene</tspan></text>
+         id="tspan1646">Oligocene</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(1.2271234,0,0,1.3469814,377.83885,-331.70336)"
@@ -541,7 +602,7 @@
        style="font-size:12.445px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect3513-3-3-4)"><tspan
          x="61.714844"
          y="533.44184"
-         id="tspan21380">slope</tspan></text>
+         id="tspan1648">slope</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(1.2271234,0,0,1.3469814,246.33678,-330.17807)"
@@ -549,7 +610,7 @@
        style="font-size:12.445px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect3513-3-3)"><tspan
          x="61.714844"
          y="533.44184"
-         id="tspan21382">reef front
+         id="tspan1650">reef front
 </tspan></text>
     <text
        xml:space="preserve"
@@ -558,8 +619,16 @@
        style="font-size:12.445px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect3513-3)"><tspan
          x="61.714844"
          y="533.44184"
-         id="tspan21384">reef flat
+         id="tspan1652">reef flat
 </tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(1.2271234,0,0,1.3469814,129.30413,-327.07186)"
+       id="text3511-56"
+       style="font-size:12.445px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect3513-5)"><tspan
+         x="61.714844"
+         y="533.44184"
+         id="tspan1654">back reef</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(1.2271234,0,0,1.3469814,24.177826,-331.24211)"
@@ -567,7 +636,7 @@
        style="font-size:12.445px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect3513)"><tspan
          x="61.714844"
          y="533.44184"
-         id="tspan21386">back reef</tspan></text>
+         id="tspan1656">back reef</tspan></text>
     <path
        style="fill:#97f5ff;fill-opacity:1;fill-rule:nonzero;stroke:none"
        d="M 82.699219,268.94531 H 127.76563 V 189.70703 H 82.699219 Z m 0,0"
@@ -1228,5 +1297,55 @@
        style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
        d="M 59.039063,358.55859 H 545.76172 V 59.039063 H 59.039063 Z m 0,0"
        id="path555" />
+    <path
+       style="fill:#99cc30;fill-opacity:1;stroke:#000000;stroke-width:0.567488;stroke-dashoffset:0.2244"
+       d="m 486.6207,369.57636 v -21.99015 h 29.08374 29.08375 v 21.99015 21.99015 H 515.70444 486.6207 Z"
+       id="path2943"
+       transform="scale(0.75)" />
+    <path
+       style="fill:#97f5ff;fill-opacity:1;stroke:#000000;stroke-width:0.567488;stroke-dashoffset:0.2244"
+       d="m 486.6207,416.03942 v -20.92611 h 29.08374 29.08375 v 20.92611 20.9261 H 515.70444 486.6207 Z"
+       id="path2982"
+       transform="scale(0.75)" />
+    <path
+       style="fill:#97f5ff;fill-opacity:1;stroke:#000000;stroke-width:0.567488;stroke-dashoffset:0.2244"
+       d="m 186.56158,424.90641 v -2.83744 h 29.08374 29.08375 v 2.83744 2.83744 h -29.08375 -29.08374 z"
+       id="path4891"
+       transform="scale(0.75)" />
+    <path
+       style="fill:#97f5ff;fill-opacity:1;stroke:#000000;stroke-width:0.200637;stroke-dashoffset:0.2244"
+       d="m 186.091,433.62714 v -2.50796 h 29.34319 29.34319 v 2.50796 2.50797 H 215.43419 186.091 Z"
+       id="path4969"
+       transform="scale(0.75)" />
+    <path
+       style="fill:#97f5ff;fill-opacity:1;stroke:#000000;stroke-width:0.200637;stroke-dashoffset:0.2244"
+       d="m 186.84339,424.97467 v -2.38257 h 28.7162 28.7162 v 2.38257 2.38256 h -28.7162 -28.7162 z"
+       id="path5008"
+       transform="scale(0.75)" />
+    <path
+       style="fill:#99cc30;fill-opacity:1;stroke:#000000;stroke-width:0.401274;stroke-dashoffset:0.2244"
+       d="m 487.0468,416.07139 v -20.31452 h 28.5908 28.5908 v 20.31452 20.31452 h -28.5908 -28.5908 z"
+       id="path6839"
+       transform="scale(0.75)" />
+    <path
+       style="fill:#ff8080;fill-opacity:1;stroke:#000000;stroke-width:0.100319;stroke-dashoffset:0.2244"
+       d="m 561.53336,382.52736 v -18.12005 h 29.46859 29.46859 v 18.12005 18.12005 h -29.46859 -29.46859 z"
+       id="path18458"
+       transform="scale(0.75)" />
+    <path
+       style="fill:#ff8080;fill-opacity:1;stroke:#000000;stroke-width:0.100319;stroke-dashoffset:0.2244"
+       d="m 561.53336,356.19373 v -5.07863 h 29.46859 29.46859 v 5.07863 5.07863 h -29.46859 -29.46859 z"
+       id="path18497"
+       transform="scale(0.75)" />
+    <path
+       style="fill:#ff8080;fill-opacity:1;stroke:#000000;stroke-width:0.100319;stroke-dashoffset:0.2244"
+       d="m 636.64691,396.50926 v -14.79699 h 29.46859 29.46859 v 14.79699 14.797 H 666.1155 636.64691 Z"
+       id="path18536"
+       transform="scale(0.75)" />
+    <path
+       style="fill:#ff8080;fill-opacity:1;stroke:#000000;stroke-width:0.100319;stroke-dashoffset:0.2244"
+       d="m 636.64691,419.89604 v -5.45483 h 29.46859 29.46859 v 5.45483 5.45482 H 666.1155 636.64691 Z"
+       id="path18575"
+       transform="scale(0.75)" />
   </g>
 </svg>

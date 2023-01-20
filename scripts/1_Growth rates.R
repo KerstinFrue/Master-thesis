@@ -41,9 +41,6 @@ mio <- subset(ol.mio, time=="Miocene")
 
 
 
-
-
-
 #--------------------------------------------------------------------------
 # 1.0 Oligocene -----------------------------------------------------------
 
@@ -54,7 +51,7 @@ mio <- subset(ol.mio, time=="Miocene")
 ol$reef.section<- factor(ol$reef.section, levels = c("back reef", "reef flat", "reef front", "proximal slope"))
 
 #color vector for distinguishing groups
-cols1 <- c("cadetblue1", "cyan4", "olivedrab3", "goldenrod1")
+cols1 <- c("cadetblue1", "cyan4", "olivedrab3", "coral1")
 
 
 #boxplot 12 3 16 8
@@ -105,6 +102,9 @@ boxplot(ol$mean.growth~ol$genus,
 kruskal.test(ol$mean.growth ~ ol$genus)
 
 
+#means of growth rates of certain genera
+mean(ol$mean.growth[ol$genus=="Pavona"])
+mean(ol$mean.growth[ol$genus=="Porites"])
 
 # RESULTS ---------------------------------------------------------------
 #Porites and Poritids do not show similar growth --> should not fuse them!
@@ -131,7 +131,7 @@ kruskal.test(ol$mean.growth ~ ol$genus)
 #correcting the order for the x axis
 mio$reef.section<- factor(mio$reef.section, levels = c("back reef", "reef front", "proximal slope"))
 
-cols3 <- c("cadetblue1", "olivedrab", "yellow")
+cols3 <- c("cadetblue1", "olivedrab3", "coral1")
 
 #boxplot 6 10 5
 boxplot(mio$mean.growth~mio$reef.section,
@@ -181,12 +181,12 @@ ol.mio$reef.section<- factor(ol.mio$reef.section, levels = c("back reef", "reef 
 
 
 #color vector for distinguishing groups
-cols <- c("cadetblue1", "cadetblue3", "cyan4", "cyan4", "olivedrab3", "olivedrab", "goldenrod1", "yellow")
+cols <- c("cadetblue1", "cadetblue1", "cyan4", "cyan4", "olivedrab3", "olivedrab3", "coral1", "coral1")
 
 
 #boxplot 12 6 3 0 16 10 8 5
 #x11()
-svg("ol.mio.reefsections1.svg", w=8, h=6)
+svg("ol.mio.reefsections12.svg", w=8, h=6)
 boxplot(ol.mio$mean.growth ~  ol.mio$time + ol.mio$reef.section, col=cols,
         #main = "Comparison between Oligocene and Miocene: reef sections",
         names = c("Oligocene back reef","Miocene back reef", "Oligocene reef flat", "Miocene reef flat",

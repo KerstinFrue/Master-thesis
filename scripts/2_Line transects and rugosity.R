@@ -1,7 +1,7 @@
 setwd("C:/Users/Kerry/Desktop/Master-thesis")
 
 #0 Preparing data ---------------------------------------------
-line<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/R/data/line transects/all line transect data.csv")
+line<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/R/data/line transects/all original line transect data.csv")
 
 #summary(line)
 library (dplyr)
@@ -43,8 +43,6 @@ VT1.glau<-(nrow(line %>% filter(transect_id == "VT1" & point_id == "Glauconite")
 VT1.hyd<-(nrow(line %>% filter(transect_id == "VT1" & point_id == "Hydnophora"))*100)/VT1
 #amount Montastrea
 VT1.mon<-(nrow(line %>% filter(transect_id == "VT1" & point_id == "Montastrea"))*100)/VT1
-#amount na
-VT1.na<-(nrow(line %>% filter(transect_id == "VT1" & point_id == "na"))*100)/VT1
 #amount Pavona
 VT1.pav<-(nrow(line %>% filter(transect_id == "VT1" & point_id == "Pavona"))*100)/VT1
 #amount Porites
@@ -64,10 +62,10 @@ VT1.tar<-(nrow(line %>% filter(transect_id == "VT1" & point_id == "Tarbellastrae
 
 
 VT1.data<-data.frame(VT1,VT1.act, VT1.ast,VT1.bio,VT1.biv,VT1.biv.b,
-                               VT1.cau,VT1.cca,VT1.cem,VT1.cor,VT1.cor.a,VT1.fav,VT1.glau,VT1.hyd,VT1.mon, VT1.na,VT1.pav,VT1.pd,
+                               VT1.cau,VT1.cca,VT1.cem,VT1.cor,VT1.cor.a,VT1.fav,VT1.glau,VT1.hyd,VT1.mon,VT1.pav,VT1.pd,
                                VT1.por,VT1.sed,VT1.sha,VT1.sid,VT1.sty,VT1.tar)
 
-##write.xlsx(x = VT1.data,"VT1.xlsx")
+write.xlsx(x = VT1.data,"VT1.xlsx")
 
 
 #--------------------------------------------------------------------------
@@ -104,8 +102,6 @@ VT2.glau<-(nrow(line %>% filter(transect_id == "VT2" & point_id == "Glauconite")
 VT2.hyd<-(nrow(line %>% filter(transect_id == "VT2" & point_id == "Hydnophora"))*100)/VT2
 #amount Montastrea
 VT2.mon<-(nrow(line %>% filter(transect_id == "VT2" & point_id == "Montastrea"))*100)/VT2
-#amount na
-VT2.na<-(nrow(line %>% filter(transect_id == "VT2" & point_id == "na"))*100)/VT2
 #amount Pavona
 VT2.pav<-(nrow(line %>% filter(transect_id == "VT2" & point_id == "Pavona"))*100)/VT2
 #amount Porites
@@ -125,11 +121,11 @@ VT2.tar<-(nrow(line %>% filter(transect_id == "VT2" & point_id == "Tarbellastrae
 
 
 VT2.data<-data.frame(VT2,VT2.act, VT2.ast,VT2.bio,VT2.biv,VT2.biv.b,
-                               VT2.cau,VT2.cca,VT2.cem,VT2.cor,VT2.cor.a,VT2.fav,VT2.glau,VT2.hyd,VT2.mon, VT2.na,VT2.pav,VT2.pd,
+                               VT2.cau,VT2.cca,VT2.cem,VT2.cor,VT2.cor.a,VT2.fav,VT2.glau,VT2.hyd,VT2.mon,VT2.pav,VT2.pd,
                                VT2.por,VT2.sed,VT2.sha,VT2.sid,VT2.sty,VT2.tar)
 
 
-###write.xlsx(x = VT2.data,"VT2.xlsx")
+write.xlsx(x = VT2.data,"VT2.xlsx")
 
 
 
@@ -166,8 +162,6 @@ VT3.glau<-(nrow(line %>% filter(transect_id == "VT3" & point_id == "Glauconite")
 VT3.hyd<-(nrow(line %>% filter(transect_id == "VT3" & point_id == "Hydnophora"))*100)/VT3
 #amount Montastrea
 VT3.mon<-(nrow(line %>% filter(transect_id == "VT3" & point_id == "Montastrea"))*100)/VT3
-#amount na
-VT3.na<-(nrow(line %>% filter(transect_id == "VT3" & point_id == "na"))*100)/VT3
 #amount Pavona
 VT3.pav<-(nrow(line %>% filter(transect_id == "VT3" & point_id == "Pavona"))*100)/VT3
 #amount Porites
@@ -187,11 +181,11 @@ VT3.tar<-(nrow(line %>% filter(transect_id == "VT3" & point_id == "Tarbellastrae
 
 
 VT3.data<-VT3.data<-data.frame(VT3,VT3.act, VT3.ast,VT3.bio,VT3.biv,VT3.biv.b,
-                               VT3.cau,VT3.cca,VT3.cem,VT3.cor,VT3.cor.a,VT3.fav,VT3.glau,VT3.hyd,VT3.mon, VT3.na,VT3.pav,VT3.pd,
+                               VT3.cau,VT3.cca,VT3.cem,VT3.cor,VT3.cor.a,VT3.fav,VT3.glau,VT3.hyd,VT3.mon,VT3.pav,VT3.pd,
                                VT3.por,VT3.sed,VT3.sha,VT3.sid,VT3.sty,VT3.tar)
 
 
-##write.xlsx(x = VT3.data,"VT3.xlsx")
+write.xlsx(x = VT3.data,"VT3.xlsx")
 
 
 
@@ -230,8 +224,6 @@ VT4.glau<-(nrow(line %>% filter(transect_id == "VT4" & point_id == "Glauconite")
 VT4.hyd<-(nrow(line %>% filter(transect_id == "VT4" & point_id == "Hydnophora"))*100)/VT4
 #amount Montastrea
 VT4.mon<-(nrow(line %>% filter(transect_id == "VT4" & point_id == "Montastrea"))*100)/VT4
-#amount na
-VT4.na<-(nrow(line %>% filter(transect_id == "VT4" & point_id == "na"))*100)/VT4
 #amount Pavona
 VT4.pav<-(nrow(line %>% filter(transect_id == "VT4" & point_id == "Pavona"))*100)/VT4
 #amount Porites
@@ -251,11 +243,11 @@ VT4.tar<-(nrow(line %>% filter(transect_id == "VT4" & point_id == "Tarbellastrae
 
 
 VT4.data<-data.frame(VT4,VT4.act, VT4.ast,VT4.bio,VT4.biv,VT4.biv.b,
-                               VT4.cau,VT4.cca,VT4.cem,VT4.cor,VT4.cor.a,VT4.fav,VT4.glau,VT4.hyd,VT4.mon, VT4.na,VT4.pav,VT4.pd,
+                               VT4.cau,VT4.cca,VT4.cem,VT4.cor,VT4.cor.a,VT4.fav,VT4.glau,VT4.hyd,VT4.mon,VT4.pav,VT4.pd,
                                VT4.por,VT4.sed,VT4.sha,VT4.sid,VT4.sty,VT4.tar)
 
 
-##write.xlsx(x = VT4.data,"VT4.xlsx")
+write.xlsx(x = VT4.data,"VT4.xlsx")
 
 
 
@@ -305,8 +297,6 @@ SCT1.glau<-(nrow(line %>% filter(transect_id == "SCT1" & point_id == "Glauconite
 SCT1.hyd<-(nrow(line %>% filter(transect_id == "SCT1" & point_id == "Hydnophora"))*100)/SCT1
 #amount Montastrea
 SCT1.mon<-(nrow(line %>% filter(transect_id == "SCT1" & point_id == "Montastrea"))*100)/SCT1
-#amount na
-SCT1.na<-(nrow(line %>% filter(transect_id == "SCT1" & point_id == "na"))*100)/SCT1
 #amount Pavona
 SCT1.pav<-(nrow(line %>% filter(transect_id == "SCT1" & point_id == "Pavona"))*100)/SCT1
 #amount Porites
@@ -326,10 +316,10 @@ SCT1.tar<-(nrow(line %>% filter(transect_id == "SCT1" & point_id == "Tarbellastr
 
 
 SCT1.data<-data.frame(SCT1,SCT1.act, SCT1.ast,SCT1.bio,SCT1.biv,SCT1.biv.b,
-                     SCT1.cau,SCT1.cca,SCT1.cem,SCT1.cor,SCT1.cor.a,SCT1.fav,SCT1.glau,SCT1.hyd,SCT1.mon, SCT1.na,SCT1.pav,SCT1.pd,
+                     SCT1.cau,SCT1.cca,SCT1.cem,SCT1.cor,SCT1.cor.a,SCT1.fav,SCT1.glau,SCT1.hyd,SCT1.mon,SCT1.pav,SCT1.pd,
                      SCT1.por,SCT1.sed,SCT1.sha,SCT1.sid,SCT1.sty,SCT1.tar)
 
-##write.xlsx(x = SCT1.data,"SCT1.xlsx")
+write.xlsx(x = SCT1.data,"SCT1.xlsx")
 
 
 #--------------------------------------------------------------------------
@@ -365,8 +355,6 @@ SCT2.glau<-(nrow(line %>% filter(transect_id == "SCT2" & point_id == "Glauconite
 SCT2.hyd<-(nrow(line %>% filter(transect_id == "SCT2" & point_id == "Hydnophora"))*100)/SCT2
 #amount Montastrea
 SCT2.mon<-(nrow(line %>% filter(transect_id == "SCT2" & point_id == "Montastrea"))*100)/SCT2
-#amount na
-SCT2.na<-(nrow(line %>% filter(transect_id == "SCT2" & point_id == "na"))*100)/SCT2
 #amount Pavona
 SCT2.pav<-(nrow(line %>% filter(transect_id == "SCT2" & point_id == "Pavona"))*100)/SCT2
 #amount Porites
@@ -386,11 +374,11 @@ SCT2.tar<-(nrow(line %>% filter(transect_id == "SCT2" & point_id == "Tarbellastr
 
 
 SCT2.data<-data.frame(SCT2,SCT2.act, SCT2.ast,SCT2.bio,SCT2.biv,SCT2.biv.b,
-                     SCT2.cau,SCT2.cca,SCT2.cem,SCT2.cor,SCT2.cor.a,SCT2.fav,SCT2.glau,SCT2.hyd,SCT2.mon, SCT2.na,SCT2.pav,SCT2.pd,
+                     SCT2.cau,SCT2.cca,SCT2.cem,SCT2.cor,SCT2.cor.a,SCT2.fav,SCT2.glau,SCT2.hyd,SCT2.mon,SCT2.pav,SCT2.pd,
                      SCT2.por,SCT2.sed,SCT2.sha,SCT2.sid,SCT2.sty,SCT2.tar)
 
 
-##write.xlsx(x = SCT2.data,"SCT2.xlsx")
+write.xlsx(x = SCT2.data,"SCT2.xlsx")
 
 
 
@@ -427,8 +415,6 @@ SCT3.glau<-(nrow(line %>% filter(transect_id == "SCT3" & point_id == "Glauconite
 SCT3.hyd<-(nrow(line %>% filter(transect_id == "SCT3" & point_id == "Hydnophora"))*100)/SCT3
 #amount Montastrea
 SCT3.mon<-(nrow(line %>% filter(transect_id == "SCT3" & point_id == "Montastrea"))*100)/SCT3
-#amount na
-SCT3.na<-(nrow(line %>% filter(transect_id == "SCT3" & point_id == "na"))*100)/SCT3
 #amount Pavona
 SCT3.pav<-(nrow(line %>% filter(transect_id == "SCT3" & point_id == "Pavona"))*100)/SCT3
 #amount Porites
@@ -448,11 +434,11 @@ SCT3.tar<-(nrow(line %>% filter(transect_id == "SCT3" & point_id == "Tarbellastr
 
 
 SCT3.data<-data.frame(SCT3,SCT3.act, SCT3.ast,SCT3.bio,SCT3.biv,SCT3.biv.b,
-                               SCT3.cau,SCT3.cca,SCT3.cem,SCT3.cor,SCT3.cor.a,SCT3.fav,SCT3.glau,SCT3.hyd,SCT3.mon, SCT3.na,SCT3.pav,SCT3.pd,
+                               SCT3.cau,SCT3.cca,SCT3.cem,SCT3.cor,SCT3.cor.a,SCT3.fav,SCT3.glau,SCT3.hyd,SCT3.mon,SCT3.pav,SCT3.pd,
                                SCT3.por,SCT3.sed,SCT3.sha,SCT3.sid,SCT3.sty,SCT3.tar)
 
 
-##write.xlsx(x = SCT3.data,"SCT3.xlsx")
+write.xlsx(x = SCT3.data,"SCT3.xlsx")
 
 
 
@@ -491,8 +477,6 @@ SCT4.glau<-(nrow(line %>% filter(transect_id == "SCT4" & point_id == "Glauconite
 SCT4.hyd<-(nrow(line %>% filter(transect_id == "SCT4" & point_id == "Hydnophora"))*100)/SCT4
 #amount Montastrea
 SCT4.mon<-(nrow(line %>% filter(transect_id == "SCT4" & point_id == "Montastrea"))*100)/SCT4
-#amount na
-SCT4.na<-(nrow(line %>% filter(transect_id == "SCT4" & point_id == "na"))*100)/SCT4
 #amount Pavona
 SCT4.pav<-(nrow(line %>% filter(transect_id == "SCT4" & point_id == "Pavona"))*100)/SCT4
 #amount Porites
@@ -512,11 +496,11 @@ SCT4.tar<-(nrow(line %>% filter(transect_id == "SCT4" & point_id == "Tarbellastr
 
 
 SCT4.data<-data.frame(SCT4,SCT4.act, SCT4.ast,SCT4.bio,SCT4.biv,SCT4.biv.b,
-                     SCT4.cau,SCT4.cca,SCT4.cem,SCT4.cor,SCT4.cor.a,SCT4.fav,SCT4.glau,SCT4.hyd,SCT4.mon, SCT4.na,SCT4.pav,SCT4.pd,
+                     SCT4.cau,SCT4.cca,SCT4.cem,SCT4.cor,SCT4.cor.a,SCT4.fav,SCT4.glau,SCT4.hyd,SCT4.mon,SCT4.pav,SCT4.pd,
                      SCT4.por,SCT4.sed,SCT4.sha,SCT4.sid,SCT4.sty,SCT4.tar)
 
 
-##write.xlsx(x = SCT4.data,"SCT4.xlsx")
+write.xlsx(x = SCT4.data,"SCT4.xlsx")
 
 
 
@@ -553,8 +537,6 @@ SCT5.glau<-(nrow(line %>% filter(transect_id == "SCT5" & point_id == "Glauconite
 SCT5.hyd<-(nrow(line %>% filter(transect_id == "SCT5" & point_id == "Hydnophora"))*100)/SCT5
 #amount Montastrea
 SCT5.mon<-(nrow(line %>% filter(transect_id == "SCT5" & point_id == "Montastrea"))*100)/SCT5
-#amount na
-SCT5.na<-(nrow(line %>% filter(transect_id == "SCT5" & point_id == "na"))*100)/SCT5
 #amount Pavona
 SCT5.pav<-(nrow(line %>% filter(transect_id == "SCT5" & point_id == "Pavona"))*100)/SCT5
 #amount Porites
@@ -574,11 +556,11 @@ SCT5.tar<-(nrow(line %>% filter(transect_id == "SCT5" & point_id == "Tarbellastr
 
 
 SCT5.data<-data.frame(SCT5,SCT5.act, SCT5.ast,SCT5.bio,SCT5.biv,SCT5.biv.b,
-                      SCT5.cau,SCT5.cca,SCT5.cem,SCT5.cor,SCT5.cor.a,SCT5.fav,SCT5.glau,SCT5.hyd,SCT5.mon, SCT5.na,SCT5.pav,SCT5.pd,
+                      SCT5.cau,SCT5.cca,SCT5.cem,SCT5.cor,SCT5.cor.a,SCT5.fav,SCT5.glau,SCT5.hyd,SCT5.mon,SCT5.pav,SCT5.pd,
                       SCT5.por,SCT5.sed,SCT5.sha,SCT5.sid,SCT5.sty,SCT5.tar)
 
 
-##write.xlsx(x = SCT5.data,"SCT5.xlsx")
+write.xlsx(x = SCT5.data,"SCT5.xlsx")
 
 
 
@@ -617,8 +599,6 @@ SCT6.glau<-(nrow(line %>% filter(transect_id == "SCT6" & point_id == "Glauconite
 SCT6.hyd<-(nrow(line %>% filter(transect_id == "SCT6" & point_id == "Hydnophora"))*100)/SCT6
 #amount Montastrea
 SCT6.mon<-(nrow(line %>% filter(transect_id == "SCT6" & point_id == "Montastrea"))*100)/SCT6
-#amount na
-SCT6.na<-(nrow(line %>% filter(transect_id == "SCT6" & point_id == "na"))*100)/SCT6
 #amount Pavona
 SCT6.pav<-(nrow(line %>% filter(transect_id == "SCT6" & point_id == "Pavona"))*100)/SCT6
 #amount Porites
@@ -638,11 +618,11 @@ SCT6.tar<-(nrow(line %>% filter(transect_id == "SCT6" & point_id == "Tarbellastr
 
 
 SCT6.data<-data.frame(SCT6,SCT6.act, SCT6.ast,SCT6.bio,SCT6.biv,SCT6.biv.b,
-                      SCT6.cau,SCT6.cca,SCT6.cem,SCT6.cor,SCT6.cor.a,SCT6.fav,SCT6.glau,SCT6.hyd,SCT6.mon, SCT6.na,SCT6.pav,SCT6.pd,
+                      SCT6.cau,SCT6.cca,SCT6.cem,SCT6.cor,SCT6.cor.a,SCT6.fav,SCT6.glau,SCT6.hyd,SCT6.mon,SCT6.pav,SCT6.pd,
                       SCT6.por,SCT6.sed,SCT6.sha,SCT6.sid,SCT6.sty,SCT6.tar)
 
 
-##write.xlsx(x = SCT6.data,"SCT6.xlsx")
+write.xlsx(x = SCT6.data,"SCT6.xlsx")
 
 
 
@@ -680,8 +660,6 @@ SCT7.glau<-(nrow(line %>% filter(transect_id == "SCT7" & point_id == "Glauconite
 SCT7.hyd<-(nrow(line %>% filter(transect_id == "SCT7" & point_id == "Hydnophora"))*100)/SCT7
 #amount Montastrea
 SCT7.mon<-(nrow(line %>% filter(transect_id == "SCT7" & point_id == "Montastrea"))*100)/SCT7
-#amount na
-SCT7.na<-(nrow(line %>% filter(transect_id == "SCT7" & point_id == "na"))*100)/SCT7
 #amount Pavona
 SCT7.pav<-(nrow(line %>% filter(transect_id == "SCT7" & point_id == "Pavona"))*100)/SCT7
 #amount Porites
@@ -701,11 +679,11 @@ SCT7.tar<-(nrow(line %>% filter(transect_id == "SCT7" & point_id == "Tarbellastr
 
 
 SCT7.data<-data.frame(SCT7,SCT7.act, SCT7.ast,SCT7.bio,SCT7.biv,SCT7.biv.b,
-                      SCT7.cau,SCT7.cca,SCT7.cem,SCT7.cor,SCT7.cor.a,SCT7.fav,SCT7.glau,SCT7.hyd,SCT7.mon, SCT7.na,SCT7.pav,SCT7.pd,
+                      SCT7.cau,SCT7.cca,SCT7.cem,SCT7.cor,SCT7.cor.a,SCT7.fav,SCT7.glau,SCT7.hyd,SCT7.mon,SCT7.pav,SCT7.pd,
                       SCT7.por,SCT7.sed,SCT7.sha,SCT7.sid,SCT7.sty,SCT7.tar)
 
 
-##write.xlsx(x = SCT7.data,"SCT7.xlsx")
+write.xlsx(x = SCT7.data,"SCT7.xlsx")
 
 
 
@@ -744,8 +722,6 @@ SCT8.glau<-(nrow(line %>% filter(transect_id == "SCT8" & point_id == "Glauconite
 SCT8.hyd<-(nrow(line %>% filter(transect_id == "SCT8" & point_id == "Hydnophora"))*100)/SCT8
 #amount Montastrea
 SCT8.mon<-(nrow(line %>% filter(transect_id == "SCT8" & point_id == "Montastrea"))*100)/SCT8
-#amount na
-SCT8.na<-(nrow(line %>% filter(transect_id == "SCT8" & point_id == "na"))*100)/SCT8
 #amount Pavona
 SCT8.pav<-(nrow(line %>% filter(transect_id == "SCT8" & point_id == "Pavona"))*100)/SCT8
 #amount Porites
@@ -765,11 +741,11 @@ SCT8.tar<-(nrow(line %>% filter(transect_id == "SCT8" & point_id == "Tarbellastr
 
 
 SCT8.data<-data.frame(SCT8,SCT8.act, SCT8.ast,SCT8.bio,SCT8.biv,SCT8.biv.b,
-                      SCT8.cau,SCT8.cca,SCT8.cem,SCT8.cor,SCT8.cor.a,SCT8.fav,SCT8.glau,SCT8.hyd,SCT8.mon, SCT8.na,SCT8.pav,SCT8.pd,
+                      SCT8.cau,SCT8.cca,SCT8.cem,SCT8.cor,SCT8.cor.a,SCT8.fav,SCT8.glau,SCT8.hyd,SCT8.mon,SCT8.pav,SCT8.pd,
                       SCT8.por,SCT8.sed,SCT8.sha,SCT8.sid,SCT8.sty,SCT8.tar)
 
 
-##write.xlsx(x = SCT8.data,"SCT8.xlsx")
+write.xlsx(x = SCT8.data,"SCT8.xlsx")
 
 
 
@@ -808,8 +784,6 @@ PML1.glau<-(nrow(line %>% filter(transect_id == "PML1" & point_id == "Glauconite
 PML1.hyd<-(nrow(line %>% filter(transect_id == "PML1" & point_id == "Hydnophora"))*100)/PML1
 #amount Montastrea
 PML1.mon<-(nrow(line %>% filter(transect_id == "PML1" & point_id == "Montastrea"))*100)/PML1
-#amount na
-PML1.na<-(nrow(line %>% filter(transect_id == "PML1" & point_id == "na"))*100)/PML1
 #amount Pavona
 PML1.pav<-(nrow(line %>% filter(transect_id == "PML1" & point_id == "Pavona"))*100)/PML1
 #amount Porites
@@ -829,10 +803,10 @@ PML1.tar<-(nrow(line %>% filter(transect_id == "PML1" & point_id == "Tarbellastr
 
 
 PML1.data<-data.frame(PML1,PML1.act, PML1.ast,PML1.bio,PML1.biv,PML1.biv.b,
-                      PML1.cau,PML1.cca,PML1.cem,PML1.cor,PML1.cor.a,PML1.fav,PML1.glau,PML1.hyd,PML1.mon, PML1.na,PML1.pav,PML1.pd,
+                      PML1.cau,PML1.cca,PML1.cem,PML1.cor,PML1.cor.a,PML1.fav,PML1.glau,PML1.hyd,PML1.mon,PML1.pav,PML1.pd,
                       PML1.por,PML1.sed,PML1.sha,PML1.sid,PML1.sty,PML1.tar)
 
-##write.xlsx(x = PML1.data,"PML1.xlsx")
+write.xlsx(x = PML1.data,"PML1.xlsx")
 
 
 #--------------------------------------------------------------------------
@@ -868,8 +842,6 @@ PML2.glau<-(nrow(line %>% filter(transect_id == "PML2" & point_id == "Glauconite
 PML2.hyd<-(nrow(line %>% filter(transect_id == "PML2" & point_id == "Hydnophora"))*100)/PML2
 #amount Montastrea
 PML2.mon<-(nrow(line %>% filter(transect_id == "PML2" & point_id == "Montastrea"))*100)/PML2
-#amount na
-PML2.na<-(nrow(line %>% filter(transect_id == "PML2" & point_id == "na"))*100)/PML2
 #amount Pavona
 PML2.pav<-(nrow(line %>% filter(transect_id == "PML2" & point_id == "Pavona"))*100)/PML2
 #amount Porites
@@ -889,11 +861,11 @@ PML2.tar<-(nrow(line %>% filter(transect_id == "PML2" & point_id == "Tarbellastr
 
 
 PML2.data<-data.frame(PML2,PML2.act, PML2.ast,PML2.bio,PML2.biv,PML2.biv.b,
-                      PML2.cau,PML2.cca,PML2.cem,PML2.cor,PML2.cor.a,PML2.fav,PML2.glau,PML2.hyd,PML2.mon, PML2.na,PML2.pav,PML2.pd,
+                      PML2.cau,PML2.cca,PML2.cem,PML2.cor,PML2.cor.a,PML2.fav,PML2.glau,PML2.hyd,PML2.mon,PML2.pav,PML2.pd,
                       PML2.por,PML2.sed,PML2.sha,PML2.sid,PML2.sty,PML2.tar)
 
 
-##write.xlsx(x = PML2.data,"PML2.xlsx")
+write.xlsx(x = PML2.data,"PML2.xlsx")
 
 
 
@@ -930,8 +902,6 @@ PML3.glau<-(nrow(line %>% filter(transect_id == "PML3" & point_id == "Glauconite
 PML3.hyd<-(nrow(line %>% filter(transect_id == "PML3" & point_id == "Hydnophora"))*100)/PML3
 #amount Montastrea
 PML3.mon<-(nrow(line %>% filter(transect_id == "PML3" & point_id == "Montastrea"))*100)/PML3
-#amount na
-PML3.na<-(nrow(line %>% filter(transect_id == "PML3" & point_id == "na"))*100)/PML3
 #amount Pavona
 PML3.pav<-(nrow(line %>% filter(transect_id == "PML3" & point_id == "Pavona"))*100)/PML3
 #amount Porites
@@ -951,11 +921,11 @@ PML3.tar<-(nrow(line %>% filter(transect_id == "PML3" & point_id == "Tarbellastr
 
 
 PML3.data<-data.frame(PML3,PML3.act, PML3.ast,PML3.bio,PML3.biv,PML3.biv.b,
-                      PML3.cau,PML3.cca,PML3.cem,PML3.cor,PML3.cor.a,PML3.fav,PML3.glau,PML3.hyd,PML3.mon, PML3.na,PML3.pav,PML3.pd,
+                      PML3.cau,PML3.cca,PML3.cem,PML3.cor,PML3.cor.a,PML3.fav,PML3.glau,PML3.hyd,PML3.mon,PML3.pav,PML3.pd,
                       PML3.por,PML3.sed,PML3.sha,PML3.sid,PML3.sty,PML3.tar)
 
 
-#write.xlsx(x = PML3.data,"PML3.xlsx")
+write.xlsx(x = PML3.data,"PML3.xlsx")
 
 
 
@@ -994,8 +964,6 @@ PML4.glau<-(nrow(line %>% filter(transect_id == "PML4" & point_id == "Glauconite
 PML4.hyd<-(nrow(line %>% filter(transect_id == "PML4" & point_id == "Hydnophora"))*100)/PML4
 #amount Montastrea
 PML4.mon<-(nrow(line %>% filter(transect_id == "PML4" & point_id == "Montastrea"))*100)/PML4
-#amount na
-PML4.na<-(nrow(line %>% filter(transect_id == "PML4" & point_id == "na"))*100)/PML4
 #amount Pavona
 PML4.pav<-(nrow(line %>% filter(transect_id == "PML4" & point_id == "Pavona"))*100)/PML4
 #amount Porites
@@ -1015,11 +983,11 @@ PML4.tar<-(nrow(line %>% filter(transect_id == "PML4" & point_id == "Tarbellastr
 
 
 PML4.data<-data.frame(PML4,PML4.act, PML4.ast,PML4.bio,PML4.biv,PML4.biv.b,
-                      PML4.cau,PML4.cca,PML4.cem,PML4.cor,PML4.cor.a,PML4.fav,PML4.glau,PML4.hyd,PML4.mon, PML4.na,PML4.pav,PML4.pd,
+                      PML4.cau,PML4.cca,PML4.cem,PML4.cor,PML4.cor.a,PML4.fav,PML4.glau,PML4.hyd,PML4.mon,PML4.pav,PML4.pd,
                       PML4.por,PML4.sed,PML4.sha,PML4.sid,PML4.sty,PML4.tar)
 
 
-#write.xlsx(x = PML4.data,"PML4.xlsx")
+write.xlsx(x = PML4.data,"PML4.xlsx")
 
 
 
@@ -1056,8 +1024,6 @@ PML5.glau<-(nrow(line %>% filter(transect_id == "PML5" & point_id == "Glauconite
 PML5.hyd<-(nrow(line %>% filter(transect_id == "PML5" & point_id == "Hydnophora"))*100)/PML5
 #amount Montastrea
 PML5.mon<-(nrow(line %>% filter(transect_id == "PML5" & point_id == "Montastrea"))*100)/PML5
-#amount na
-PML5.na<-(nrow(line %>% filter(transect_id == "PML5" & point_id == "na"))*100)/PML5
 #amount Pavona
 PML5.pav<-(nrow(line %>% filter(transect_id == "PML5" & point_id == "Pavona"))*100)/PML5
 #amount Porites
@@ -1077,11 +1043,11 @@ PML5.tar<-(nrow(line %>% filter(transect_id == "PML5" & point_id == "Tarbellastr
 
 
 PML5.data<-data.frame(PML5,PML5.act, PML5.ast,PML5.bio,PML5.biv,PML5.biv.b,
-                      PML5.cau,PML5.cca,PML5.cem,PML5.cor,PML5.cor.a,PML5.fav,PML5.glau,PML5.hyd,PML5.mon, PML5.na,PML5.pav,PML5.pd,
+                      PML5.cau,PML5.cca,PML5.cem,PML5.cor,PML5.cor.a,PML5.fav,PML5.glau,PML5.hyd,PML5.mon,PML5.pav,PML5.pd,
                       PML5.por,PML5.sed,PML5.sha,PML5.sid,PML5.sty,PML5.tar)
 
 
-#write.xlsx(x = PML5.data,"PML5.xlsx")
+write.xlsx(x = PML5.data,"PML5.xlsx")
 
 
 
@@ -1120,8 +1086,6 @@ PML6.glau<-(nrow(line %>% filter(transect_id == "PML6" & point_id == "Glauconite
 PML6.hyd<-(nrow(line %>% filter(transect_id == "PML6" & point_id == "Hydnophora"))*100)/PML6
 #amount Montastrea
 PML6.mon<-(nrow(line %>% filter(transect_id == "PML6" & point_id == "Montastrea"))*100)/PML6
-#amount na
-PML6.na<-(nrow(line %>% filter(transect_id == "PML6" & point_id == "na"))*100)/PML6
 #amount Pavona
 PML6.pav<-(nrow(line %>% filter(transect_id == "PML6" & point_id == "Pavona"))*100)/PML6
 #amount Porites
@@ -1141,11 +1105,11 @@ PML6.tar<-(nrow(line %>% filter(transect_id == "PML6" & point_id == "Tarbellastr
 
 
 PML6.data<-data.frame(PML6,PML6.act, PML6.ast,PML6.bio,PML6.biv,PML6.biv.b,
-                      PML6.cau,PML6.cca,PML6.cem,PML6.cor,PML6.cor.a,PML6.fav,PML6.glau,PML6.hyd,PML6.mon, PML6.na,PML6.pav,PML6.pd,
+                      PML6.cau,PML6.cca,PML6.cem,PML6.cor,PML6.cor.a,PML6.fav,PML6.glau,PML6.hyd,PML6.mon,PML6.pav,PML6.pd,
                       PML6.por,PML6.sed,PML6.sha,PML6.sid,PML6.sty,PML6.tar)
 
 
-#write.xlsx(x = PML6.data,"PML6.xlsx")
+write.xlsx(x = PML6.data,"PML6.xlsx")
 
 
 
@@ -1192,8 +1156,6 @@ TL1.glau<-(nrow(line %>% filter(transect_id == "TL1" & point_id == "Glauconite")
 TL1.hyd<-(nrow(line %>% filter(transect_id == "TL1" & point_id == "Hydnophora"))*100)/TL1
 #amount Montastrea
 TL1.mon<-(nrow(line %>% filter(transect_id == "TL1" & point_id == "Montastrea"))*100)/TL1
-#amount na
-TL1.na<-(nrow(line %>% filter(transect_id == "TL1" & point_id == "na"))*100)/TL1
 #amount Pavona
 TL1.pav<-(nrow(line %>% filter(transect_id == "TL1" & point_id == "Pavona"))*100)/TL1
 #amount Porites
@@ -1213,10 +1175,10 @@ TL1.tar<-(nrow(line %>% filter(transect_id == "TL1" & point_id == "Tarbellastrae
 
 
 TL1.data<-data.frame(TL1,TL1.act, TL1.ast,TL1.bio,TL1.biv,TL1.biv.b,
-                      TL1.cau,TL1.cca,TL1.cem,TL1.cor,TL1.cor.a,TL1.fav,TL1.glau,TL1.hyd,TL1.mon, TL1.na,TL1.pav,TL1.pd,
+                      TL1.cau,TL1.cca,TL1.cem,TL1.cor,TL1.cor.a,TL1.fav,TL1.glau,TL1.hyd,TL1.mon,TL1.pav,TL1.pd,
                       TL1.por,TL1.sed,TL1.sha,TL1.sid,TL1.sty,TL1.tar)
 
-#write.xlsx(x = TL1.data,"TL1.xlsx")
+write.xlsx(x = TL1.data,"TL1.xlsx")
 
 
 #--------------------------------------------------------------------------
@@ -1252,8 +1214,6 @@ TL2.glau<-(nrow(line %>% filter(transect_id == "TL2" & point_id == "Glauconite")
 TL2.hyd<-(nrow(line %>% filter(transect_id == "TL2" & point_id == "Hydnophora"))*100)/TL2
 #amount Montastrea
 TL2.mon<-(nrow(line %>% filter(transect_id == "TL2" & point_id == "Montastrea"))*100)/TL2
-#amount na
-TL2.na<-(nrow(line %>% filter(transect_id == "TL2" & point_id == "na"))*100)/TL2
 #amount Pavona
 TL2.pav<-(nrow(line %>% filter(transect_id == "TL2" & point_id == "Pavona"))*100)/TL2
 #amount Porites
@@ -1273,11 +1233,11 @@ TL2.tar<-(nrow(line %>% filter(transect_id == "TL2" & point_id == "Tarbellastrae
 
 
 TL2.data<-data.frame(TL2,TL2.act, TL2.ast,TL2.bio,TL2.biv,TL2.biv.b,
-                      TL2.cau,TL2.cca,TL2.cem,TL2.cor,TL2.cor.a,TL2.fav,TL2.glau,TL2.hyd,TL2.mon, TL2.na,TL2.pav,TL2.pd,
+                      TL2.cau,TL2.cca,TL2.cem,TL2.cor,TL2.cor.a,TL2.fav,TL2.glau,TL2.hyd,TL2.mon,TL2.pav,TL2.pd,
                       TL2.por,TL2.sed,TL2.sha,TL2.sid,TL2.sty,TL2.tar)
 
 
-#write.xlsx(x = TL2.data,"TL2.xlsx")
+write.xlsx(x = TL2.data,"TL2.xlsx")
 
 
 
@@ -1314,8 +1274,6 @@ TL3.glau<-(nrow(line %>% filter(transect_id == "TL3" & point_id == "Glauconite")
 TL3.hyd<-(nrow(line %>% filter(transect_id == "TL3" & point_id == "Hydnophora"))*100)/TL3
 #amount Montastrea
 TL3.mon<-(nrow(line %>% filter(transect_id == "TL3" & point_id == "Montastrea"))*100)/TL3
-#amount na
-TL3.na<-(nrow(line %>% filter(transect_id == "TL3" & point_id == "na"))*100)/TL3
 #amount Pavona
 TL3.pav<-(nrow(line %>% filter(transect_id == "TL3" & point_id == "Pavona"))*100)/TL3
 #amount Porites
@@ -1335,11 +1293,11 @@ TL3.tar<-(nrow(line %>% filter(transect_id == "TL3" & point_id == "Tarbellastrae
 
 
 TL3.data<-data.frame(TL3,TL3.act, TL3.ast,TL3.bio,TL3.biv,TL3.biv.b,
-                      TL3.cau,TL3.cca,TL3.cem,TL3.cor,TL3.cor.a,TL3.fav,TL3.glau,TL3.hyd,TL3.mon, TL3.na,TL3.pav,TL3.pd,
+                      TL3.cau,TL3.cca,TL3.cem,TL3.cor,TL3.cor.a,TL3.fav,TL3.glau,TL3.hyd,TL3.mon,TL3.pav,TL3.pd,
                       TL3.por,TL3.sed,TL3.sha,TL3.sid,TL3.sty,TL3.tar)
 
 
-#write.xlsx(x = TL3.data,"TL3.xlsx")
+write.xlsx(x = TL3.data,"TL3.xlsx")
 
 
 
@@ -1378,8 +1336,6 @@ TL4.glau<-(nrow(line %>% filter(transect_id == "TL4" & point_id == "Glauconite")
 TL4.hyd<-(nrow(line %>% filter(transect_id == "TL4" & point_id == "Hydnophora"))*100)/TL4
 #amount Montastrea
 TL4.mon<-(nrow(line %>% filter(transect_id == "TL4" & point_id == "Montastrea"))*100)/TL4
-#amount na
-TL4.na<-(nrow(line %>% filter(transect_id == "TL4" & point_id == "na"))*100)/TL4
 #amount Pavona
 TL4.pav<-(nrow(line %>% filter(transect_id == "TL4" & point_id == "Pavona"))*100)/TL4
 #amount Porites
@@ -1399,11 +1355,11 @@ TL4.tar<-(nrow(line %>% filter(transect_id == "TL4" & point_id == "Tarbellastrae
 
 
 TL4.data<-data.frame(TL4,TL4.act, TL4.ast,TL4.bio,TL4.biv,TL4.biv.b,
-                      TL4.cau,TL4.cca,TL4.cem,TL4.cor,TL4.cor.a,TL4.fav,TL4.glau,TL4.hyd,TL4.mon, TL4.na,TL4.pav,TL4.pd,
+                      TL4.cau,TL4.cca,TL4.cem,TL4.cor,TL4.cor.a,TL4.fav,TL4.glau,TL4.hyd,TL4.mon,TL4.pav,TL4.pd,
                       TL4.por,TL4.sed,TL4.sha,TL4.sid,TL4.sty,TL4.tar)
 
 
-#write.xlsx(x = TL4.data,"TL4.xlsx")
+write.xlsx(x = TL4.data,"TL4.xlsx")
 
 
 
@@ -1440,8 +1396,6 @@ TL5.glau<-(nrow(line %>% filter(transect_id == "TL5" & point_id == "Glauconite")
 TL5.hyd<-(nrow(line %>% filter(transect_id == "TL5" & point_id == "Hydnophora"))*100)/TL5
 #amount Montastrea
 TL5.mon<-(nrow(line %>% filter(transect_id == "TL5" & point_id == "Montastrea"))*100)/TL5
-#amount na
-TL5.na<-(nrow(line %>% filter(transect_id == "TL5" & point_id == "na"))*100)/TL5
 #amount Pavona
 TL5.pav<-(nrow(line %>% filter(transect_id == "TL5" & point_id == "Pavona"))*100)/TL5
 #amount Porites
@@ -1461,11 +1415,11 @@ TL5.tar<-(nrow(line %>% filter(transect_id == "TL5" & point_id == "Tarbellastrae
 
 
 TL5.data<-data.frame(TL5,TL5.act, TL5.ast,TL5.bio,TL5.biv,TL5.biv.b,
-                      TL5.cau,TL5.cca,TL5.cem,TL5.cor,TL5.cor.a,TL5.fav,TL5.glau,TL5.hyd,TL5.mon, TL5.na,TL5.pav,TL5.pd,
+                      TL5.cau,TL5.cca,TL5.cem,TL5.cor,TL5.cor.a,TL5.fav,TL5.glau,TL5.hyd,TL5.mon,TL5.pav,TL5.pd,
                       TL5.por,TL5.sed,TL5.sha,TL5.sid,TL5.sty,TL5.tar)
 
 
-#write.xlsx(x = TL5.data,"TL5.xlsx")
+write.xlsx(x = TL5.data,"TL5.xlsx")
 
 
 
@@ -1504,8 +1458,6 @@ TL6.glau<-(nrow(line %>% filter(transect_id == "TL6" & point_id == "Glauconite")
 TL6.hyd<-(nrow(line %>% filter(transect_id == "TL6" & point_id == "Hydnophora"))*100)/TL6
 #amount Montastrea
 TL6.mon<-(nrow(line %>% filter(transect_id == "TL6" & point_id == "Montastrea"))*100)/TL6
-#amount na
-TL6.na<-(nrow(line %>% filter(transect_id == "TL6" & point_id == "na"))*100)/TL6
 #amount Pavona
 TL6.pav<-(nrow(line %>% filter(transect_id == "TL6" & point_id == "Pavona"))*100)/TL6
 #amount Porites
@@ -1525,11 +1477,11 @@ TL6.tar<-(nrow(line %>% filter(transect_id == "TL6" & point_id == "Tarbellastrae
 
 
 TL6.data<-data.frame(TL6,TL6.act, TL6.ast,TL6.bio,TL6.biv,TL6.biv.b,
-                      TL6.cau,TL6.cca,TL6.cem,TL6.cor,TL6.cor.a,TL6.fav,TL6.glau,TL6.hyd,TL6.mon, TL6.na,TL6.pav,TL6.pd,
+                      TL6.cau,TL6.cca,TL6.cem,TL6.cor,TL6.cor.a,TL6.fav,TL6.glau,TL6.hyd,TL6.mon,TL6.pav,TL6.pd,
                       TL6.por,TL6.sed,TL6.sha,TL6.sid,TL6.sty,TL6.tar)
 
 
-#write.xlsx(x = TL6.data,"TL6.xlsx")
+write.xlsx(x = TL6.data,"TL6.xlsx")
 
 
 
@@ -1571,8 +1523,6 @@ CGL1.glau<-(nrow(line %>% filter(transect_id == "CGL1" & point_id == "Glauconite
 CGL1.hyd<-(nrow(line %>% filter(transect_id == "CGL1" & point_id == "Hydnophora"))*100)/CGL1
 #amount Montastrea
 CGL1.mon<-(nrow(line %>% filter(transect_id == "CGL1" & point_id == "Montastrea"))*100)/CGL1
-#amount na
-CGL1.na<-(nrow(line %>% filter(transect_id == "CGL1" & point_id == "na"))*100)/CGL1
 #amount Pavona
 CGL1.pav<-(nrow(line %>% filter(transect_id == "CGL1" & point_id == "Pavona"))*100)/CGL1
 #amount Porites
@@ -1592,10 +1542,10 @@ CGL1.tar<-(nrow(line %>% filter(transect_id == "CGL1" & point_id == "Tarbellastr
 
 
 CGL1.data<-data.frame(CGL1,CGL1.act, CGL1.ast,CGL1.bio,CGL1.biv,CGL1.biv.b,
-                      CGL1.cau,CGL1.cca,CGL1.cem,CGL1.cor,CGL1.cor.a,CGL1.fav,CGL1.glau,CGL1.hyd,CGL1.mon, CGL1.na,CGL1.pav,CGL1.pd,
+                      CGL1.cau,CGL1.cca,CGL1.cem,CGL1.cor,CGL1.cor.a,CGL1.fav,CGL1.glau,CGL1.hyd,CGL1.mon,CGL1.pav,CGL1.pd,
                       CGL1.por,CGL1.sed,CGL1.sha,CGL1.sid,CGL1.sty,CGL1.tar)
 
-#write.xlsx(x = CGL1.data,"CGL1.xlsx")
+write.xlsx(x = CGL1.data,"CGL1.xlsx")
 
 
 #--------------------------------------------------------------------------
@@ -1631,8 +1581,6 @@ CGL2.glau<-(nrow(line %>% filter(transect_id == "CGL2" & point_id == "Glauconite
 CGL2.hyd<-(nrow(line %>% filter(transect_id == "CGL2" & point_id == "Hydnophora"))*100)/CGL2
 #amount Montastrea
 CGL2.mon<-(nrow(line %>% filter(transect_id == "CGL2" & point_id == "Montastrea"))*100)/CGL2
-#amount na
-CGL2.na<-(nrow(line %>% filter(transect_id == "CGL2" & point_id == "na"))*100)/CGL2
 #amount Pavona
 CGL2.pav<-(nrow(line %>% filter(transect_id == "CGL2" & point_id == "Pavona"))*100)/CGL2
 #amount Porites
@@ -1652,11 +1600,11 @@ CGL2.tar<-(nrow(line %>% filter(transect_id == "CGL2" & point_id == "Tarbellastr
 
 
 CGL2.data<-data.frame(CGL2,CGL2.act, CGL2.ast,CGL2.bio,CGL2.biv,CGL2.biv.b,
-                      CGL2.cau,CGL2.cca,CGL2.cem,CGL2.cor,CGL2.cor.a,CGL2.fav,CGL2.glau,CGL2.hyd,CGL2.mon, CGL2.na,CGL2.pav,CGL2.pd,
+                      CGL2.cau,CGL2.cca,CGL2.cem,CGL2.cor,CGL2.cor.a,CGL2.fav,CGL2.glau,CGL2.hyd,CGL2.mon,CGL2.pav,CGL2.pd,
                       CGL2.por,CGL2.sed,CGL2.sha,CGL2.sid,CGL2.sty,CGL2.tar)
 
 
-#write.xlsx(x = CGL2.data,"CGL2.xlsx")
+write.xlsx(x = CGL2.data,"CGL2.xlsx")
 
 
 
@@ -1693,8 +1641,6 @@ CGL3.glau<-(nrow(line %>% filter(transect_id == "CGL3" & point_id == "Glauconite
 CGL3.hyd<-(nrow(line %>% filter(transect_id == "CGL3" & point_id == "Hydnophora"))*100)/CGL3
 #amount Montastrea
 CGL3.mon<-(nrow(line %>% filter(transect_id == "CGL3" & point_id == "Montastrea"))*100)/CGL3
-#amount na
-CGL3.na<-(nrow(line %>% filter(transect_id == "CGL3" & point_id == "na"))*100)/CGL3
 #amount Pavona
 CGL3.pav<-(nrow(line %>% filter(transect_id == "CGL3" & point_id == "Pavona"))*100)/CGL3
 #amount Porites
@@ -1714,11 +1660,11 @@ CGL3.tar<-(nrow(line %>% filter(transect_id == "CGL3" & point_id == "Tarbellastr
 
 
 CGL3.data<-data.frame(CGL3,CGL3.act, CGL3.ast,CGL3.bio,CGL3.biv,CGL3.biv.b,
-                      CGL3.cau,CGL3.cca,CGL3.cem,CGL3.cor,CGL3.cor.a,CGL3.fav,CGL3.glau,CGL3.hyd,CGL3.mon, CGL3.na,CGL3.pav,CGL3.pd,
+                      CGL3.cau,CGL3.cca,CGL3.cem,CGL3.cor,CGL3.cor.a,CGL3.fav,CGL3.glau,CGL3.hyd,CGL3.mon,CGL3.pav,CGL3.pd,
                       CGL3.por,CGL3.sed,CGL3.sha,CGL3.sid,CGL3.sty,CGL3.tar)
 
 
-#write.xlsx(x = CGL3.data,"CGL3.xlsx")
+write.xlsx(x = CGL3.data,"CGL3.xlsx")
 
 
 
@@ -1757,8 +1703,6 @@ CGL4.glau<-(nrow(line %>% filter(transect_id == "CGL4" & point_id == "Glauconite
 CGL4.hyd<-(nrow(line %>% filter(transect_id == "CGL4" & point_id == "Hydnophora"))*100)/CGL4
 #amount Montastrea
 CGL4.mon<-(nrow(line %>% filter(transect_id == "CGL4" & point_id == "Montastrea"))*100)/CGL4
-#amount na
-CGL4.na<-(nrow(line %>% filter(transect_id == "CGL4" & point_id == "na"))*100)/CGL4
 #amount Pavona
 CGL4.pav<-(nrow(line %>% filter(transect_id == "CGL4" & point_id == "Pavona"))*100)/CGL4
 #amount Porites
@@ -1778,11 +1722,11 @@ CGL4.tar<-(nrow(line %>% filter(transect_id == "CGL4" & point_id == "Tarbellastr
 
 
 CGL4.data<-data.frame(CGL4,CGL4.act, CGL4.ast,CGL4.bio,CGL4.biv,CGL4.biv.b,
-                      CGL4.cau,CGL4.cca,CGL4.cem,CGL4.cor,CGL4.cor.a,CGL4.fav,CGL4.glau,CGL4.hyd,CGL4.mon, CGL4.na,CGL4.pav,CGL4.pd,
+                      CGL4.cau,CGL4.cca,CGL4.cem,CGL4.cor,CGL4.cor.a,CGL4.fav,CGL4.glau,CGL4.hyd,CGL4.mon,CGL4.pav,CGL4.pd,
                       CGL4.por,CGL4.sed,CGL4.sha,CGL4.sid,CGL4.sty,CGL4.tar)
 
 
-#write.xlsx(x = CGL4.data,"CGL4.xlsx")
+write.xlsx(x = CGL4.data,"CGL4.xlsx")
 
 
 
@@ -1819,8 +1763,6 @@ CGL5.glau<-(nrow(line %>% filter(transect_id == "CGL5" & point_id == "Glauconite
 CGL5.hyd<-(nrow(line %>% filter(transect_id == "CGL5" & point_id == "Hydnophora"))*100)/CGL5
 #amount Montastrea
 CGL5.mon<-(nrow(line %>% filter(transect_id == "CGL5" & point_id == "Montastrea"))*100)/CGL5
-#amount na
-CGL5.na<-(nrow(line %>% filter(transect_id == "CGL5" & point_id == "na"))*100)/CGL5
 #amount Pavona
 CGL5.pav<-(nrow(line %>% filter(transect_id == "CGL5" & point_id == "Pavona"))*100)/CGL5
 #amount Porites
@@ -1840,11 +1782,11 @@ CGL5.tar<-(nrow(line %>% filter(transect_id == "CGL5" & point_id == "Tarbellastr
 
 
 CGL5.data<-data.frame(CGL5,CGL5.act, CGL5.ast,CGL5.bio,CGL5.biv,CGL5.biv.b,
-                      CGL5.cau,CGL5.cca,CGL5.cem,CGL5.cor,CGL5.cor.a,CGL5.fav,CGL5.glau,CGL5.hyd,CGL5.mon, CGL5.na,CGL5.pav,CGL5.pd,
+                      CGL5.cau,CGL5.cca,CGL5.cem,CGL5.cor,CGL5.cor.a,CGL5.fav,CGL5.glau,CGL5.hyd,CGL5.mon,CGL5.pav,CGL5.pd,
                       CGL5.por,CGL5.sed,CGL5.sha,CGL5.sid,CGL5.sty,CGL5.tar)
 
 
-#write.xlsx(x = CGL5.data,"CGL5.xlsx")
+write.xlsx(x = CGL5.data,"CGL5.xlsx")
 
 
 
@@ -1883,8 +1825,6 @@ CGL6.glau<-(nrow(line %>% filter(transect_id == "CGL6" & point_id == "Glauconite
 CGL6.hyd<-(nrow(line %>% filter(transect_id == "CGL6" & point_id == "Hydnophora"))*100)/CGL6
 #amount Montastrea
 CGL6.mon<-(nrow(line %>% filter(transect_id == "CGL6" & point_id == "Montastrea"))*100)/CGL6
-#amount na
-CGL6.na<-(nrow(line %>% filter(transect_id == "CGL6" & point_id == "na"))*100)/CGL6
 #amount Pavona
 CGL6.pav<-(nrow(line %>% filter(transect_id == "CGL6" & point_id == "Pavona"))*100)/CGL6
 #amount Porites
@@ -1904,11 +1844,11 @@ CGL6.tar<-(nrow(line %>% filter(transect_id == "CGL6" & point_id == "Tarbellastr
 
 
 CGL6.data<-data.frame(CGL6,CGL6.act, CGL6.ast,CGL6.bio,CGL6.biv,CGL6.biv.b,
-                      CGL6.cau,CGL6.cca,CGL6.cem,CGL6.cor,CGL6.cor.a,CGL6.fav,CGL6.glau,CGL6.hyd,CGL6.mon, CGL6.na,CGL6.pav,CGL6.pd,
+                      CGL6.cau,CGL6.cca,CGL6.cem,CGL6.cor,CGL6.cor.a,CGL6.fav,CGL6.glau,CGL6.hyd,CGL6.mon,CGL6.pav,CGL6.pd,
                       CGL6.por,CGL6.sed,CGL6.sha,CGL6.sid,CGL6.sty,CGL6.tar)
 
 
-#write.xlsx(x = CGL6.data,"CGL6.xlsx")
+write.xlsx(x = CGL6.data,"CGL6.xlsx")
 
 
 
@@ -1946,8 +1886,6 @@ CGL7.glau<-(nrow(line %>% filter(transect_id == "CGL7" & point_id == "Glauconite
 CGL7.hyd<-(nrow(line %>% filter(transect_id == "CGL7" & point_id == "Hydnophora"))*100)/CGL7
 #amount Montastrea
 CGL7.mon<-(nrow(line %>% filter(transect_id == "CGL7" & point_id == "Montastrea"))*100)/CGL7
-#amount na
-CGL7.na<-(nrow(line %>% filter(transect_id == "CGL7" & point_id == "na"))*100)/CGL7
 #amount Pavona
 CGL7.pav<-(nrow(line %>% filter(transect_id == "CGL7" & point_id == "Pavona"))*100)/CGL7
 #amount Porites
@@ -1967,11 +1905,11 @@ CGL7.tar<-(nrow(line %>% filter(transect_id == "CGL7" & point_id == "Tarbellastr
 
 
 CGL7.data<-data.frame(CGL7,CGL7.act, CGL7.ast,CGL7.bio,CGL7.biv,CGL7.biv.b,
-                      CGL7.cau,CGL7.cca,CGL7.cem,CGL7.cor,CGL7.cor.a,CGL7.fav,CGL7.glau,CGL7.hyd,CGL7.mon, CGL7.na,CGL7.pav,CGL7.pd,
+                      CGL7.cau,CGL7.cca,CGL7.cem,CGL7.cor,CGL7.cor.a,CGL7.fav,CGL7.glau,CGL7.hyd,CGL7.mon,CGL7.pav,CGL7.pd,
                       CGL7.por,CGL7.sed,CGL7.sha,CGL7.sid,CGL7.sty,CGL7.tar)
 
 
-#write.xlsx(x = CGL7.data,"CGL7.xlsx")
+write.xlsx(x = CGL7.data,"CGL7.xlsx")
 
 
 
@@ -2012,8 +1950,6 @@ LCT1.glau<-(nrow(line %>% filter(transect_id == "LCT1" & point_id == "Glauconite
 LCT1.hyd<-(nrow(line %>% filter(transect_id == "LCT1" & point_id == "Hydnophora"))*100)/LCT1
 #amount Montastrea
 LCT1.mon<-(nrow(line %>% filter(transect_id == "LCT1" & point_id == "Montastrea"))*100)/LCT1
-#amount na
-LCT1.na<-(nrow(line %>% filter(transect_id == "LCT1" & point_id == "na"))*100)/LCT1
 #amount Pavona
 LCT1.pav<-(nrow(line %>% filter(transect_id == "LCT1" & point_id == "Pavona"))*100)/LCT1
 #amount Porites
@@ -2033,10 +1969,10 @@ LCT1.tar<-(nrow(line %>% filter(transect_id == "LCT1" & point_id == "Tarbellastr
 
 
 LCT1.data<-data.frame(LCT1,LCT1.act, LCT1.ast,LCT1.bio,LCT1.biv,LCT1.biv.b,
-                      LCT1.cau,LCT1.cca,LCT1.cem,LCT1.cor,LCT1.cor.a,LCT1.fav,LCT1.glau,LCT1.hyd,LCT1.mon, LCT1.na,LCT1.pav,LCT1.pd,
+                      LCT1.cau,LCT1.cca,LCT1.cem,LCT1.cor,LCT1.cor.a,LCT1.fav,LCT1.glau,LCT1.hyd,LCT1.mon,LCT1.pav,LCT1.pd,
                       LCT1.por,LCT1.sed,LCT1.sha,LCT1.sid,LCT1.sty,LCT1.tar)
 
-#write.xlsx(x = LCT1.data,"LCT1.xlsx")
+write.xlsx(x = LCT1.data,"LCT1.xlsx")
 
 
 #--------------------------------------------------------------------------
@@ -2072,8 +2008,6 @@ LCT2.glau<-(nrow(line %>% filter(transect_id == "LCT2" & point_id == "Glauconite
 LCT2.hyd<-(nrow(line %>% filter(transect_id == "LCT2" & point_id == "Hydnophora"))*100)/LCT2
 #amount Montastrea
 LCT2.mon<-(nrow(line %>% filter(transect_id == "LCT2" & point_id == "Montastrea"))*100)/LCT2
-#amount na
-LCT2.na<-(nrow(line %>% filter(transect_id == "LCT2" & point_id == "na"))*100)/LCT2
 #amount Pavona
 LCT2.pav<-(nrow(line %>% filter(transect_id == "LCT2" & point_id == "Pavona"))*100)/LCT2
 #amount Porites
@@ -2093,11 +2027,11 @@ LCT2.tar<-(nrow(line %>% filter(transect_id == "LCT2" & point_id == "Tarbellastr
 
 
 LCT2.data<-data.frame(LCT2,LCT2.act, LCT2.ast,LCT2.bio,LCT2.biv,LCT2.biv.b,
-                      LCT2.cau,LCT2.cca,LCT2.cem,LCT2.cor,LCT2.cor.a,LCT2.fav,LCT2.glau,LCT2.hyd,LCT2.mon, LCT2.na,LCT2.pav,LCT2.pd,
+                      LCT2.cau,LCT2.cca,LCT2.cem,LCT2.cor,LCT2.cor.a,LCT2.fav,LCT2.glau,LCT2.hyd,LCT2.mon,LCT2.pav,LCT2.pd,
                       LCT2.por,LCT2.sed,LCT2.sha,LCT2.sid,LCT2.sty,LCT2.tar)
 
 
-##write.xlsx(x = LCT2.data,"LCT2.xlsx")
+write.xlsx(x = LCT2.data,"LCT2.xlsx")
 
 
 
@@ -2134,8 +2068,6 @@ LCT3.glau<-(nrow(line %>% filter(transect_id == "LCT3" & point_id == "Glauconite
 LCT3.hyd<-(nrow(line %>% filter(transect_id == "LCT3" & point_id == "Hydnophora"))*100)/LCT3
 #amount Montastrea
 LCT3.mon<-(nrow(line %>% filter(transect_id == "LCT3" & point_id == "Montastrea"))*100)/LCT3
-#amount na
-LCT3.na<-(nrow(line %>% filter(transect_id == "LCT3" & point_id == "na"))*100)/LCT3
 #amount Pavona
 LCT3.pav<-(nrow(line %>% filter(transect_id == "LCT3" & point_id == "Pavona"))*100)/LCT3
 #amount Porites
@@ -2155,11 +2087,11 @@ LCT3.tar<-(nrow(line %>% filter(transect_id == "LCT3" & point_id == "Tarbellastr
 
 
 LCT3.data<-data.frame(LCT3,LCT3.act, LCT3.ast,LCT3.bio,LCT3.biv,LCT3.biv.b,
-                      LCT3.cau,LCT3.cca,LCT3.cem,LCT3.cor,LCT3.cor.a,LCT3.fav,LCT3.glau,LCT3.hyd,LCT3.mon, LCT3.na,LCT3.pav,LCT3.pd,
+                      LCT3.cau,LCT3.cca,LCT3.cem,LCT3.cor,LCT3.cor.a,LCT3.fav,LCT3.glau,LCT3.hyd,LCT3.mon,LCT3.pav,LCT3.pd,
                       LCT3.por,LCT3.sed,LCT3.sha,LCT3.sid,LCT3.sty,LCT3.tar)
 
 
-###write.xlsx(x = LCT3.data,"LCT3.xlsx")
+write.xlsx(x = LCT3.data,"LCT3.xlsx")
 
 
 
@@ -2198,8 +2130,6 @@ LCT4.glau<-(nrow(line %>% filter(transect_id == "LCT4" & point_id == "Glauconite
 LCT4.hyd<-(nrow(line %>% filter(transect_id == "LCT4" & point_id == "Hydnophora"))*100)/LCT4
 #amount Montastrea
 LCT4.mon<-(nrow(line %>% filter(transect_id == "LCT4" & point_id == "Montastrea"))*100)/LCT4
-#amount na
-LCT4.na<-(nrow(line %>% filter(transect_id == "LCT4" & point_id == "na"))*100)/LCT4
 #amount Pavona
 LCT4.pav<-(nrow(line %>% filter(transect_id == "LCT4" & point_id == "Pavona"))*100)/LCT4
 #amount Porites
@@ -2219,11 +2149,11 @@ LCT4.tar<-(nrow(line %>% filter(transect_id == "LCT4" & point_id == "Tarbellastr
 
 
 LCT4.data<-data.frame(LCT4,LCT4.act, LCT4.ast,LCT4.bio,LCT4.biv,LCT4.biv.b,
-                      LCT4.cau,LCT4.cca,LCT4.cem,LCT4.cor,LCT4.cor.a,LCT4.fav,LCT4.glau,LCT4.hyd,LCT4.mon, LCT4.na,LCT4.pav,LCT4.pd,
+                      LCT4.cau,LCT4.cca,LCT4.cem,LCT4.cor,LCT4.cor.a,LCT4.fav,LCT4.glau,LCT4.hyd,LCT4.mon,LCT4.pav,LCT4.pd,
                       LCT4.por,LCT4.sed,LCT4.sha,LCT4.sid,LCT4.sty,LCT4.tar)
 
 
-###write.xlsx(x = LCT4.data,"LCT4.xlsx")
+write.xlsx(x = LCT4.data,"LCT4.xlsx")
 
 
 
