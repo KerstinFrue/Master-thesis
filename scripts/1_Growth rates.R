@@ -102,15 +102,6 @@ boxplot(ol$mean.growth~ol$genus,
 kruskal.test(ol$mean.growth ~ ol$genus)
 
 
-#means of growth rates of certain genera
-mean(ol$mean.growth[ol$genus=="Pavona"])
-mean(ol$mean.growth[ol$genus=="Porites"])
-
-# RESULTS ---------------------------------------------------------------
-#Porites and Poriticaes do not show similar growth --> should not fuse them!
-#Kruskal-test: p-value 0.02349, is SMALLER than 0,05--> ??? PROBLEM
-
-
 
 
 
@@ -327,4 +318,36 @@ summary(an.mio.section)
 #growth rate ~ genus                                DOES NOT MAKE SENSE (only PORITES)
 #an.mio.genus<-aov(mio$mean.growth ~ mio$genus)
 #summary(an.mio.genus)
+
+
+
+
+
+# 6 Comparison of Actinacis and Porites Oligocene reef front --------------
+
+#means of growth rates of certain genera
+mean(ol$mean.growth[ol$genus=="Pavona"])
+mean(ol$mean.growth[ol$genus=="Porites"])
+
+# RESULTS ---------------------------------------------------------------
+#Porites and Poriticae do not show similar growth --> should not fuse them!
+#Kruskal-test: p-value 0.02349, is SMALLER than 0,05--> ??? PROBLEM
+
+
+
+
+# subsetting for Oligocene reef front data
+ol.front<-subset(ol, reef.section=="reef front")
+
+
+#correcting the order for the x axis
+ol.front$genus<- factor(ol.front$genus, levels = c("Porites", "Actinacis", "Poriticae"))
+
+
+cols6<-c("coral","coral1", "coral3")
+
+#boxplot
+boxplot(ol.front$mean.growth ~ol.front$genus,
+        #main = "Oligocene: comparison between genera of the Oligocene reef front",
+        col=cols6, xlab = "genus", ylab = "mean growth rate (mm / year)", names =c("Porites", "Actinacis", "Poriticae"))
 
