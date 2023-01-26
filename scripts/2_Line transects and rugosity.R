@@ -47,8 +47,8 @@ VT1.mon<-(nrow(line %>% filter(transect_id == "VT1" & point_id == "Montastrea"))
 VT1.pav<-(nrow(line %>% filter(transect_id == "VT1" & point_id == "Pavona"))*100)/VT1
 #amount Porites
 VT1.por<-(nrow(line %>% filter(transect_id == "VT1" & point_id == "Porites"))*100)/VT1
-#amount Poritid
-VT1.pd<-(nrow(line %>% filter(transect_id == "VT1" & point_id == "Poritid"))*100)/VT1
+#amount Poriticae
+VT1.pd<-(nrow(line %>% filter(transect_id == "VT1" & point_id == "Poriticae"))*100)/VT1
 #amount Sediment
 VT1.sed<-(nrow(line %>% filter(transect_id == "VT1" & point_id == "Sediment"))*100)/VT1
 #amount Shale
@@ -106,8 +106,8 @@ VT2.mon<-(nrow(line %>% filter(transect_id == "VT2" & point_id == "Montastrea"))
 VT2.pav<-(nrow(line %>% filter(transect_id == "VT2" & point_id == "Pavona"))*100)/VT2
 #amount Porites
 VT2.por<-(nrow(line %>% filter(transect_id == "VT2" & point_id == "Porites"))*100)/VT2
-#amount Poritid
-VT2.pd<-(nrow(line %>% filter(transect_id == "VT2" & point_id == "Poritid"))*100)/VT2
+#amount Poriticae
+VT2.pd<-(nrow(line %>% filter(transect_id == "VT2" & point_id == "Poriticae"))*100)/VT2
 #amount Sediment
 VT2.sed<-(nrow(line %>% filter(transect_id == "VT2" & point_id == "Sediment"))*100)/VT2
 #amount Shale
@@ -166,8 +166,8 @@ VT3.mon<-(nrow(line %>% filter(transect_id == "VT3" & point_id == "Montastrea"))
 VT3.pav<-(nrow(line %>% filter(transect_id == "VT3" & point_id == "Pavona"))*100)/VT3
 #amount Porites
 VT3.por<-(nrow(line %>% filter(transect_id == "VT3" & point_id == "Porites"))*100)/VT3
-#amount Poritid
-VT3.pd<-(nrow(line %>% filter(transect_id == "VT3" & point_id == "Poritid"))*100)/VT3
+#amount Poriticae
+VT3.pd<-(nrow(line %>% filter(transect_id == "VT3" & point_id == "Poriticae"))*100)/VT3
 #amount Sediment
 VT3.sed<-(nrow(line %>% filter(transect_id == "VT3" & point_id == "Sediment"))*100)/VT3
 #amount Shale
@@ -228,8 +228,8 @@ VT4.mon<-(nrow(line %>% filter(transect_id == "VT4" & point_id == "Montastrea"))
 VT4.pav<-(nrow(line %>% filter(transect_id == "VT4" & point_id == "Pavona"))*100)/VT4
 #amount Porites
 VT4.por<-(nrow(line %>% filter(transect_id == "VT4" & point_id == "Porites"))*100)/VT4
-#amount Poritid
-VT4.pd<-(nrow(line %>% filter(transect_id == "VT4" & point_id == "Poritid"))*100)/VT4
+#amount Poriticae
+VT4.pd<-(nrow(line %>% filter(transect_id == "VT4" & point_id == "Poriticae"))*100)/VT4
 #amount Sediment
 VT4.sed<-(nrow(line %>% filter(transect_id == "VT4" & point_id == "Sediment"))*100)/VT4
 #amount Shale
@@ -301,8 +301,8 @@ SCT1.mon<-(nrow(line %>% filter(transect_id == "SCT1" & point_id == "Montastrea"
 SCT1.pav<-(nrow(line %>% filter(transect_id == "SCT1" & point_id == "Pavona"))*100)/SCT1
 #amount Porites
 SCT1.por<-(nrow(line %>% filter(transect_id == "SCT1" & point_id == "Porites"))*100)/SCT1
-#amount Poritid
-SCT1.pd<-(nrow(line %>% filter(transect_id == "SCT1" & point_id == "Poritid"))*100)/SCT1
+#amount Poriticae
+SCT1.pd<-(nrow(line %>% filter(transect_id == "SCT1" & point_id == "Poriticae"))*100)/SCT1
 #amount Sediment
 SCT1.sed<-(nrow(line %>% filter(transect_id == "SCT1" & point_id == "Sediment"))*100)/SCT1
 #amount Shale
@@ -359,8 +359,8 @@ SCT2.mon<-(nrow(line %>% filter(transect_id == "SCT2" & point_id == "Montastrea"
 SCT2.pav<-(nrow(line %>% filter(transect_id == "SCT2" & point_id == "Pavona"))*100)/SCT2
 #amount Porites
 SCT2.por<-(nrow(line %>% filter(transect_id == "SCT2" & point_id == "Porites"))*100)/SCT2
-#amount Poritid
-SCT2.pd<-(nrow(line %>% filter(transect_id == "SCT2" & point_id == "Poritid"))*100)/SCT2
+#amount Poriticae
+SCT2.pd<-(nrow(line %>% filter(transect_id == "SCT2" & point_id == "Poriticae"))*100)/SCT2
 #amount Sediment
 SCT2.sed<-(nrow(line %>% filter(transect_id == "SCT2" & point_id == "Sediment"))*100)/SCT2
 #amount Shale
@@ -419,8 +419,8 @@ SCT3.mon<-(nrow(line %>% filter(transect_id == "SCT3" & point_id == "Montastrea"
 SCT3.pav<-(nrow(line %>% filter(transect_id == "SCT3" & point_id == "Pavona"))*100)/SCT3
 #amount Porites
 SCT3.por<-(nrow(line %>% filter(transect_id == "SCT3" & point_id == "Porites"))*100)/SCT3
-#amount Poritid
-SCT3.pd<-(nrow(line %>% filter(transect_id == "SCT3" & point_id == "Poritid"))*100)/SCT3
+#amount Poriticae
+SCT3.pd<-(nrow(line %>% filter(transect_id == "SCT3" & point_id == "Poriticae"))*100)/SCT3
 #amount Sediment
 SCT3.sed<-(nrow(line %>% filter(transect_id == "SCT3" & point_id == "Sediment"))*100)/SCT3
 #amount Shale
@@ -481,8 +481,8 @@ SCT4.mon<-(nrow(line %>% filter(transect_id == "SCT4" & point_id == "Montastrea"
 SCT4.pav<-(nrow(line %>% filter(transect_id == "SCT4" & point_id == "Pavona"))*100)/SCT4
 #amount Porites
 SCT4.por<-(nrow(line %>% filter(transect_id == "SCT4" & point_id == "Porites"))*100)/SCT4
-#amount Poritid
-SCT4.pd<-(nrow(line %>% filter(transect_id == "SCT4" & point_id == "Poritid"))*100)/SCT4
+#amount Poriticae
+SCT4.pd<-(nrow(line %>% filter(transect_id == "SCT4" & point_id == "Poriticae"))*100)/SCT4
 #amount Sediment
 SCT4.sed<-(nrow(line %>% filter(transect_id == "SCT4" & point_id == "Sediment"))*100)/SCT4
 #amount Shale
@@ -541,8 +541,8 @@ SCT5.mon<-(nrow(line %>% filter(transect_id == "SCT5" & point_id == "Montastrea"
 SCT5.pav<-(nrow(line %>% filter(transect_id == "SCT5" & point_id == "Pavona"))*100)/SCT5
 #amount Porites
 SCT5.por<-(nrow(line %>% filter(transect_id == "SCT5" & point_id == "Porites"))*100)/SCT5
-#amount Poritid
-SCT5.pd<-(nrow(line %>% filter(transect_id == "SCT5" & point_id == "Poritid"))*100)/SCT5
+#amount Poriticae
+SCT5.pd<-(nrow(line %>% filter(transect_id == "SCT5" & point_id == "Poriticae"))*100)/SCT5
 #amount Sediment
 SCT5.sed<-(nrow(line %>% filter(transect_id == "SCT5" & point_id == "Sediment"))*100)/SCT5
 #amount Shale
@@ -603,8 +603,8 @@ SCT6.mon<-(nrow(line %>% filter(transect_id == "SCT6" & point_id == "Montastrea"
 SCT6.pav<-(nrow(line %>% filter(transect_id == "SCT6" & point_id == "Pavona"))*100)/SCT6
 #amount Porites
 SCT6.por<-(nrow(line %>% filter(transect_id == "SCT6" & point_id == "Porites"))*100)/SCT6
-#amount Poritid
-SCT6.pd<-(nrow(line %>% filter(transect_id == "SCT6" & point_id == "Poritid"))*100)/SCT6
+#amount Poriticae
+SCT6.pd<-(nrow(line %>% filter(transect_id == "SCT6" & point_id == "Poriticae"))*100)/SCT6
 #amount Sediment
 SCT6.sed<-(nrow(line %>% filter(transect_id == "SCT6" & point_id == "Sediment"))*100)/SCT6
 #amount Shale
@@ -664,8 +664,8 @@ SCT7.mon<-(nrow(line %>% filter(transect_id == "SCT7" & point_id == "Montastrea"
 SCT7.pav<-(nrow(line %>% filter(transect_id == "SCT7" & point_id == "Pavona"))*100)/SCT7
 #amount Porites
 SCT7.por<-(nrow(line %>% filter(transect_id == "SCT7" & point_id == "Porites"))*100)/SCT7
-#amount Poritid
-SCT7.pd<-(nrow(line %>% filter(transect_id == "SCT7" & point_id == "Poritid"))*100)/SCT7
+#amount Poriticae
+SCT7.pd<-(nrow(line %>% filter(transect_id == "SCT7" & point_id == "Poriticae"))*100)/SCT7
 #amount Sediment
 SCT7.sed<-(nrow(line %>% filter(transect_id == "SCT7" & point_id == "Sediment"))*100)/SCT7
 #amount Shale
@@ -726,8 +726,8 @@ SCT8.mon<-(nrow(line %>% filter(transect_id == "SCT8" & point_id == "Montastrea"
 SCT8.pav<-(nrow(line %>% filter(transect_id == "SCT8" & point_id == "Pavona"))*100)/SCT8
 #amount Porites
 SCT8.por<-(nrow(line %>% filter(transect_id == "SCT8" & point_id == "Porites"))*100)/SCT8
-#amount Poritid
-SCT8.pd<-(nrow(line %>% filter(transect_id == "SCT8" & point_id == "Poritid"))*100)/SCT8
+#amount Poriticae
+SCT8.pd<-(nrow(line %>% filter(transect_id == "SCT8" & point_id == "Poriticae"))*100)/SCT8
 #amount Sediment
 SCT8.sed<-(nrow(line %>% filter(transect_id == "SCT8" & point_id == "Sediment"))*100)/SCT8
 #amount Shale
@@ -788,8 +788,8 @@ PML1.mon<-(nrow(line %>% filter(transect_id == "PML1" & point_id == "Montastrea"
 PML1.pav<-(nrow(line %>% filter(transect_id == "PML1" & point_id == "Pavona"))*100)/PML1
 #amount Porites
 PML1.por<-(nrow(line %>% filter(transect_id == "PML1" & point_id == "Porites"))*100)/PML1
-#amount Poritid
-PML1.pd<-(nrow(line %>% filter(transect_id == "PML1" & point_id == "Poritid"))*100)/PML1
+#amount Poriticae
+PML1.pd<-(nrow(line %>% filter(transect_id == "PML1" & point_id == "Poriticae"))*100)/PML1
 #amount Sediment
 PML1.sed<-(nrow(line %>% filter(transect_id == "PML1" & point_id == "Sediment"))*100)/PML1
 #amount Shale
@@ -846,8 +846,8 @@ PML2.mon<-(nrow(line %>% filter(transect_id == "PML2" & point_id == "Montastrea"
 PML2.pav<-(nrow(line %>% filter(transect_id == "PML2" & point_id == "Pavona"))*100)/PML2
 #amount Porites
 PML2.por<-(nrow(line %>% filter(transect_id == "PML2" & point_id == "Porites"))*100)/PML2
-#amount Poritid
-PML2.pd<-(nrow(line %>% filter(transect_id == "PML2" & point_id == "Poritid"))*100)/PML2
+#amount Poriticae
+PML2.pd<-(nrow(line %>% filter(transect_id == "PML2" & point_id == "Poriticae"))*100)/PML2
 #amount Sediment
 PML2.sed<-(nrow(line %>% filter(transect_id == "PML2" & point_id == "Sediment"))*100)/PML2
 #amount Shale
@@ -906,8 +906,8 @@ PML3.mon<-(nrow(line %>% filter(transect_id == "PML3" & point_id == "Montastrea"
 PML3.pav<-(nrow(line %>% filter(transect_id == "PML3" & point_id == "Pavona"))*100)/PML3
 #amount Porites
 PML3.por<-(nrow(line %>% filter(transect_id == "PML3" & point_id == "Porites"))*100)/PML3
-#amount Poritid
-PML3.pd<-(nrow(line %>% filter(transect_id == "PML3" & point_id == "Poritid"))*100)/PML3
+#amount Poriticae
+PML3.pd<-(nrow(line %>% filter(transect_id == "PML3" & point_id == "Poriticae"))*100)/PML3
 #amount Sediment
 PML3.sed<-(nrow(line %>% filter(transect_id == "PML3" & point_id == "Sediment"))*100)/PML3
 #amount Shale
@@ -968,8 +968,8 @@ PML4.mon<-(nrow(line %>% filter(transect_id == "PML4" & point_id == "Montastrea"
 PML4.pav<-(nrow(line %>% filter(transect_id == "PML4" & point_id == "Pavona"))*100)/PML4
 #amount Porites
 PML4.por<-(nrow(line %>% filter(transect_id == "PML4" & point_id == "Porites"))*100)/PML4
-#amount Poritid
-PML4.pd<-(nrow(line %>% filter(transect_id == "PML4" & point_id == "Poritid"))*100)/PML4
+#amount Poriticae
+PML4.pd<-(nrow(line %>% filter(transect_id == "PML4" & point_id == "Poriticae"))*100)/PML4
 #amount Sediment
 PML4.sed<-(nrow(line %>% filter(transect_id == "PML4" & point_id == "Sediment"))*100)/PML4
 #amount Shale
@@ -1028,8 +1028,8 @@ PML5.mon<-(nrow(line %>% filter(transect_id == "PML5" & point_id == "Montastrea"
 PML5.pav<-(nrow(line %>% filter(transect_id == "PML5" & point_id == "Pavona"))*100)/PML5
 #amount Porites
 PML5.por<-(nrow(line %>% filter(transect_id == "PML5" & point_id == "Porites"))*100)/PML5
-#amount Poritid
-PML5.pd<-(nrow(line %>% filter(transect_id == "PML5" & point_id == "Poritid"))*100)/PML5
+#amount Poriticae
+PML5.pd<-(nrow(line %>% filter(transect_id == "PML5" & point_id == "Poriticae"))*100)/PML5
 #amount Sediment
 PML5.sed<-(nrow(line %>% filter(transect_id == "PML5" & point_id == "Sediment"))*100)/PML5
 #amount Shale
@@ -1090,8 +1090,8 @@ PML6.mon<-(nrow(line %>% filter(transect_id == "PML6" & point_id == "Montastrea"
 PML6.pav<-(nrow(line %>% filter(transect_id == "PML6" & point_id == "Pavona"))*100)/PML6
 #amount Porites
 PML6.por<-(nrow(line %>% filter(transect_id == "PML6" & point_id == "Porites"))*100)/PML6
-#amount Poritid
-PML6.pd<-(nrow(line %>% filter(transect_id == "PML6" & point_id == "Poritid"))*100)/PML6
+#amount Poriticae
+PML6.pd<-(nrow(line %>% filter(transect_id == "PML6" & point_id == "Poriticae"))*100)/PML6
 #amount Sediment
 PML6.sed<-(nrow(line %>% filter(transect_id == "PML6" & point_id == "Sediment"))*100)/PML6
 #amount Shale
@@ -1160,8 +1160,8 @@ TL1.mon<-(nrow(line %>% filter(transect_id == "TL1" & point_id == "Montastrea"))
 TL1.pav<-(nrow(line %>% filter(transect_id == "TL1" & point_id == "Pavona"))*100)/TL1
 #amount Porites
 TL1.por<-(nrow(line %>% filter(transect_id == "TL1" & point_id == "Porites"))*100)/TL1
-#amount Poritid
-TL1.pd<-(nrow(line %>% filter(transect_id == "TL1" & point_id == "Poritid"))*100)/TL1
+#amount Poriticae
+TL1.pd<-(nrow(line %>% filter(transect_id == "TL1" & point_id == "Poriticae"))*100)/TL1
 #amount Sediment
 TL1.sed<-(nrow(line %>% filter(transect_id == "TL1" & point_id == "Sediment"))*100)/TL1
 #amount Shale
@@ -1218,8 +1218,8 @@ TL2.mon<-(nrow(line %>% filter(transect_id == "TL2" & point_id == "Montastrea"))
 TL2.pav<-(nrow(line %>% filter(transect_id == "TL2" & point_id == "Pavona"))*100)/TL2
 #amount Porites
 TL2.por<-(nrow(line %>% filter(transect_id == "TL2" & point_id == "Porites"))*100)/TL2
-#amount Poritid
-TL2.pd<-(nrow(line %>% filter(transect_id == "TL2" & point_id == "Poritid"))*100)/TL2
+#amount Poriticae
+TL2.pd<-(nrow(line %>% filter(transect_id == "TL2" & point_id == "Poriticae"))*100)/TL2
 #amount Sediment
 TL2.sed<-(nrow(line %>% filter(transect_id == "TL2" & point_id == "Sediment"))*100)/TL2
 #amount Shale
@@ -1278,8 +1278,8 @@ TL3.mon<-(nrow(line %>% filter(transect_id == "TL3" & point_id == "Montastrea"))
 TL3.pav<-(nrow(line %>% filter(transect_id == "TL3" & point_id == "Pavona"))*100)/TL3
 #amount Porites
 TL3.por<-(nrow(line %>% filter(transect_id == "TL3" & point_id == "Porites"))*100)/TL3
-#amount Poritid
-TL3.pd<-(nrow(line %>% filter(transect_id == "TL3" & point_id == "Poritid"))*100)/TL3
+#amount Poriticae
+TL3.pd<-(nrow(line %>% filter(transect_id == "TL3" & point_id == "Poriticae"))*100)/TL3
 #amount Sediment
 TL3.sed<-(nrow(line %>% filter(transect_id == "TL3" & point_id == "Sediment"))*100)/TL3
 #amount Shale
@@ -1340,8 +1340,8 @@ TL4.mon<-(nrow(line %>% filter(transect_id == "TL4" & point_id == "Montastrea"))
 TL4.pav<-(nrow(line %>% filter(transect_id == "TL4" & point_id == "Pavona"))*100)/TL4
 #amount Porites
 TL4.por<-(nrow(line %>% filter(transect_id == "TL4" & point_id == "Porites"))*100)/TL4
-#amount Poritid
-TL4.pd<-(nrow(line %>% filter(transect_id == "TL4" & point_id == "Poritid"))*100)/TL4
+#amount Poriticae
+TL4.pd<-(nrow(line %>% filter(transect_id == "TL4" & point_id == "Poriticae"))*100)/TL4
 #amount Sediment
 TL4.sed<-(nrow(line %>% filter(transect_id == "TL4" & point_id == "Sediment"))*100)/TL4
 #amount Shale
@@ -1400,8 +1400,8 @@ TL5.mon<-(nrow(line %>% filter(transect_id == "TL5" & point_id == "Montastrea"))
 TL5.pav<-(nrow(line %>% filter(transect_id == "TL5" & point_id == "Pavona"))*100)/TL5
 #amount Porites
 TL5.por<-(nrow(line %>% filter(transect_id == "TL5" & point_id == "Porites"))*100)/TL5
-#amount Poritid
-TL5.pd<-(nrow(line %>% filter(transect_id == "TL5" & point_id == "Poritid"))*100)/TL5
+#amount Poriticae
+TL5.pd<-(nrow(line %>% filter(transect_id == "TL5" & point_id == "Poriticae"))*100)/TL5
 #amount Sediment
 TL5.sed<-(nrow(line %>% filter(transect_id == "TL5" & point_id == "Sediment"))*100)/TL5
 #amount Shale
@@ -1462,8 +1462,8 @@ TL6.mon<-(nrow(line %>% filter(transect_id == "TL6" & point_id == "Montastrea"))
 TL6.pav<-(nrow(line %>% filter(transect_id == "TL6" & point_id == "Pavona"))*100)/TL6
 #amount Porites
 TL6.por<-(nrow(line %>% filter(transect_id == "TL6" & point_id == "Porites"))*100)/TL6
-#amount Poritid
-TL6.pd<-(nrow(line %>% filter(transect_id == "TL6" & point_id == "Poritid"))*100)/TL6
+#amount Poriticae
+TL6.pd<-(nrow(line %>% filter(transect_id == "TL6" & point_id == "Poriticae"))*100)/TL6
 #amount Sediment
 TL6.sed<-(nrow(line %>% filter(transect_id == "TL6" & point_id == "Sediment"))*100)/TL6
 #amount Shale
@@ -1527,8 +1527,8 @@ CGL1.mon<-(nrow(line %>% filter(transect_id == "CGL1" & point_id == "Montastrea"
 CGL1.pav<-(nrow(line %>% filter(transect_id == "CGL1" & point_id == "Pavona"))*100)/CGL1
 #amount Porites
 CGL1.por<-(nrow(line %>% filter(transect_id == "CGL1" & point_id == "Porites"))*100)/CGL1
-#amount Poritid
-CGL1.pd<-(nrow(line %>% filter(transect_id == "CGL1" & point_id == "Poritid"))*100)/CGL1
+#amount Poriticae
+CGL1.pd<-(nrow(line %>% filter(transect_id == "CGL1" & point_id == "Poriticae"))*100)/CGL1
 #amount Sediment
 CGL1.sed<-(nrow(line %>% filter(transect_id == "CGL1" & point_id == "Sediment"))*100)/CGL1
 #amount Shale
@@ -1585,8 +1585,8 @@ CGL2.mon<-(nrow(line %>% filter(transect_id == "CGL2" & point_id == "Montastrea"
 CGL2.pav<-(nrow(line %>% filter(transect_id == "CGL2" & point_id == "Pavona"))*100)/CGL2
 #amount Porites
 CGL2.por<-(nrow(line %>% filter(transect_id == "CGL2" & point_id == "Porites"))*100)/CGL2
-#amount Poritid
-CGL2.pd<-(nrow(line %>% filter(transect_id == "CGL2" & point_id == "Poritid"))*100)/CGL2
+#amount Poriticae
+CGL2.pd<-(nrow(line %>% filter(transect_id == "CGL2" & point_id == "Poriticae"))*100)/CGL2
 #amount Sediment
 CGL2.sed<-(nrow(line %>% filter(transect_id == "CGL2" & point_id == "Sediment"))*100)/CGL2
 #amount Shale
@@ -1645,8 +1645,8 @@ CGL3.mon<-(nrow(line %>% filter(transect_id == "CGL3" & point_id == "Montastrea"
 CGL3.pav<-(nrow(line %>% filter(transect_id == "CGL3" & point_id == "Pavona"))*100)/CGL3
 #amount Porites
 CGL3.por<-(nrow(line %>% filter(transect_id == "CGL3" & point_id == "Porites"))*100)/CGL3
-#amount Poritid
-CGL3.pd<-(nrow(line %>% filter(transect_id == "CGL3" & point_id == "Poritid"))*100)/CGL3
+#amount Poriticae
+CGL3.pd<-(nrow(line %>% filter(transect_id == "CGL3" & point_id == "Poriticae"))*100)/CGL3
 #amount Sediment
 CGL3.sed<-(nrow(line %>% filter(transect_id == "CGL3" & point_id == "Sediment"))*100)/CGL3
 #amount Shale
@@ -1707,8 +1707,8 @@ CGL4.mon<-(nrow(line %>% filter(transect_id == "CGL4" & point_id == "Montastrea"
 CGL4.pav<-(nrow(line %>% filter(transect_id == "CGL4" & point_id == "Pavona"))*100)/CGL4
 #amount Porites
 CGL4.por<-(nrow(line %>% filter(transect_id == "CGL4" & point_id == "Porites"))*100)/CGL4
-#amount Poritid
-CGL4.pd<-(nrow(line %>% filter(transect_id == "CGL4" & point_id == "Poritid"))*100)/CGL4
+#amount Poriticae
+CGL4.pd<-(nrow(line %>% filter(transect_id == "CGL4" & point_id == "Poriticae"))*100)/CGL4
 #amount Sediment
 CGL4.sed<-(nrow(line %>% filter(transect_id == "CGL4" & point_id == "Sediment"))*100)/CGL4
 #amount Shale
@@ -1767,8 +1767,8 @@ CGL5.mon<-(nrow(line %>% filter(transect_id == "CGL5" & point_id == "Montastrea"
 CGL5.pav<-(nrow(line %>% filter(transect_id == "CGL5" & point_id == "Pavona"))*100)/CGL5
 #amount Porites
 CGL5.por<-(nrow(line %>% filter(transect_id == "CGL5" & point_id == "Porites"))*100)/CGL5
-#amount Poritid
-CGL5.pd<-(nrow(line %>% filter(transect_id == "CGL5" & point_id == "Poritid"))*100)/CGL5
+#amount Poriticae
+CGL5.pd<-(nrow(line %>% filter(transect_id == "CGL5" & point_id == "Poriticae"))*100)/CGL5
 #amount Sediment
 CGL5.sed<-(nrow(line %>% filter(transect_id == "CGL5" & point_id == "Sediment"))*100)/CGL5
 #amount Shale
@@ -1829,8 +1829,8 @@ CGL6.mon<-(nrow(line %>% filter(transect_id == "CGL6" & point_id == "Montastrea"
 CGL6.pav<-(nrow(line %>% filter(transect_id == "CGL6" & point_id == "Pavona"))*100)/CGL6
 #amount Porites
 CGL6.por<-(nrow(line %>% filter(transect_id == "CGL6" & point_id == "Porites"))*100)/CGL6
-#amount Poritid
-CGL6.pd<-(nrow(line %>% filter(transect_id == "CGL6" & point_id == "Poritid"))*100)/CGL6
+#amount Poriticae
+CGL6.pd<-(nrow(line %>% filter(transect_id == "CGL6" & point_id == "Poriticae"))*100)/CGL6
 #amount Sediment
 CGL6.sed<-(nrow(line %>% filter(transect_id == "CGL6" & point_id == "Sediment"))*100)/CGL6
 #amount Shale
@@ -1890,8 +1890,8 @@ CGL7.mon<-(nrow(line %>% filter(transect_id == "CGL7" & point_id == "Montastrea"
 CGL7.pav<-(nrow(line %>% filter(transect_id == "CGL7" & point_id == "Pavona"))*100)/CGL7
 #amount Porites
 CGL7.por<-(nrow(line %>% filter(transect_id == "CGL7" & point_id == "Porites"))*100)/CGL7
-#amount Poritid
-CGL7.pd<-(nrow(line %>% filter(transect_id == "CGL7" & point_id == "Poritid"))*100)/CGL7
+#amount Poriticae
+CGL7.pd<-(nrow(line %>% filter(transect_id == "CGL7" & point_id == "Poriticae"))*100)/CGL7
 #amount Sediment
 CGL7.sed<-(nrow(line %>% filter(transect_id == "CGL7" & point_id == "Sediment"))*100)/CGL7
 #amount Shale
@@ -1954,8 +1954,8 @@ LCT1.mon<-(nrow(line %>% filter(transect_id == "LCT1" & point_id == "Montastrea"
 LCT1.pav<-(nrow(line %>% filter(transect_id == "LCT1" & point_id == "Pavona"))*100)/LCT1
 #amount Porites
 LCT1.por<-(nrow(line %>% filter(transect_id == "LCT1" & point_id == "Porites"))*100)/LCT1
-#amount Poritid
-LCT1.pd<-(nrow(line %>% filter(transect_id == "LCT1" & point_id == "Poritid"))*100)/LCT1
+#amount Poriticae
+LCT1.pd<-(nrow(line %>% filter(transect_id == "LCT1" & point_id == "Poriticae"))*100)/LCT1
 #amount Sediment
 LCT1.sed<-(nrow(line %>% filter(transect_id == "LCT1" & point_id == "Sediment"))*100)/LCT1
 #amount Shale
@@ -2012,8 +2012,8 @@ LCT2.mon<-(nrow(line %>% filter(transect_id == "LCT2" & point_id == "Montastrea"
 LCT2.pav<-(nrow(line %>% filter(transect_id == "LCT2" & point_id == "Pavona"))*100)/LCT2
 #amount Porites
 LCT2.por<-(nrow(line %>% filter(transect_id == "LCT2" & point_id == "Porites"))*100)/LCT2
-#amount Poritid
-LCT2.pd<-(nrow(line %>% filter(transect_id == "LCT2" & point_id == "Poritid"))*100)/LCT2
+#amount Poriticae
+LCT2.pd<-(nrow(line %>% filter(transect_id == "LCT2" & point_id == "Poriticae"))*100)/LCT2
 #amount Sediment
 LCT2.sed<-(nrow(line %>% filter(transect_id == "LCT2" & point_id == "Sediment"))*100)/LCT2
 #amount Shale
@@ -2072,8 +2072,8 @@ LCT3.mon<-(nrow(line %>% filter(transect_id == "LCT3" & point_id == "Montastrea"
 LCT3.pav<-(nrow(line %>% filter(transect_id == "LCT3" & point_id == "Pavona"))*100)/LCT3
 #amount Porites
 LCT3.por<-(nrow(line %>% filter(transect_id == "LCT3" & point_id == "Porites"))*100)/LCT3
-#amount Poritid
-LCT3.pd<-(nrow(line %>% filter(transect_id == "LCT3" & point_id == "Poritid"))*100)/LCT3
+#amount Poriticae
+LCT3.pd<-(nrow(line %>% filter(transect_id == "LCT3" & point_id == "Poriticae"))*100)/LCT3
 #amount Sediment
 LCT3.sed<-(nrow(line %>% filter(transect_id == "LCT3" & point_id == "Sediment"))*100)/LCT3
 #amount Shale
@@ -2134,8 +2134,8 @@ LCT4.mon<-(nrow(line %>% filter(transect_id == "LCT4" & point_id == "Montastrea"
 LCT4.pav<-(nrow(line %>% filter(transect_id == "LCT4" & point_id == "Pavona"))*100)/LCT4
 #amount Porites
 LCT4.por<-(nrow(line %>% filter(transect_id == "LCT4" & point_id == "Porites"))*100)/LCT4
-#amount Poritid
-LCT4.pd<-(nrow(line %>% filter(transect_id == "LCT4" & point_id == "Poritid"))*100)/LCT4
+#amount Poriticae
+LCT4.pd<-(nrow(line %>% filter(transect_id == "LCT4" & point_id == "Poriticae"))*100)/LCT4
 #amount Sediment
 LCT4.sed<-(nrow(line %>% filter(transect_id == "LCT4" & point_id == "Sediment"))*100)/LCT4
 #amount Shale

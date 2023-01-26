@@ -87,14 +87,14 @@ kruskal.test(ol$mean.growth~ol$reef.section)
 #--------------------------------------------------------------------------------------------------
 
 #correcting the order for the x axis
-ol$genus<- factor(ol$genus, levels = c("Porites", "Actinacis", "Poritid", "Tarbellastraea", "Pavona"))
+ol$genus<- factor(ol$genus, levels = c("Porites", "Actinacis", "Poriticae", "Tarbellastraea", "Pavona"))
 
 cols2<-c("coral","coral1","coral2", "coral4", "coral1")
 
 #boxplot 10 6 17 2 2
 boxplot(ol$mean.growth~ol$genus,
         #main = "Oligocene: comparison between genera",
-        col=cols2, xlab = "genus", ylab = "mean growth rate (mm / year)", names =c("Porites", "Actinacis", "Poritid", "Tarbellastraea", "Pavona"))
+        col=cols2, xlab = "genus", ylab = "mean growth rate (mm / year)", names =c("Porites", "Actinacis", "Poriticae", "Tarbellastraea", "Pavona"))
 
 #Test geht nicht?  --> Gruppen mioüssen gleich lang sein! Und Vergleich geht nur mit 2 Gruppen! -->Kruskal test
 #wilcox.test(ol$mean.growth~ol$reef.section)
@@ -107,7 +107,7 @@ mean(ol$mean.growth[ol$genus=="Pavona"])
 mean(ol$mean.growth[ol$genus=="Porites"])
 
 # RESULTS ---------------------------------------------------------------
-#Porites and Poritids do not show similar growth --> should not fuse them!
+#Porites and Poriticaes do not show similar growth --> should not fuse them!
 #Kruskal-test: p-value 0.02349, is SMALLER than 0,05--> ??? PROBLEM
 
 
