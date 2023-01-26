@@ -351,3 +351,6 @@ boxplot(ol.front$mean.growth ~ol.front$genus,
         #main = "Oligocene: comparison between genera of the Oligocene reef front",
         col=cols6, xlab = "genus", ylab = "mean growth rate (mm / year)", names =c("Porites", "Actinacis", "Poriticae"))
 
+
+#Kruskall-Wallis test
+kruskal.test(ol.front$mean.growth~ol.front$genus)
