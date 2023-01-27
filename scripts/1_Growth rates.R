@@ -354,3 +354,84 @@ boxplot(ol.front$mean.growth ~ol.front$genus,
 
 #Kruskall-Wallis test
 kruskal.test(ol.front$mean.growth~ol.front$genus)
+
+
+
+
+
+
+# 7_standard errors -------------------------------------------------------
+
+#oligocene se per reef section
+
+se <- tapply(ol$mean.growth, ol$reef.section,
+             function(x) sd(x)/sqrt(length(x)))
+str(se)
+se <- as.data.frame(se)
+
+#se$reef.section <- rownames(se)   #what is this good for?
+#se <- merge(reef.section, se)
+            
+# Standard error bars
+
+#c95 <- 1.96 * se$se
+
+#arrows(x0=m$mid, y0=m$m - c95, y1=m$m + c95, code = 3, angle=90, length=0, col = cols)
+
+
+
+#-----------------------------------------------------------------------------------------------------------------------
+
+
+#Miocene se per reef section
+
+se1 <- tapply(mio$mean.growth, mio$reef.section, function(x) sd(x)/sqrt(length(x)))
+str(se1)
+se1 <- as.data.frame(se1)
+
+#se1$reef.section <- rownames(se1)   #what is this good for?
+#se1 <- merge(reef.section, se1)
+
+# Standard error bars
+
+#c95 <- 1.96 * se1$se1
+
+#arrows(x0=m$mid, y0=m$m - c95, y1=m$m + c95, code = 3, angle=90, length=0, col = cols)
+
+
+#-----------------------------------------------------------------------------------------------------------------------
+
+#oligocene se per genus
+
+se2 <- tapply(ol$mean.growth, ol$genus,
+             function(x) sd(x)/sqrt(length(x)))
+str(se2)
+se2 <- as.data.frame(se2)
+
+#se2$reef.section <- rownames(se2)   #what is this good for?
+#se2 <- merge(reef.section, se2)
+
+# Standard error bars
+
+#c95 <- 1.96 * se2$se2
+
+#arrows(x0=m$mid, y0=m$m - c95, y1=m$m + c95, code = 3, angle=90, length=0, col = cols)
+
+
+#-----------------------------------------------------------------------------------------------------------------------
+
+#Miocene se per genus
+
+se3 <- tapply(mio$mean.growth, mio$genus,
+              function(x) sd(x)/sqrt(length(x)))
+str(se3)
+se3 <- as.data.frame(se3)
+
+#se3$reef.section <- rownames(se3)   #what is this good for?
+#se3 <- merge(reef.section, se3)
+
+# Standard error bars
+
+#c95 <- 1.96 * se3$se3
+
+#arrows(x0=m$mid, y0=m$m - c95, y1=m$m + c95, code = 3, angle=90, length=0, col = cols)
