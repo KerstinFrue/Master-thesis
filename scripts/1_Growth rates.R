@@ -177,13 +177,13 @@ cols <- c("cadetblue1", "cadetblue1", "cyan4", "cyan4", "olivedrab3", "olivedrab
 
 #boxplot 12 6 3 0 16 10 8 5
 #x11()
-svg("ol.mio.reefsections12.svg", w=8, h=6)
+#svg("ol.mio.reefsections12.svg", w=8, h=6)
 boxplot(ol.mio$mean.growth ~  ol.mio$time + ol.mio$reef.section, col=cols,
         #main = "Comparison between Oligocene and Miocene: reef sections",
         names = c("Oligocene back reef","Miocene back reef", "Oligocene reef flat", "Miocene reef flat",
                   "Oligocene reef front", "Miocene reef front", "Oligocene proximal slope", "Miocene proximal slope"),
         xlab = "time & reef section", ylab= "mean growth rate (mm / year)", cex.main=1.0, cex.lab=1.0, cex.axis=1.0)
-dev.off()
+#dev.off()
 
 
 
