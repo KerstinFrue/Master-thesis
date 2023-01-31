@@ -22,19 +22,11 @@ setwd("C:/Users/Kerry/Desktop/Master-thesis")
 ol.mio.mo<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates/mean growth rates Oligocene Miocene Modern.csv")
 
 # Oligocene and Miocene data only
-ol.mio<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates/mean growth rates Oligocene Miocene.csv")
+ol.mio<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates/mean growth rates per specimen Oligocene Miocene.csv")
 ol <- subset(ol.mio, time=="Oligocene")
 #slope: Favites data (1 specimen, only 2 measurements) was left out (very big growth rate)
 
 mio <- subset(ol.mio, time=="Miocene")
-
-
-
-
-
-
-
-
 
 
 
@@ -75,6 +67,18 @@ kruskal.test(ol$mean.growth~ol$reef.section)
 
 
 #Kruskal-test: p-value 0.0184, is SMALLER than 0,05--> ??? PROBLEM
+
+
+
+
+# Getting boxplot statistics (boxplot data: Min, First Quartile, Median, Third Quartile, Maximum)
+
+#summary1<-boxplot(ol$mean.growth~ol$reef.section,
+        #main = "Oligocene: comparison between reef sections",
+        #col=cols1, xlab = "reef section", ylab= "mean growth rate (mm / year)",
+        #names = c("back reef", "reef flat", "reef front ", "proximal slope"))$stats
+
+#summary1
 
 
 
@@ -294,10 +298,26 @@ kruskal.test(ol.mio.mo$mean.growth ~ ol.mio.mo$time)
 
 # 5 ANOVA tests -------------------------------------------------------------
 
+
+#normal distribution test
+shapiro.test(ol.mio$mean.growth)
+shapiro.test(ol$mean.growth)        #only data set with normal distribution....
+shapiro.test(mio$mean.growth)
+shapiro.test(ol.mio.mo$mean.growth)
+
+#library(car)
+#leveneTest(ol$mean.growth ~ ol$reef.section)
+
+
 #Oligocene
 #5.1 growth rate ~ reef section
 an.ol.section<-aov(ol$mean.growth ~ ol$reef.section)
 summary(an.ol.section)
+plot(an.ol.section, 1)
+
+
+
+
 
 
 
