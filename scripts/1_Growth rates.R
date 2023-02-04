@@ -18,7 +18,7 @@ setwd("C:/Users/Kerry/Desktop/Master-thesis")
 
 
 # Growth rate data ----------------------------------------------
-# alldata
+# allmeandata
 ol.mio.mo<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates/mean growth rates Oligocene Miocene Modern.csv")
 
 # Oligocene and Miocene data only
@@ -32,6 +32,165 @@ mio <- subset(ol.mio, time=="Miocene")
 
 
 
+
+
+
+
+
+
+
+
+
+#1 TESTS FOR NORMALITY AND VARIANCE (OF MEANS)
+
+#-------------------------------------------------------------------------------------------------------------------------------------
+
+
+# Oligocene growth data ---------------------------------------------------
+
+
+#normal distribution test for data
+shapiro.test(ol$mean.growth)        # only data set with normal distribution....
+
+
+
+# Oligocene reef section ------------------------------------------------
+
+
+class(ol$reef.section)
+summary(ol)
+
+#--> Kruskal-test, whether the means vary between the Oligocene reef sections???
+kruskal.test(ol$mean.growth~ol$reef.section)
+
+
+#Null hypothesis was, that the values don't vary much
+#if the p value is smaller than the commonly chosen significance level of 0,05,
+#the null hypothesis is rejected, as in this case. The mean growth rates vary highly between the different times, as you can also see in the graph
+
+
+
+
+#library(car)
+#leveneTest(ol$mean.growth ~ ol$reef.section)
+
+
+an.ol.section<-aov(ol$mean.growth ~ ol$reef.section)
+summary(an.ol.section)
+plot(an.ol.section, 1)
+
+
+
+
+
+
+# Oligocene genera --------------------------------------------------------
+
+
+kruskal.test(ol$mean.growth ~ ol$genus)
+
+
+an.ol.genus<-aov(ol$mean.growth ~ ol$genus)
+summary(an.ol.genus)
+
+
+#-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+# Miocene growth data -----------------------------------------------------
+
+
+
+shapiro.test(mio$mean.growth)
+
+kruskal.test(mio$mean.growth ~ mio$reef.section)
+
+an.mio.section<-aov(mio$mean.growth ~ mio$reef.section)
+summary(an.mio.section)
+
+#---------------------------------------------------------------------------------------------------------------------------------------
+
+
+# Oligocene vs. Miocene reef section --------------------------------------
+
+
+
+shapiro.test(ol.mio$mean.growth)
+
+
+kruskal.test(ol.mio$mean.growth ~  ol.mio$reef.section)
+
+#ANOVA
+
+#growth rate ~ reef.section
+an.ol.mio.section<-aov(ol.mio$mean.growth ~ ol.mio$reef.section)
+summary(an.ol.mio.section)
+
+
+
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+
+
+# Oligocene Porites vs. Miocene Porites -----------------------------------
+
+
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!very useful function!!!!!!!!!!!!!!!!!!!!!!!!!
+summary (ol.mio)
+
+shapiro.test(ol.mio$mean.growth[ol.mio$genus=="Porites"])
+
+
+kruskal.test(ol.mio$mean.growth[ol.mio$genus=="Porites"] ~ ol.mio$time[ol.mio$genus=="Porites"])
+
+
+
+#ANOVA
+
+an.ol.mio.genus<-aov(ol.mio$mean.growth[ol.mio$genus=="Porites"] ~ ol.mio$genus[ol.mio$genus=="Porites"])
+summary(an.ol.mio.genus)
+
+
+#---------------------------------------------------------------------------------------------------------------------------------------
+
+
+# Oligocene vs. Miocene vs. modern ----------------------------------------
+
+
+
+shapiro.test(ol.mio.mo$mean.growth)
+
+kruskal.test(ol.mio.mo$mean.growth ~ ol.mio.mo$time)
+
+#ANOVA
+an.ol.mio.mo<-aov(ol.mio.mo$mean.growth ~ ol.mio.mo$time)
+summary(an.ol.mio.mo)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#######################################################################################################################################
+#2 PLOTS
 
 #--------------------------------------------------------------------------
 # 1.0 Oligocene -----------------------------------------------------------
@@ -52,22 +211,12 @@ boxplot(ol$mean.growth~ol$reef.section,
         col=cols1, xlab = "reef section", ylab= "mean growth rate (mm / year)",
         names = c("back reef", "reef flat", "reef front ", "proximal slope"))
 
-#Test geht nicht? --> Gruppen mio?ssen gleich lang sein! Und Vergleich geht nur mit 2 Gruppen! -->Kruskal test
-#wilcox.test(ol$mean.growth~ol$reef.section)
-
-#--> Kruskal-test, whether the means vary between the Oligocene reef sections???
-kruskal.test(ol$mean.growth~ol$reef.section)
 
 
 
 # RESULTS---------------------------------------------------------------
 #growth rate during Oligocene highest in the back reef reef front, then proximal slope and 4. reef flat
 #--> does agree with previous studies where it is said that the corals grow best in the back reef!
-
-
-
-#Kruskal-test: p-value 0.0184, is SMALLER than 0,05--> ??? PROBLEM
-
 
 
 
@@ -79,7 +228,6 @@ kruskal.test(ol$mean.growth~ol$reef.section)
         #names = c("back reef", "reef flat", "reef front ", "proximal slope"))$stats
 
 #summary1
-
 
 
 
@@ -99,17 +247,6 @@ cols2<-c("coral","coral1","coral2", "coral4", "coral1")
 boxplot(ol$mean.growth~ol$genus,
         #main = "Oligocene: comparison between genera",
         col=cols2, xlab = "genus", ylab = "mean growth rate (mm / year)", names =c("Porites", "Actinacis", "Poriticae", "Tarbellastraea", "Pavona"))
-
-#Test geht nicht?  --> Gruppen mioüssen gleich lang sein! Und Vergleich geht nur mit 2 Gruppen! -->Kruskal test
-#wilcox.test(ol$mean.growth~ol$reef.section)
-
-kruskal.test(ol$mean.growth ~ ol$genus)
-
-
-
-
-
-
 
 
 
@@ -134,17 +271,12 @@ boxplot(mio$mean.growth~mio$reef.section,
         xlab = "reef section", ylab= "mean growth rate (mm / year)", col=cols3,
         names = c("back reef", "reef front ", "proximal slope"))
 
-#Test geht nicht?  --> Gruppen mioüssen gleich lang sein! Und Vergleich geht nur mit 2 Gruppen! -->Kruskal test
-#wilcox.test(ol$mean.growth ~ ol$reef.section)
-
-kruskal.test(mio$mean.growth ~ mio$reef.section)
 
 
 
 # RESULTS -----------------------------------------------------------------
 #reef front showas highest growth rates, then proximal slope and then back reef
 #--> have a look at the data, back reef data was probably not good ()
-#Kruskal-test: p-value 0.1719, is BIGGER than 0,05--> ??? PROBLEM
 
 
 
@@ -156,6 +288,9 @@ kruskal.test(mio$mean.growth ~ mio$reef.section)
 #--------------------------------------------------------------------------------------------------
 
 
+#growth rate ~ genus                                DOES NOT MAKE SENSE (only PORITES)
+#an.mio.genus<-aov(mio$mean.growth ~ mio$genus)
+#summary(an.mio.genus)
 
 
 
@@ -199,21 +334,11 @@ boxplot(ol.mio$mean.growth ~  ol.mio$time + ol.mio$reef.section, col=cols,
 #par(op)
 
 
-#Test does not work, see notes above
-#wilcox.test()
-
-kruskal.test(ol.mio$mean.growth ~  ol.mio$reef.section)
-
 # RESULTS -----------------------------------------------------------------
 #growth rate is generally higher in the Oligocene throughout all sections
 #no data of reef flat for Miocene though, which is the reef section with the lower growth rates for the Oligocene
 #this location could also have been just a channel with sediment transport
-#look at line transect data if there is any
-#Kruskal test: p value is 0,09609 is BIGGER than 0,05 --> ??? PROBLEM
-
-
-
-
+#look at line transect data if there is any !
 
 
 
@@ -231,22 +356,6 @@ cols4<- c("goldenrod1","yellow")
 boxplot(ol.mio$mean.growth[ol.mio$genus=="Porites"] ~ ol.mio$time[ol.mio$genus=="Porites"],
         #main = "Comparison between Oligocene and Miocene: Porites",
         col=cols4, names=c("Oligocene", "Miocene"), xlab = "time", ylab= "mean growth rate (mm / year)")
-
-
-
-wilcox.test(ol.mio$mean.growth[ol.mio$genus=="Porites"] ~ ol.mio$time[ol.mio$genus=="Porites"])
-
-#kruskal.test(ol.mio$mean.growth[ol.mio$genus=="Porites"] ~ ol.mio$time[ol.mio$genus=="Porites"])
-
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!very useful function!!!!!!!!!!!!!!!!!!!!!!!!!
-#summary (ol.mio)
-
-# RESULTS -----------------------------------------------------------------
-#Wilcox test: p value is 1,504 e-06 is way SMALLER than 0,05 --> ??? PROBLEM
-
-
-
-
 
 
 
@@ -269,12 +378,6 @@ boxplot(ol.mio.mo$mean.growth ~ ol.mio.mo$time,
         col=cols5, outline=FALSE)
 
 
-#geht nicht, siehe oben
-#wilcox.test(ol.mio.mo$mean.growth~ol.mio.mo$time)
-
-
-kruskal.test(ol.mio.mo$mean.growth ~ ol.mio.mo$time)
-
 
 
 
@@ -284,9 +387,6 @@ kruskal.test(ol.mio.mo$mean.growth ~ ol.mio.mo$time)
 #mean mean growth rate 1. modern, 2. Oligocene, 3. Miocene
 #modern growth rates have the highest range by far, up to over 300 mm (30 cm?!), most values are up to around 30 mm though
 
-#Kruskal Test: p value 3.873e-05 is EXTREMELY SMALL --> ??? Null hypothesis was, that the values don't vary much
-#if the p value is smaller than the commonly chosen significance level of 0,05,
-#the null hypothesis is rejected, as in this case. The mean growth rates vary highly between the different times, as you can also see in the graph
 
 
 
@@ -296,54 +396,13 @@ kruskal.test(ol.mio.mo$mean.growth ~ ol.mio.mo$time)
 
 
 
-# 5 ANOVA tests -------------------------------------------------------------
-
-
-#normal distribution test
-shapiro.test(ol.mio$mean.growth)
-shapiro.test(ol$mean.growth)        #only data set with normal distribution....
-shapiro.test(mio$mean.growth)
-shapiro.test(ol.mio.mo$mean.growth)
-
-#library(car)
-#leveneTest(ol$mean.growth ~ ol$reef.section)
-
-
-#Oligocene
-#5.1 growth rate ~ reef section
-an.ol.section<-aov(ol$mean.growth ~ ol$reef.section)
-summary(an.ol.section)
-plot(an.ol.section, 1)
 
 
 
+#################################################################################################################################################
 
 
-
-
-# 5.2 growth rate ~ genus
-an.ol.genus<-aov(ol$mean.growth ~ ol$genus)
-summary(an.ol.genus)
-
-
-#--------------------------------------------------------------------------
-
-
-# 5.3 Miocene
-#growth rate ~ reef section
-an.mio.section<-aov(mio$mean.growth ~ mio$reef.section)
-summary(an.mio.section)
-
-
-#growth rate ~ genus                                DOES NOT MAKE SENSE (only PORITES)
-#an.mio.genus<-aov(mio$mean.growth ~ mio$genus)
-#summary(an.mio.genus)
-
-
-
-
-
-# 6 Comparison of Actinacis and Porites Oligocene reef front --------------
+#3 Comparison of Actinacis and Porites in Oligocene reef front --------------
 
 #means of growth rates of certain genera
 mean(ol$mean.growth[ol$genus=="Pavona"])
@@ -351,19 +410,17 @@ mean(ol$mean.growth[ol$genus=="Porites"])
 
 # RESULTS ---------------------------------------------------------------
 #Porites and Poriticae do not show similar growth --> should not fuse them!
-#Kruskal-test: p-value 0.02349, is SMALLER than 0,05--> ??? PROBLEM
-
 
 
 
 # subsetting for Oligocene reef front data
 ol.front<-subset(ol, reef.section=="reef front")
-
+ol.front<-ol.front[-13,] #delete Astreopora data
 
 #correcting the order for the x axis
 ol.front$genus<- factor(ol.front$genus, levels = c("Porites", "Actinacis", "Poriticae"))
 
-
+na.omit(ol.front)
 cols6<-c("coral","coral1", "coral3")
 
 #boxplot
@@ -375,12 +432,26 @@ boxplot(ol.front$mean.growth ~ol.front$genus,
 #Kruskall-Wallis test
 kruskal.test(ol.front$mean.growth~ol.front$genus)
 
+#ANOVA
+
+an.ol.poriticae<-aov(ol$mean.growth ~ ol.front$genus)
+summary(an.ol.section)
 
 
 
 
 
-# 7_standard errors -------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+# 4_standard errors -------------------------------------------------------
 
 #oligocene se per reef section
 
