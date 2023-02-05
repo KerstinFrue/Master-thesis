@@ -9,7 +9,434 @@ library (dplyr)
 library("xlsx")
 
 
+
+
+
+
+
+
+
+# PER REEF SECTION --------------------------------------------------------
+
+
+
+
+
 # Vitigliano --------------------------------------------------------------
+
+VT<-nrow(line %>% filter(section_name %in% "Vitigliano"))
+
+#amount Actinacis
+VT.act<-(nrow(line %>% filter(section_name %in% "Vitigliano" & point_id == "Actinacis"))*100)/VT
+#amount Astreopora
+VT.ast<-(nrow(line %>% filter(section_name %in% "Vitigliano" & point_id == "Astreopora"))*100)/VT
+#amount Bioclastic
+VT.bio<-(nrow(line %>% filter(section_name %in% "Vitigliano" & point_id == "Bioclastic sediment"))*100)/VT
+#amount Bivalve
+VT.biv<-(nrow(line %>% filter(section_name %in% "Vitigliano" & point_id == "Bivalve"))*100)/VT
+#amount Bivalve boring
+VT.biv.b<-(nrow(line %>% filter(section_name %in% "Vitigliano" & point_id == "Bivalve boring"))*100)/VT
+#amount Caulastrea
+VT.cau<-(nrow(line %>% filter(section_name %in% "Vitigliano" & point_id == "Caulastrea"))*100)/VT
+#amount CCA
+VT.cca<-(nrow(line %>% filter(section_name %in% "Vitigliano" & point_id == "CCA"))*100)/VT
+#amount Cement
+VT.cem<-(nrow(line %>% filter(section_name %in% "Vitigliano" & point_id == "Cement"))*100)/VT
+#amount Coral
+VT.cor<-(nrow(line %>% filter(section_name %in% "Vitigliano" & point_id == "Coral"))*100)/VT
+#amount Coralline algae
+VT.cor.a<-(nrow(line %>% filter(section_name %in% "Vitigliano" & point_id == "Coralline algae"))*100)/VT
+#amount Favites
+VT.fav<-(nrow(line %>% filter(section_name %in% "Vitigliano" & point_id == "Favites"))*100)/VT
+#amount Glauconite
+VT.glau<-(nrow(line %>% filter(section_name %in% "Vitigliano" & point_id == "Glauconite"))*100)/VT
+#amount Hydnophora
+VT.hyd<-(nrow(line %>% filter(section_name %in% "Vitigliano" & point_id == "Hydnophora"))*100)/VT
+#amount Montastrea
+VT.mon<-(nrow(line %>% filter(section_name %in% "Vitigliano" & point_id == "Montastrea"))*100)/VT
+#amount Pavona
+VT.pav<-(nrow(line %>% filter(section_name %in% "Vitigliano" & point_id == "Pavona"))*100)/VT
+#amount Porites
+VT.por<-(nrow(line %>% filter(section_name %in% "Vitigliano" & point_id == "Porites"))*100)/VT
+#amount Poriticae
+VT.pd<-(nrow(line %>% filter(section_name %in% "Vitigliano" & point_id == "Poriticae"))*100)/VT
+#amount Sediment
+VT.sed<-(nrow(line %>% filter(section_name %in% "Vitigliano" & point_id == "Sediment"))*100)/VT
+#amount Shale
+VT.sha<-(nrow(line %>% filter(section_name %in% "Vitigliano" & point_id == "Shale"))*100)/VT
+#amount Siderastrea
+VT.sid<-(nrow(line %>% filter(section_name %in% "Vitigliano" & point_id == "Siderastrea"))*100)/VT
+#amount Stylophora
+VT.sty<-(nrow(line %>% filter(section_name %in% "Vitigliano" & point_id == "Stylophora"))*100)/VT
+#amount Tarbellastraea
+VT.tar<-(nrow(line %>% filter(section_name %in% "Vitigliano" & point_id == "Tarbellastraea"))*100)/VT
+
+
+VT.data<-data.frame(VT,VT.act, VT.ast,VT.bio,VT.biv,VT.biv.b,
+                     VT.cau,VT.cca,VT.cem,VT.cor,VT.cor.a,VT.fav,VT.glau,VT.hyd,VT.mon,VT.pav,VT.pd,
+                     VT.por,VT.sed,VT.sha,VT.sid,VT.sty,VT.tar)
+
+
+#write.xlsx(x = VT.data,"Oligocene back reef.xlsx")
+
+
+# Santa Cesarea --------------------------------------------------------------
+
+SC<-nrow(line %>% filter(section_name %in% "Santa Cesarea"))
+
+#amount Actinacis
+SC.act<-(nrow(line %>% filter(section_name %in% "Santa Cesarea" & point_id == "Actinacis"))*100)/SC
+#amount Astreopora
+SC.ast<-(nrow(line %>% filter(section_name %in% "Santa Cesarea" & point_id == "Astreopora"))*100)/SC
+#amount Bioclastic
+SC.bio<-(nrow(line %>% filter(section_name %in% "Santa Cesarea" & point_id == "Bioclastic sediment"))*100)/SC
+#amount Bivalve
+SC.biv<-(nrow(line %>% filter(section_name %in% "Santa Cesarea" & point_id == "Bivalve"))*100)/SC
+#amount Bivalve boring
+SC.biv.b<-(nrow(line %>% filter(section_name %in% "Santa Cesarea" & point_id == "Bivalve boring"))*100)/SC
+#amount Caulastrea
+SC.cau<-(nrow(line %>% filter(section_name %in% "Santa Cesarea" & point_id == "Caulastrea"))*100)/SC
+#amount CCA
+SC.cca<-(nrow(line %>% filter(section_name %in% "Santa Cesarea" & point_id == "CCA"))*100)/SC
+#amount Cement
+SC.cem<-(nrow(line %>% filter(section_name %in% "Santa Cesarea" & point_id == "Cement"))*100)/SC
+#amount Coral
+SC.cor<-(nrow(line %>% filter(section_name %in% "Santa Cesarea" & point_id == "Coral"))*100)/SC
+#amount Coralline algae
+SC.cor.a<-(nrow(line %>% filter(section_name %in% "Santa Cesarea" & point_id == "Coralline algae"))*100)/SC
+#amount Favites
+SC.fav<-(nrow(line %>% filter(section_name %in% "Santa Cesarea" & point_id == "Favites"))*100)/SC
+#amount Glauconite
+SC.glau<-(nrow(line %>% filter(section_name %in% "Santa Cesarea" & point_id == "Glauconite"))*100)/SC
+#amount Hydnophora
+SC.hyd<-(nrow(line %>% filter(section_name %in% "Santa Cesarea" & point_id == "Hydnophora"))*100)/SC
+#amount Montastrea
+SC.mon<-(nrow(line %>% filter(section_name %in% "Santa Cesarea" & point_id == "Montastrea"))*100)/SC
+#amount Pavona
+SC.pav<-(nrow(line %>% filter(section_name %in% "Santa Cesarea" & point_id == "Pavona"))*100)/SC
+#amount Porites
+SC.por<-(nrow(line %>% filter(section_name %in% "Santa Cesarea" & point_id == "Porites"))*100)/SC
+#amount Poriticae
+SC.pd<-(nrow(line %>% filter(section_name %in% "Santa Cesarea" & point_id == "Poriticae"))*100)/SC
+#amount Sediment
+SC.sed<-(nrow(line %>% filter(section_name %in% "Santa Cesarea" & point_id == "Sediment"))*100)/SC
+#amount Shale
+SC.sha<-(nrow(line %>% filter(section_name %in% "Santa Cesarea" & point_id == "Shale"))*100)/SC
+#amount Siderastrea
+SC.sid<-(nrow(line %>% filter(section_name %in% "Santa Cesarea" & point_id == "Siderastrea"))*100)/SC
+#amount Stylophora
+SC.sty<-(nrow(line %>% filter(section_name %in% "Santa Cesarea" & point_id == "Stylophora"))*100)/SC
+#amount Tarbellastraea
+SC.tar<-(nrow(line %>% filter(section_name %in% "Santa Cesarea" & point_id == "Tarbellastraea"))*100)/SC
+
+
+SC.data<-data.frame(SC,SC.act, SC.ast,SC.bio,SC.biv,SC.biv.b,
+                    SC.cau,SC.cca,SC.cem,SC.cor,SC.cor.a,SC.fav,SC.glau,SC.hyd,SC.mon,SC.pav,SC.pd,
+                    SC.por,SC.sed,SC.sha,SC.sid,SC.sty,SC.tar)
+
+
+#write.xlsx(x = SC.data,"Oligocene reef front.xlsx")
+
+
+
+
+# Porto Miggiano --------------------------------------------------------------
+
+PM<-nrow(line %>% filter(section_name %in% "Porto Miggiano"))
+
+#amount Actinacis
+PM.act<-(nrow(line %>% filter(section_name %in% "Porto Miggiano" & point_id == "Actinacis"))*100)/PM
+#amount Astreopora
+PM.ast<-(nrow(line %>% filter(section_name %in% "Porto Miggiano" & point_id == "Astreopora"))*100)/PM
+#amount Bioclastic
+PM.bio<-(nrow(line %>% filter(section_name %in% "Porto Miggiano" & point_id == "Bioclastic sediment"))*100)/PM
+#amount Bivalve
+PM.biv<-(nrow(line %>% filter(section_name %in% "Porto Miggiano" & point_id == "Bivalve"))*100)/PM
+#amount Bivalve boring
+PM.biv.b<-(nrow(line %>% filter(section_name %in% "Porto Miggiano" & point_id == "Bivalve boring"))*100)/PM
+#amount Caulastrea
+PM.cau<-(nrow(line %>% filter(section_name %in% "Porto Miggiano" & point_id == "Caulastrea"))*100)/PM
+#amount CCA
+PM.cca<-(nrow(line %>% filter(section_name %in% "Porto Miggiano" & point_id == "CCA"))*100)/PM
+#amount Cement
+PM.cem<-(nrow(line %>% filter(section_name %in% "Porto Miggiano" & point_id == "Cement"))*100)/PM
+#amount Coral
+PM.cor<-(nrow(line %>% filter(section_name %in% "Porto Miggiano" & point_id == "Coral"))*100)/PM
+#amount Coralline algae
+PM.cor.a<-(nrow(line %>% filter(section_name %in% "Porto Miggiano" & point_id == "Coralline algae"))*100)/PM
+#amount Favites
+PM.fav<-(nrow(line %>% filter(section_name %in% "Porto Miggiano" & point_id == "Favites"))*100)/PM
+#amount Glauconite
+PM.glau<-(nrow(line %>% filter(section_name %in% "Porto Miggiano" & point_id == "Glauconite"))*100)/PM
+#amount Hydnophora
+PM.hyd<-(nrow(line %>% filter(section_name %in% "Porto Miggiano" & point_id == "Hydnophora"))*100)/PM
+#amount Montastrea
+PM.mon<-(nrow(line %>% filter(section_name %in% "Porto Miggiano" & point_id == "Montastrea"))*100)/PM
+#amount Pavona
+PM.pav<-(nrow(line %>% filter(section_name %in% "Porto Miggiano" & point_id == "Pavona"))*100)/PM
+#amount Porites
+PM.por<-(nrow(line %>% filter(section_name %in% "Porto Miggiano" & point_id == "Porites"))*100)/PM
+#amount Poriticae
+PM.pd<-(nrow(line %>% filter(section_name %in% "Porto Miggiano" & point_id == "Poriticae"))*100)/PM
+#amount Sediment
+PM.sed<-(nrow(line %>% filter(section_name %in% "Porto Miggiano" & point_id == "Sediment"))*100)/PM
+#amount Shale
+PM.sha<-(nrow(line %>% filter(section_name %in% "Porto Miggiano" & point_id == "Shale"))*100)/PM
+#amount Siderastrea
+PM.sid<-(nrow(line %>% filter(section_name %in% "Porto Miggiano" & point_id == "Siderastrea"))*100)/PM
+#amount Stylophora
+PM.sty<-(nrow(line %>% filter(section_name %in% "Porto Miggiano" & point_id == "Stylophora"))*100)/PM
+#amount Tarbellastraea
+PM.tar<-(nrow(line %>% filter(section_name %in% "Porto Miggiano" & point_id == "Tarbellastraea"))*100)/PM
+
+
+PM.data<-data.frame(PM,PM.act, PM.ast,PM.bio,PM.biv,PM.biv.b,
+                    PM.cau,PM.cca,PM.cem,PM.cor,PM.cor.a,PM.fav,PM.glau,PM.hyd,PM.mon,PM.pav,PM.pd,
+                    PM.por,PM.sed,PM.sha,PM.sid,PM.sty,PM.tar)
+
+
+#write.xlsx(x = PM.data,"Oligocene proximal slope.xlsx")
+
+
+
+
+
+
+
+
+# Tricase --------------------------------------------------------------
+
+Tri<-nrow(line %>% filter(section_name %in% "Tricase"))
+
+#amount Actinacis
+Tri.act<-(nrow(line %>% filter(section_name %in% "Tricase" & point_id == "Actinacis"))*100)/Tri
+#amount Astreopora
+Tri.ast<-(nrow(line %>% filter(section_name %in% "Tricase" & point_id == "Astreopora"))*100)/Tri
+#amount Bioclastic
+Tri.bio<-(nrow(line %>% filter(section_name %in% "Tricase" & point_id == "Bioclastic sediment"))*100)/Tri
+#amount Bivalve
+Tri.biv<-(nrow(line %>% filter(section_name %in% "Tricase" & point_id == "Bivalve"))*100)/Tri
+#amount Bivalve boring
+Tri.biv.b<-(nrow(line %>% filter(section_name %in% "Tricase" & point_id == "Bivalve boring"))*100)/Tri
+#amount Caulastrea
+Tri.cau<-(nrow(line %>% filter(section_name %in% "Tricase" & point_id == "Caulastrea"))*100)/Tri
+#amount CCA
+Tri.cca<-(nrow(line %>% filter(section_name %in% "Tricase" & point_id == "CCA"))*100)/Tri
+#amount Cement
+Tri.cem<-(nrow(line %>% filter(section_name %in% "Tricase" & point_id == "Cement"))*100)/Tri
+#amount Coral
+Tri.cor<-(nrow(line %>% filter(section_name %in% "Tricase" & point_id == "Coral"))*100)/Tri
+#amount Coralline algae
+Tri.cor.a<-(nrow(line %>% filter(section_name %in% "Tricase" & point_id == "Coralline algae"))*100)/Tri
+#amount Favites
+Tri.fav<-(nrow(line %>% filter(section_name %in% "Tricase" & point_id == "Favites"))*100)/Tri
+#amount Glauconite
+Tri.glau<-(nrow(line %>% filter(section_name %in% "Tricase" & point_id == "Glauconite"))*100)/Tri
+#amount Hydnophora
+Tri.hyd<-(nrow(line %>% filter(section_name %in% "Tricase" & point_id == "Hydnophora"))*100)/Tri
+#amount Montastrea
+Tri.mon<-(nrow(line %>% filter(section_name %in% "Tricase" & point_id == "Montastrea"))*100)/Tri
+#amount Pavona
+Tri.pav<-(nrow(line %>% filter(section_name %in% "Tricase" & point_id == "Pavona"))*100)/Tri
+#amount Porites
+Tri.por<-(nrow(line %>% filter(section_name %in% "Tricase" & point_id == "Porites"))*100)/Tri
+#amount Poriticae
+Tri.pd<-(nrow(line %>% filter(section_name %in% "Tricase" & point_id == "Poriticae"))*100)/Tri
+#amount Sediment
+Tri.sed<-(nrow(line %>% filter(section_name %in% "Tricase" & point_id == "Sediment"))*100)/Tri
+#amount Shale
+Tri.sha<-(nrow(line %>% filter(section_name %in% "Tricase" & point_id == "Shale"))*100)/Tri
+#amount Siderastrea
+Tri.sid<-(nrow(line %>% filter(section_name %in% "Tricase" & point_id == "Siderastrea"))*100)/Tri
+#amount Stylophora
+Tri.sty<-(nrow(line %>% filter(section_name %in% "Tricase" & point_id == "Stylophora"))*100)/Tri
+#amount Tarbellastraea
+Tri.tar<-(nrow(line %>% filter(section_name %in% "Tricase" & point_id == "Tarbellastraea"))*100)/Tri
+
+
+Tri.data<-data.frame(Tri,Tri.act, Tri.ast,Tri.bio,Tri.biv,Tri.biv.b,
+                    Tri.cau,Tri.cca,Tri.cem,Tri.cor,Tri.cor.a,Tri.fav,Tri.glau,Tri.hyd,Tri.mon,Tri.pav,Tri.pd,
+                    Tri.por,Tri.sed,Tri.sha,Tri.sid,Tri.sty,Tri.tar)
+
+
+#write.xlsx(x = Tri.data,"Oligocene proximal slope.xlsx")
+
+
+
+
+
+
+
+
+
+
+
+
+# Ciolo --------------------------------------------------------------
+
+CL<-nrow(line %>% filter(section_name %in% "Ciolo"))
+
+#amount Actinacis
+CL.act<-(nrow(line %>% filter(section_name %in% "Ciolo" & point_id == "Actinacis"))*100)/CL
+#amount Astreopora
+CL.ast<-(nrow(line %>% filter(section_name %in% "Ciolo" & point_id == "Astreopora"))*100)/CL
+#amount Bioclastic
+CL.bio<-(nrow(line %>% filter(section_name %in% "Ciolo" & point_id == "Bioclastic sediment"))*100)/CL
+#amount Bivalve
+CL.biv<-(nrow(line %>% filter(section_name %in% "Ciolo" & point_id == "Bivalve"))*100)/CL
+#amount Bivalve boring
+CL.biv.b<-(nrow(line %>% filter(section_name %in% "Ciolo" & point_id == "Bivalve boring"))*100)/CL
+#amount Caulastrea
+CL.cau<-(nrow(line %>% filter(section_name %in% "Ciolo" & point_id == "Caulastrea"))*100)/CL
+#amount CCA
+CL.cca<-(nrow(line %>% filter(section_name %in% "Ciolo" & point_id == "CCA"))*100)/CL
+#amount Cement
+CL.cem<-(nrow(line %>% filter(section_name %in% "Ciolo" & point_id == "Cement"))*100)/CL
+#amount Coral
+CL.cor<-(nrow(line %>% filter(section_name %in% "Ciolo" & point_id == "Coral"))*100)/CL
+#amount Coralline algae
+CL.cor.a<-(nrow(line %>% filter(section_name %in% "Ciolo" & point_id == "Coralline algae"))*100)/CL
+#amount Favites
+CL.fav<-(nrow(line %>% filter(section_name %in% "Ciolo" & point_id == "Favites"))*100)/CL
+#amount Glauconite
+CL.glau<-(nrow(line %>% filter(section_name %in% "Ciolo" & point_id == "Glauconite"))*100)/CL
+#amount Hydnophora
+CL.hyd<-(nrow(line %>% filter(section_name %in% "Ciolo" & point_id == "Hydnophora"))*100)/CL
+#amount Montastrea
+CL.mon<-(nrow(line %>% filter(section_name %in% "Ciolo" & point_id == "Montastrea"))*100)/CL
+#amount Pavona
+CL.pav<-(nrow(line %>% filter(section_name %in% "Ciolo" & point_id == "Pavona"))*100)/CL
+#amount Porites
+CL.por<-(nrow(line %>% filter(section_name %in% "Ciolo" & point_id == "Porites"))*100)/CL
+#amount Poriticae
+CL.pd<-(nrow(line %>% filter(section_name %in% "Ciolo" & point_id == "Poriticae"))*100)/CL
+#amount Sediment
+CL.sed<-(nrow(line %>% filter(section_name %in% "Ciolo" & point_id == "Sediment"))*100)/CL
+#amount Shale
+CL.sha<-(nrow(line %>% filter(section_name %in% "Ciolo" & point_id == "Shale"))*100)/CL
+#amount Siderastrea
+CL.sid<-(nrow(line %>% filter(section_name %in% "Ciolo" & point_id == "Siderastrea"))*100)/CL
+#amount Stylophora
+CL.sty<-(nrow(line %>% filter(section_name %in% "Ciolo" & point_id == "Stylophora"))*100)/CL
+#amount Tarbellastraea
+CL.tar<-(nrow(line %>% filter(section_name %in% "Ciolo" & point_id == "Tarbellastraea"))*100)/CL
+
+
+CL.data<-data.frame(CL,CL.act, CL.ast,CL.bio,CL.biv,CL.biv.b,
+                     CL.cau,CL.cca,CL.cem,CL.cor,CL.cor.a,CL.fav,CL.glau,CL.hyd,CL.mon,CL.pav,CL.pd,
+                     CL.por,CL.sed,CL.sha,CL.sid,CL.sty,CL.tar)
+
+
+#write.xlsx(x = CL.data,"Miocene reef front.xlsx")
+
+
+
+
+
+
+
+
+
+
+# Leuca --------------------------------------------------------------
+
+LL<-nrow(line %>% filter(section_name %in% "Leuca"))
+
+#amount Actinacis
+LL.act<-(nrow(line %>% filter(section_name %in% "Leuca" & point_id == "Actinacis"))*100)/LL
+#amount Astreopora
+LL.ast<-(nrow(line %>% filter(section_name %in% "Leuca" & point_id == "Astreopora"))*100)/LL
+#amount BioLLastic
+LL.bio<-(nrow(line %>% filter(section_name %in% "Leuca" & point_id == "BioLLastic sediment"))*100)/LL
+#amount Bivalve
+LL.biv<-(nrow(line %>% filter(section_name %in% "Leuca" & point_id == "Bivalve"))*100)/LL
+#amount Bivalve boring
+LL.biv.b<-(nrow(line %>% filter(section_name %in% "Leuca" & point_id == "Bivalve boring"))*100)/LL
+#amount Caulastrea
+LL.cau<-(nrow(line %>% filter(section_name %in% "Leuca" & point_id == "Caulastrea"))*100)/LL
+#amount CCA
+LL.cca<-(nrow(line %>% filter(section_name %in% "Leuca" & point_id == "CCA"))*100)/LL
+#amount Cement
+LL.cem<-(nrow(line %>% filter(section_name %in% "Leuca" & point_id == "Cement"))*100)/LL
+#amount Coral
+LL.cor<-(nrow(line %>% filter(section_name %in% "Leuca" & point_id == "Coral"))*100)/LL
+#amount Coralline algae
+LL.cor.a<-(nrow(line %>% filter(section_name %in% "Leuca" & point_id == "Coralline algae"))*100)/LL
+#amount Favites
+LL.fav<-(nrow(line %>% filter(section_name %in% "Leuca" & point_id == "Favites"))*100)/LL
+#amount Glauconite
+LL.glau<-(nrow(line %>% filter(section_name %in% "Leuca" & point_id == "Glauconite"))*100)/LL
+#amount Hydnophora
+LL.hyd<-(nrow(line %>% filter(section_name %in% "Leuca" & point_id == "Hydnophora"))*100)/LL
+#amount Montastrea
+LL.mon<-(nrow(line %>% filter(section_name %in% "Leuca" & point_id == "Montastrea"))*100)/LL
+#amount Pavona
+LL.pav<-(nrow(line %>% filter(section_name %in% "Leuca" & point_id == "Pavona"))*100)/LL
+#amount Porites
+LL.por<-(nrow(line %>% filter(section_name %in% "Leuca" & point_id == "Porites"))*100)/LL
+#amount Poriticae
+LL.pd<-(nrow(line %>% filter(section_name %in% "Leuca" & point_id == "Poriticae"))*100)/LL
+#amount Sediment
+LL.sed<-(nrow(line %>% filter(section_name %in% "Leuca" & point_id == "Sediment"))*100)/LL
+#amount Shale
+LL.sha<-(nrow(line %>% filter(section_name %in% "Leuca" & point_id == "Shale"))*100)/LL
+#amount Siderastrea
+LL.sid<-(nrow(line %>% filter(section_name %in% "Leuca" & point_id == "Siderastrea"))*100)/LL
+#amount Stylophora
+LL.sty<-(nrow(line %>% filter(section_name %in% "Leuca" & point_id == "Stylophora"))*100)/LL
+#amount Tarbellastraea
+LL.tar<-(nrow(line %>% filter(section_name %in% "Leuca" & point_id == "Tarbellastraea"))*100)/LL
+
+
+LL.data<-data.frame(LL,LL.act, LL.ast,LL.bio,LL.biv,LL.biv.b,
+                    LL.cau,LL.cca,LL.cem,LL.cor,LL.cor.a,LL.fav,LL.glau,LL.hyd,LL.mon,LL.pav,LL.pd,
+                    LL.por,LL.sed,LL.sha,LL.sid,LL.sty,LL.tar)
+
+
+#write.xlsx(x = LL.data,"Miocene proximal slope.xlsx")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# SITES OF SECTIONS -------------------------------------------------------
+
+
+
 #--------------------------------------------------------------------------
 # VT1 ---------------------------------------------------------------------
 #-------------------------------------------------------------------------
@@ -65,7 +492,7 @@ VT1.data<-data.frame(VT1,VT1.act, VT1.ast,VT1.bio,VT1.biv,VT1.biv.b,
                                VT1.cau,VT1.cca,VT1.cem,VT1.cor,VT1.cor.a,VT1.fav,VT1.glau,VT1.hyd,VT1.mon,VT1.pav,VT1.pd,
                                VT1.por,VT1.sed,VT1.sha,VT1.sid,VT1.sty,VT1.tar)
 
-write.xlsx(x = VT1.data,"VT1.xlsx")
+#write.xlsx(x = VT1.data,"VT1.xlsx")
 
 
 #--------------------------------------------------------------------------
@@ -125,7 +552,7 @@ VT2.data<-data.frame(VT2,VT2.act, VT2.ast,VT2.bio,VT2.biv,VT2.biv.b,
                                VT2.por,VT2.sed,VT2.sha,VT2.sid,VT2.sty,VT2.tar)
 
 
-write.xlsx(x = VT2.data,"VT2.xlsx")
+#write.xlsx(x = VT2.data,"VT2.xlsx")
 
 
 
@@ -185,7 +612,7 @@ VT3.data<-VT3.data<-data.frame(VT3,VT3.act, VT3.ast,VT3.bio,VT3.biv,VT3.biv.b,
                                VT3.por,VT3.sed,VT3.sha,VT3.sid,VT3.sty,VT3.tar)
 
 
-write.xlsx(x = VT3.data,"VT3.xlsx")
+#write.xlsx(x = VT3.data,"VT3.xlsx")
 
 
 
@@ -247,7 +674,7 @@ VT4.data<-data.frame(VT4,VT4.act, VT4.ast,VT4.bio,VT4.biv,VT4.biv.b,
                                VT4.por,VT4.sed,VT4.sha,VT4.sid,VT4.sty,VT4.tar)
 
 
-write.xlsx(x = VT4.data,"VT4.xlsx")
+#write.xlsx(x = VT4.data,"VT4.xlsx")
 
 
 
@@ -319,7 +746,7 @@ SCT1.data<-data.frame(SCT1,SCT1.act, SCT1.ast,SCT1.bio,SCT1.biv,SCT1.biv.b,
                      SCT1.cau,SCT1.cca,SCT1.cem,SCT1.cor,SCT1.cor.a,SCT1.fav,SCT1.glau,SCT1.hyd,SCT1.mon,SCT1.pav,SCT1.pd,
                      SCT1.por,SCT1.sed,SCT1.sha,SCT1.sid,SCT1.sty,SCT1.tar)
 
-write.xlsx(x = SCT1.data,"SCT1.xlsx")
+#write.xlsx(x = SCT1.data,"SCT1.xlsx")
 
 
 #--------------------------------------------------------------------------
@@ -378,7 +805,7 @@ SCT2.data<-data.frame(SCT2,SCT2.act, SCT2.ast,SCT2.bio,SCT2.biv,SCT2.biv.b,
                      SCT2.por,SCT2.sed,SCT2.sha,SCT2.sid,SCT2.sty,SCT2.tar)
 
 
-write.xlsx(x = SCT2.data,"SCT2.xlsx")
+#write.xlsx(x = SCT2.data,"SCT2.xlsx")
 
 
 
@@ -438,7 +865,7 @@ SCT3.data<-data.frame(SCT3,SCT3.act, SCT3.ast,SCT3.bio,SCT3.biv,SCT3.biv.b,
                                SCT3.por,SCT3.sed,SCT3.sha,SCT3.sid,SCT3.sty,SCT3.tar)
 
 
-write.xlsx(x = SCT3.data,"SCT3.xlsx")
+#write.xlsx(x = SCT3.data,"SCT3.xlsx")
 
 
 
@@ -500,7 +927,7 @@ SCT4.data<-data.frame(SCT4,SCT4.act, SCT4.ast,SCT4.bio,SCT4.biv,SCT4.biv.b,
                      SCT4.por,SCT4.sed,SCT4.sha,SCT4.sid,SCT4.sty,SCT4.tar)
 
 
-write.xlsx(x = SCT4.data,"SCT4.xlsx")
+#write.xlsx(x = SCT4.data,"SCT4.xlsx")
 
 
 
@@ -560,7 +987,7 @@ SCT5.data<-data.frame(SCT5,SCT5.act, SCT5.ast,SCT5.bio,SCT5.biv,SCT5.biv.b,
                       SCT5.por,SCT5.sed,SCT5.sha,SCT5.sid,SCT5.sty,SCT5.tar)
 
 
-write.xlsx(x = SCT5.data,"SCT5.xlsx")
+#write.xlsx(x = SCT5.data,"SCT5.xlsx")
 
 
 
@@ -622,7 +1049,7 @@ SCT6.data<-data.frame(SCT6,SCT6.act, SCT6.ast,SCT6.bio,SCT6.biv,SCT6.biv.b,
                       SCT6.por,SCT6.sed,SCT6.sha,SCT6.sid,SCT6.sty,SCT6.tar)
 
 
-write.xlsx(x = SCT6.data,"SCT6.xlsx")
+#write.xlsx(x = SCT6.data,"SCT6.xlsx")
 
 
 
@@ -683,7 +1110,7 @@ SCT7.data<-data.frame(SCT7,SCT7.act, SCT7.ast,SCT7.bio,SCT7.biv,SCT7.biv.b,
                       SCT7.por,SCT7.sed,SCT7.sha,SCT7.sid,SCT7.sty,SCT7.tar)
 
 
-write.xlsx(x = SCT7.data,"SCT7.xlsx")
+#write.xlsx(x = SCT7.data,"SCT7.xlsx")
 
 
 
@@ -745,12 +1172,12 @@ SCT8.data<-data.frame(SCT8,SCT8.act, SCT8.ast,SCT8.bio,SCT8.biv,SCT8.biv.b,
                       SCT8.por,SCT8.sed,SCT8.sha,SCT8.sid,SCT8.sty,SCT8.tar)
 
 
-write.xlsx(x = SCT8.data,"SCT8.xlsx")
+#write.xlsx(x = SCT8.data,"SCT8.xlsx")
 
 
 
 
-# Porto Miggiano -----------------------------------------------------------
+# Leuca -----------------------------------------------------------
 #--------------------------------------------------------------------------
 # PML1 ---------------------------------------------------------------------
 #-------------------------------------------------------------------------
@@ -806,7 +1233,7 @@ PML1.data<-data.frame(PML1,PML1.act, PML1.ast,PML1.bio,PML1.biv,PML1.biv.b,
                       PML1.cau,PML1.cca,PML1.cem,PML1.cor,PML1.cor.a,PML1.fav,PML1.glau,PML1.hyd,PML1.mon,PML1.pav,PML1.pd,
                       PML1.por,PML1.sed,PML1.sha,PML1.sid,PML1.sty,PML1.tar)
 
-write.xlsx(x = PML1.data,"PML1.xlsx")
+#write.xlsx(x = PML1.data,"PML1.xlsx")
 
 
 #--------------------------------------------------------------------------
@@ -865,7 +1292,7 @@ PML2.data<-data.frame(PML2,PML2.act, PML2.ast,PML2.bio,PML2.biv,PML2.biv.b,
                       PML2.por,PML2.sed,PML2.sha,PML2.sid,PML2.sty,PML2.tar)
 
 
-write.xlsx(x = PML2.data,"PML2.xlsx")
+#write.xlsx(x = PML2.data,"PML2.xlsx")
 
 
 
@@ -925,7 +1352,7 @@ PML3.data<-data.frame(PML3,PML3.act, PML3.ast,PML3.bio,PML3.biv,PML3.biv.b,
                       PML3.por,PML3.sed,PML3.sha,PML3.sid,PML3.sty,PML3.tar)
 
 
-write.xlsx(x = PML3.data,"PML3.xlsx")
+#write.xlsx(x = PML3.data,"PML3.xlsx")
 
 
 
@@ -987,7 +1414,7 @@ PML4.data<-data.frame(PML4,PML4.act, PML4.ast,PML4.bio,PML4.biv,PML4.biv.b,
                       PML4.por,PML4.sed,PML4.sha,PML4.sid,PML4.sty,PML4.tar)
 
 
-write.xlsx(x = PML4.data,"PML4.xlsx")
+#write.xlsx(x = PML4.data,"PML4.xlsx")
 
 
 
@@ -1047,7 +1474,7 @@ PML5.data<-data.frame(PML5,PML5.act, PML5.ast,PML5.bio,PML5.biv,PML5.biv.b,
                       PML5.por,PML5.sed,PML5.sha,PML5.sid,PML5.sty,PML5.tar)
 
 
-write.xlsx(x = PML5.data,"PML5.xlsx")
+#write.xlsx(x = PML5.data,"PML5.xlsx")
 
 
 
@@ -1109,7 +1536,7 @@ PML6.data<-data.frame(PML6,PML6.act, PML6.ast,PML6.bio,PML6.biv,PML6.biv.b,
                       PML6.por,PML6.sed,PML6.sha,PML6.sid,PML6.sty,PML6.tar)
 
 
-write.xlsx(x = PML6.data,"PML6.xlsx")
+#write.xlsx(x = PML6.data,"PML6.xlsx")
 
 
 
@@ -1122,7 +1549,7 @@ write.xlsx(x = PML6.data,"PML6.xlsx")
 
 
 
-# Tricase -----------------------------------------------------------
+# Leuca -----------------------------------------------------------
 #--------------------------------------------------------------------------
 # TL1 ---------------------------------------------------------------------
 #-------------------------------------------------------------------------
@@ -1178,7 +1605,7 @@ TL1.data<-data.frame(TL1,TL1.act, TL1.ast,TL1.bio,TL1.biv,TL1.biv.b,
                       TL1.cau,TL1.cca,TL1.cem,TL1.cor,TL1.cor.a,TL1.fav,TL1.glau,TL1.hyd,TL1.mon,TL1.pav,TL1.pd,
                       TL1.por,TL1.sed,TL1.sha,TL1.sid,TL1.sty,TL1.tar)
 
-write.xlsx(x = TL1.data,"TL1.xlsx")
+#write.xlsx(x = TL1.data,"TL1.xlsx")
 
 
 #--------------------------------------------------------------------------
@@ -1237,7 +1664,7 @@ TL2.data<-data.frame(TL2,TL2.act, TL2.ast,TL2.bio,TL2.biv,TL2.biv.b,
                       TL2.por,TL2.sed,TL2.sha,TL2.sid,TL2.sty,TL2.tar)
 
 
-write.xlsx(x = TL2.data,"TL2.xlsx")
+#write.xlsx(x = TL2.data,"TL2.xlsx")
 
 
 
@@ -1297,7 +1724,7 @@ TL3.data<-data.frame(TL3,TL3.act, TL3.ast,TL3.bio,TL3.biv,TL3.biv.b,
                       TL3.por,TL3.sed,TL3.sha,TL3.sid,TL3.sty,TL3.tar)
 
 
-write.xlsx(x = TL3.data,"TL3.xlsx")
+#write.xlsx(x = TL3.data,"TL3.xlsx")
 
 
 
@@ -1359,7 +1786,7 @@ TL4.data<-data.frame(TL4,TL4.act, TL4.ast,TL4.bio,TL4.biv,TL4.biv.b,
                       TL4.por,TL4.sed,TL4.sha,TL4.sid,TL4.sty,TL4.tar)
 
 
-write.xlsx(x = TL4.data,"TL4.xlsx")
+#write.xlsx(x = TL4.data,"TL4.xlsx")
 
 
 
@@ -1419,7 +1846,7 @@ TL5.data<-data.frame(TL5,TL5.act, TL5.ast,TL5.bio,TL5.biv,TL5.biv.b,
                       TL5.por,TL5.sed,TL5.sha,TL5.sid,TL5.sty,TL5.tar)
 
 
-write.xlsx(x = TL5.data,"TL5.xlsx")
+#write.xlsx(x = TL5.data,"TL5.xlsx")
 
 
 
@@ -1481,7 +1908,7 @@ TL6.data<-data.frame(TL6,TL6.act, TL6.ast,TL6.bio,TL6.biv,TL6.biv.b,
                       TL6.por,TL6.sed,TL6.sha,TL6.sid,TL6.sty,TL6.tar)
 
 
-write.xlsx(x = TL6.data,"TL6.xlsx")
+#write.xlsx(x = TL6.data,"TL6.xlsx")
 
 
 
@@ -1545,7 +1972,7 @@ CGL1.data<-data.frame(CGL1,CGL1.act, CGL1.ast,CGL1.bio,CGL1.biv,CGL1.biv.b,
                       CGL1.cau,CGL1.cca,CGL1.cem,CGL1.cor,CGL1.cor.a,CGL1.fav,CGL1.glau,CGL1.hyd,CGL1.mon,CGL1.pav,CGL1.pd,
                       CGL1.por,CGL1.sed,CGL1.sha,CGL1.sid,CGL1.sty,CGL1.tar)
 
-write.xlsx(x = CGL1.data,"CGL1.xlsx")
+#write.xlsx(x = CGL1.data,"CGL1.xlsx")
 
 
 #--------------------------------------------------------------------------
@@ -1604,7 +2031,7 @@ CGL2.data<-data.frame(CGL2,CGL2.act, CGL2.ast,CGL2.bio,CGL2.biv,CGL2.biv.b,
                       CGL2.por,CGL2.sed,CGL2.sha,CGL2.sid,CGL2.sty,CGL2.tar)
 
 
-write.xlsx(x = CGL2.data,"CGL2.xlsx")
+#write.xlsx(x = CGL2.data,"CGL2.xlsx")
 
 
 
@@ -1664,7 +2091,7 @@ CGL3.data<-data.frame(CGL3,CGL3.act, CGL3.ast,CGL3.bio,CGL3.biv,CGL3.biv.b,
                       CGL3.por,CGL3.sed,CGL3.sha,CGL3.sid,CGL3.sty,CGL3.tar)
 
 
-write.xlsx(x = CGL3.data,"CGL3.xlsx")
+#write.xlsx(x = CGL3.data,"CGL3.xlsx")
 
 
 
@@ -1726,7 +2153,7 @@ CGL4.data<-data.frame(CGL4,CGL4.act, CGL4.ast,CGL4.bio,CGL4.biv,CGL4.biv.b,
                       CGL4.por,CGL4.sed,CGL4.sha,CGL4.sid,CGL4.sty,CGL4.tar)
 
 
-write.xlsx(x = CGL4.data,"CGL4.xlsx")
+#write.xlsx(x = CGL4.data,"CGL4.xlsx")
 
 
 
@@ -1786,7 +2213,7 @@ CGL5.data<-data.frame(CGL5,CGL5.act, CGL5.ast,CGL5.bio,CGL5.biv,CGL5.biv.b,
                       CGL5.por,CGL5.sed,CGL5.sha,CGL5.sid,CGL5.sty,CGL5.tar)
 
 
-write.xlsx(x = CGL5.data,"CGL5.xlsx")
+#write.xlsx(x = CGL5.data,"CGL5.xlsx")
 
 
 
@@ -1848,7 +2275,7 @@ CGL6.data<-data.frame(CGL6,CGL6.act, CGL6.ast,CGL6.bio,CGL6.biv,CGL6.biv.b,
                       CGL6.por,CGL6.sed,CGL6.sha,CGL6.sid,CGL6.sty,CGL6.tar)
 
 
-write.xlsx(x = CGL6.data,"CGL6.xlsx")
+#write.xlsx(x = CGL6.data,"CGL6.xlsx")
 
 
 
@@ -1909,7 +2336,7 @@ CGL7.data<-data.frame(CGL7,CGL7.act, CGL7.ast,CGL7.bio,CGL7.biv,CGL7.biv.b,
                       CGL7.por,CGL7.sed,CGL7.sha,CGL7.sid,CGL7.sty,CGL7.tar)
 
 
-write.xlsx(x = CGL7.data,"CGL7.xlsx")
+#write.xlsx(x = CGL7.data,"CGL7.xlsx")
 
 
 
@@ -1972,7 +2399,7 @@ LCT1.data<-data.frame(LCT1,LCT1.act, LCT1.ast,LCT1.bio,LCT1.biv,LCT1.biv.b,
                       LCT1.cau,LCT1.cca,LCT1.cem,LCT1.cor,LCT1.cor.a,LCT1.fav,LCT1.glau,LCT1.hyd,LCT1.mon,LCT1.pav,LCT1.pd,
                       LCT1.por,LCT1.sed,LCT1.sha,LCT1.sid,LCT1.sty,LCT1.tar)
 
-write.xlsx(x = LCT1.data,"LCT1.xlsx")
+#write.xlsx(x = LCT1.data,"LCT1.xlsx")
 
 
 #--------------------------------------------------------------------------
@@ -2031,7 +2458,7 @@ LCT2.data<-data.frame(LCT2,LCT2.act, LCT2.ast,LCT2.bio,LCT2.biv,LCT2.biv.b,
                       LCT2.por,LCT2.sed,LCT2.sha,LCT2.sid,LCT2.sty,LCT2.tar)
 
 
-write.xlsx(x = LCT2.data,"LCT2.xlsx")
+#write.xlsx(x = LCT2.data,"LCT2.xlsx")
 
 
 
@@ -2091,7 +2518,7 @@ LCT3.data<-data.frame(LCT3,LCT3.act, LCT3.ast,LCT3.bio,LCT3.biv,LCT3.biv.b,
                       LCT3.por,LCT3.sed,LCT3.sha,LCT3.sid,LCT3.sty,LCT3.tar)
 
 
-write.xlsx(x = LCT3.data,"LCT3.xlsx")
+#write.xlsx(x = LCT3.data,"LCT3.xlsx")
 
 
 
@@ -2153,7 +2580,7 @@ LCT4.data<-data.frame(LCT4,LCT4.act, LCT4.ast,LCT4.bio,LCT4.biv,LCT4.biv.b,
                       LCT4.por,LCT4.sed,LCT4.sha,LCT4.sid,LCT4.sty,LCT4.tar)
 
 
-write.xlsx(x = LCT4.data,"LCT4.xlsx")
+#write.xlsx(x = LCT4.data,"LCT4.xlsx")
 
 
 

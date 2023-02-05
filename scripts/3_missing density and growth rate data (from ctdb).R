@@ -44,7 +44,7 @@ write.csv2(d.por,"C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates and d
 #-------------------------------------------------------------------------
 # 1.2 Skeletal density Actinacis------------------------------------------
 --------------------------------------------------------------------------
-#LITERATURE
+#nothing found, taken same as Porites
 
 
 
@@ -117,6 +117,9 @@ write.csv(gr.por,"C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates and d
 #--------------------------------------------------------------------------
 # 2.3 Growth rates Hydnophora---------------too little data in the CTDB-------------------------------
 #--------------------------------------------------------------------------
+
+gr<- subset(ct, trait_name=="Growth rate")
+
 
 
 #Hydnophora microconos  Maldives          6.3 mm yr^-1    mean value
