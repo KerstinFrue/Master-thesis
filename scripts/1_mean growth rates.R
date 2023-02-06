@@ -127,7 +127,7 @@ kruskal.test(ol.mio$mean.growth ~  ol.mio$reef.section)
 #growth rate ~ reef.section
 an.ol.mio.section<-aov(ol.mio$mean.growth ~ ol.mio$reef.section)
 summary(an.ol.mio.section)
-plot(an.mio.section, 1)
+plot(an.ol.mio.section, 1)
 
 
 
