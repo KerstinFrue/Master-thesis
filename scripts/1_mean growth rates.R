@@ -11,11 +11,15 @@ setwd("C:/Users/Kerry/Desktop/Master-thesis")
 #library(chronosphere)
 #ct<-fetch("CoralTraitDB")
 #ct_growthrate<- subset(ct, trait_name=="Growth rate")
+#ct_modern_mean<-subset(ct_growthrate, value_type=="mean")
+#ct_modern_mean_year<-subset(ct_modern_mean, standard_unit=="mm yr^-1")
 #ct_growthrate<-data.frame(ct_growthrate$specie_name, ct_growthrate$trait_name, ct_growthrate$value)
 #library(readr)
 #write.csv(ct_growthrate, "C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates//modern growth rates.csv", row.names=FALSE, quote=F)
-
-
+#write.csv(ct_modern_mean_year, "C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates//modern mean growth rates per year.csv", row.names=FALSE, quote=F)
+write.csv2(ct_modern_mean_year, "C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates//modern mean growth rates per year.csv", row.names=FALSE, quote=F)
+library(xlsx)
+write.xlsx(ct_modern_mean_year, "C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates//modern mean growth rates per year.xlsx", row.names=FALSE)
 
 # Growth rate data ----------------------------------------------
 # allmeandata
@@ -52,8 +56,6 @@ mio <- subset(ol.mio, time=="Miocene")
 #normal distribution test for data
 shapiro.test(ol$mean.growth)        # only data set with normal distribution....
 
-
-
 # Oligocene reef section ------------------------------------------------
 
 
@@ -79,12 +81,12 @@ an.ol.section<-aov(ol$mean.growth ~ ol$reef.section)
 summary(an.ol.section)
 plot(an.ol.section, 1)
 
+TukeyHSD(an.ol.section, conf.level = .95)
+plot(TukeyHSD(an.ol.section, conf.level = .95))
 
 
 
-
-
-# Oligocene genera --------------------------------------------------------
+D# Oligocene genera --------------------------------------------------------
 
 
 kruskal.test(ol$mean.growth ~ ol$genus)
@@ -150,7 +152,7 @@ kruskal.test(ol.mio$mean.growth[ol.mio$genus=="Porites"] ~ ol.mio$time[ol.mio$ge
 
 #ANOVA
 
-an.ol.mio.genus<-aov(ol.mio$mean.growth[ol.mio$genus=="Porites"] ~ ol.mio$genus[ol.mio$genus=="Porites"])
+an.ol.mio.genus<-aov(ol.mio$mean.growth[ol.mio$genus=="Porites"] ~ ol.mio$time[ol.mio$genus=="Porites"])
 summary(an.ol.mio.genus)
 plot(an.ol.mio.genus, 1)
 

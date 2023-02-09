@@ -7,7 +7,7 @@ all<-read.csv2("C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates/all gro
 ol<-subset(all, time=="Oligocene")
 mio<-subset(all, time=="Miocene")
 
-
+shapiro.test(all$growth..mm.)
 
 #----------------------------------------------------------------------------------------------------------------------
 #subsettting
