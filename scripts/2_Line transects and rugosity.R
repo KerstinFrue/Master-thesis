@@ -2615,5 +2615,4 @@ rug$time.reef.section<- factor(rug$time.reef.section, levels = c("Oligocene reef
 
 plot(rug$time.reef.section,rug$mean_rugosity, type="5",
      ylab="rugosity", xlab="time & reef section", #main="Rugosity (Oligocene and Miocene)"
-)
   
