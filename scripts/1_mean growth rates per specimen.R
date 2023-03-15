@@ -391,7 +391,8 @@ se1 <- tapply(mio$mean.growth, mio$reef.section, function(x) sd(x)/sqrt(length(x
 str(se1)
 se1 <- as.data.frame(se1)
 
- 
+
+
 #-----------------------------------------------------------------------------------------------------------------------
 
 #oligocene se per genus
