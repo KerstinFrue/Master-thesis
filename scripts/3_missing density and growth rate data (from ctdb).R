@@ -120,8 +120,6 @@ write.csv(gr.por,"C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates and d
 
 gr<- subset(ct, trait_name=="Growth rate")
 
-
-
 #Hydnophora microconos  Maldives          6.3 mm yr^-1    mean value
 #Hydnophora microconos  Marshall islands  11.5 mm yr^-1
 #Hydnophora rigida      Phillippines      71 mm yr^-1
