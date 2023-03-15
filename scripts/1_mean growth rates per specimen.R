@@ -17,9 +17,9 @@ setwd("C:/Users/Kerry/Desktop/Master-thesis")
 #library(readr)
 #write.csv(ct_growthrate, "C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates//modern growth rates.csv", row.names=FALSE, quote=F)
 #write.csv(ct_modern_mean_year, "C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates//modern mean growth rates per year.csv", row.names=FALSE, quote=F)
-write.csv2(ct_modern_mean_year, "C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates//modern mean growth rates per year.csv", row.names=FALSE, quote=F)
-library(xlsx)
-write.xlsx(ct_modern_mean_year, "C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates//modern mean growth rates per year.xlsx", row.names=FALSE)
+#write.csv2(ct_modern_mean_year, "C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates//modern mean growth rates per year.csv", row.names=FALSE, quote=F)
+#library(xlsx)
+#write.xlsx(ct_modern_mean_year, "C:/Users/Kerry/Desktop/Master-thesis/R/data/growth rates//modern mean growth rates per year.xlsx", row.names=FALSE)
 
 # Growth rate data ----------------------------------------------
 # allmeandata
@@ -31,7 +31,6 @@ ol <- subset(ol.mio, time=="Oligocene")
 #slope: Favites data (1 specimen, only 2 measurements) was left out (very big growth rate)
 
 mio <- subset(ol.mio, time=="Miocene")
-
 
 
 
@@ -66,6 +65,8 @@ summary(ol)
 kruskal.test(ol$mean.growth~ol$reef.section)
 
 
+#??chisq.test()
+
 #Null hypothesis was, that the values don't vary much
 #if the p value is smaller than the commonly chosen significance level of 0,05,
 #the null hypothesis is rejected, as in this case. The mean growth rates vary highly between the different times, as you can also see in the graph
@@ -76,27 +77,37 @@ kruskal.test(ol$mean.growth~ol$reef.section)
 #library(car)
 #leveneTest(ol$mean.growth ~ ol$reef.section)
 
+#ANOVA
 
 an.ol.section<-aov(ol$mean.growth ~ ol$reef.section)
 summary(an.ol.section)
 plot(an.ol.section, 1)
 
 TukeyHSD(an.ol.section, conf.level = .95)
-plot(TukeyHSD(an.ol.section, conf.level = .95))
+plot(TukeyHSD(an.ol.section, conf.level = .95)#, ylab="a","b","c","d","e","f")
 
 
 
-D# Oligocene genera --------------------------------------------------------
+# Oligocene genera --------------------------------------------------------
 
 
 kruskal.test(ol$mean.growth ~ ol$genus)
 
+#ANOVA
 
 an.ol.genus<-aov(ol$mean.growth ~ ol$genus)
 summary(an.ol.genus)
 plot(an.ol.genus, 1)
 
 #-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
@@ -108,6 +119,7 @@ shapiro.test(mio$mean.growth)
 
 kruskal.test(mio$mean.growth ~ mio$reef.section)
 
+#ANOVA
 an.mio.section<-aov(mio$mean.growth ~ mio$reef.section)
 summary(an.mio.section)
 plot(an.mio.section, 1)
@@ -130,7 +142,6 @@ kruskal.test(ol.mio$mean.growth ~  ol.mio$reef.section)
 an.ol.mio.section<-aov(ol.mio$mean.growth ~ ol.mio$reef.section)
 summary(an.ol.mio.section)
 plot(an.ol.mio.section, 1)
-
 
 
 #--------------------------------------------------------------------------------------------------------------------------------------
@@ -156,6 +167,8 @@ an.ol.mio.genus<-aov(ol.mio$mean.growth[ol.mio$genus=="Porites"] ~ ol.mio$time[o
 summary(an.ol.mio.genus)
 plot(an.ol.mio.genus, 1)
 
+t.test(ol.mio$mean.growth[ol.mio$genus=="Porites"] ~ ol.mio$time[ol.mio$genus=="Porites"])
+
 #---------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -172,9 +185,9 @@ an.ol.mio.mo<-aov(ol.mio.mo$mean.growth ~ ol.mio.mo$time)
 summary(an.ol.mio.mo)
 plot(an.ol.mio.mo, 1)
 
+TukeyHSD(an.ol.mio.mo)
 
-
-
+Dplot(TukeyHSD(an.ol.mio.mo))
 
 
 
@@ -212,10 +225,10 @@ cols1 <- c("cadetblue1", "cyan4", "olivedrab3", "coral1")
 boxplot(ol$mean.growth~ol$reef.section,
         #main = "Oligocene: comparison between reef sections",
         col=cols1, xlab = "reef section", ylab= "mean growth rate (mm / year)",
-        names = c("back reef", "reef flat", "reef front ", "proximal slope"))
+        names = c("back reef", "reef flat", "reef front ", "proximal slope")) #$stats
 
-
-
+  
+# $stats: Getting boxplot statistics (boxplot data: Min, First Quartile, Median, Third Quartile, Maximum)
 
 # RESULTS---------------------------------------------------------------
 #growth rate during Oligocene highest in the back reef reef front, then proximal slope and 4. reef flat
@@ -223,18 +236,7 @@ boxplot(ol$mean.growth~ol$reef.section,
 
 
 
-# Getting boxplot statistics (boxplot data: Min, First Quartile, Median, Third Quartile, Maximum)
-
-#summary1<-boxplot(ol$mean.growth~ol$reef.section,
-        #main = "Oligocene: comparison between reef sections",
-        #col=cols1, xlab = "reef section", ylab= "mean growth rate (mm / year)",
-        #names = c("back reef", "reef flat", "reef front ", "proximal slope"))$stats
-
-#summary1
-
-
-
-
+var(ol$mean.growth)
 
 
 #--------------------------------------------------------------------------------------------------
@@ -249,8 +251,8 @@ cols2<-c("coral","coral1","coral2", "coral4", "coral1")
 #boxplot 10 6 17 2 2
 boxplot(ol$mean.growth~ol$genus,
         #main = "Oligocene: comparison between genera",
-        col=cols2, xlab = "genus", ylab = "mean growth rate (mm / year)", names =c("Porites", "Actinacis", "Poriticae", "Tarbellastraea", "Pavona"))
-
+        col=cols2, xlab = "genus", ylab = "mean growth rate (mm / year)",
+        names =c("Porites", "Actinacis", "Poriticae", "Tarbellastraea", "Pavona"))$stats
 
 
 
@@ -272,10 +274,10 @@ cols3 <- c("cadetblue1", "olivedrab3", "coral1")
 boxplot(mio$mean.growth~mio$reef.section,
         #main = "Miocene: comparison between reef sections",
         xlab = "reef section", ylab= "mean growth rate (mm / year)", col=cols3,
-        names = c("back reef", "reef front ", "proximal slope"))
+        names = c("back reef", "reef front ", "proximal slope")) $stats
 
-
-
+median(mio$mean.growth)
+mean(mio$mean.growth)
 
 # RESULTS -----------------------------------------------------------------
 #reef front showas highest growth rates, then proximal slope and then back reef
@@ -324,7 +326,7 @@ boxplot(ol.mio$mean.growth ~  ol.mio$time + ol.mio$reef.section, col=cols,
         #main = "Comparison between Oligocene and Miocene: reef sections",
         names = c("Oligocene back reef","Miocene back reef", "Oligocene reef flat", "Miocene reef flat",
                   "Oligocene reef front", "Miocene reef front", "Oligocene proximal slope", "Miocene proximal slope"),
-        xlab = "time & reef section", ylab= "mean growth rate (mm / year)", cex.main=1.0, cex.lab=1.0, cex.axis=1.0)
+        xlab = "time & reef section", ylab= "mean growth rate (mm / year)", cex.main=1.0, cex.lab=1.0, cex.axis=1.0) $stats
 #dev.off()
 
 
@@ -358,11 +360,10 @@ cols4<- c("goldenrod1","yellow")
 #boxplot 11 21
 boxplot(ol.mio$mean.growth[ol.mio$genus=="Porites"] ~ ol.mio$time[ol.mio$genus=="Porites"],
         #main = "Comparison between Oligocene and Miocene: Porites",
-        col=cols4, names=c("Oligocene", "Miocene"), xlab = "time", ylab= "mean growth rate (mm / year)")
+        col=cols4, names=c("Oligocene", "Miocene"), xlab = "time", ylab= "mean growth rate (mm / year)") $stats
 
-
-
-
+mean(ol.mio$mean.growth[ol.mio$genus=="Porites"])
+mean(mio$mean.growth)
 
 --------------------------------------------------------------------------------------------------------------------
 # 4 Comparison of growth rates Oligocene vs. Miocene vs. modern ----------------------------------------------------
@@ -378,7 +379,7 @@ cols5<- c("goldenrod1","yellow", "seagreen2")
 boxplot(ol.mio.mo$mean.growth ~ ol.mio.mo$time,
         #main = "Comparison between Oligocene, Miocene and modern",
         xlab = "time", ylab= "mean growth rate (mm / year)", names=c("Oligocene", "Miocene", "Modern"),
-        col=cols5, outline=FALSE)
+        col=cols5, outline=FALSE)$stats
 
 
 
@@ -529,3 +530,12 @@ se3 <- as.data.frame(se3)
 #c95 <- 1.96 * se3$se3
 
 #arrows(x0=m$mid, y0=m$m - c95, y1=m$m + c95, code = 3, angle=90, length=0, col = cols)
+
+
+
+
+
+
+# Variances ---------------------------------------------------------------
+
+var(ol.mio$mean.growth)

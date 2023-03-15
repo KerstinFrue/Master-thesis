@@ -27,9 +27,6 @@ mio.3slope<-subset(mio, X=="Miocene proximal slope")
 
 
 
-
-
-
 #-----------------------------------------------------------------------------------------------------------------
 
 #means of Porites from Oligocene reef front
